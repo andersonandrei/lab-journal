@@ -1,0 +1,36 @@
+* quarta, 06-02-2019
+
+** 18:02 Meeting, org-journal
+
+*** Starting on org-journal
+**** Trying o do something in the org-jornal1. 
+***** Creating a list
+     1. Hello
+     2. Hi
+     3. Salut
+	1. Ça vá?
+     4. Learning how to do some lists
+     5. Creating a lot of topics
+	
+*** Todays meeting:
+**** Specified each part in the project.
+**** Actually, we have two main layers to keep attention: scheduler and allocation.
+**** My work will be on the allocation: *DO THE FIRST VERSION OF THE SCHEDULER*:
+***** For this, I will use some data from:
+****** The INPUT (jobs)
+******* Priority
+******* Client
+******* etc
+****** The QBoxes (status from each QBOX):
+******* Local data
+******* Status(how full it is)
+
+*** TODO LIST
+**** TODO Learn BatSim
+***** TODO Read about it
+***** TODO Configure
+***** TODO Install
+***** TODO First examples
+**** TODO Read two papers
+***** TODO How future buildings...
+***** TODO Heating as a cloud...
