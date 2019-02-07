@@ -1,0 +1,92 @@
+# -- mode: org --
+# -- coding: utf-8 --
+#+STARTUP: overview indent inlineimages logdrawer
+#+TITLE:  Andrei's Journal
+#+AUTHOR:      Andrei
+#+LANGUAGE:    en
+#+TAGS: noexport(n) Stats(S)
+#+TAGS: Teaching(T) R(R) OrgMode(O) Python(P)
+#+TAGS: Book(b) DOE(D) Code(C) NODAL(N) FPGA(F) Autotuning(A) Arnaud(r)
+#+TAGS: DataVis(v) PaperReview(W)
+#+EXPORT_SELECT_TAGS: Blog
+#+OPTIONS:   H:3 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+COLUMNS: %25ITEM %TODO %3PRIORITY %TAGS
+#+SEQ_TODO: TODO(t!) STARTED(s!) WAITING(w@) APPT(a!) | DONE(d!) CANCELLED(c!) DEFERRED(f!)
+
+* quarta, 06-02-2019
+
+** 18:02 Meeting, org-journal                                      :OrgMode:
+
+*** Starting on org-journal
+**** Trying o do something in the org-jornal1. 
+***** Creating a list
+     1. Hello
+     2. Hi
+     3. Salut
+	1. Ça vá?
+     4. Learning how to do some lists
+     5. Creating a lot of topics
+
+*** Todays meeting:
+**** Specified each part in the project.
+**** Actually, we have two main layers to keep attention: scheduler and allocation.
+**** My work will be on the allocation: *DO THE FIRST VERSION OF THE SCHEDULER*:
+***** For this, I will use some data from:
+****** The INPUT (jobs)
+******* Priority
+******* Client
+******* etc
+****** The QBoxes (status from each QBOX):
+******* Local data
+******* Status(how full it is)
+
+*** TODO LIST
+**** DONE Learn BatSim
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-02-07 qui 14:29]
+- State "TODO"       from "WAITING"    [2019-02-07 qui 14:29]
+- State "WAITING"    from "TODO"       [2019-02-07 qui 14:28] \\
+  Waiting ...
+:END:      
+***** WAITING Red about it
+:LOGBOOK:  
+- State "WAITING"    from "TODO"       [2019-02-07 qui 14:36] \\
+  read
+:END:      
+***** TODO Configure
+***** TODO Install
+***** TODO First examples
+**** TODO Read two papers
+***** TODO How future buildings...
+***** TODO Heating as a cloud...
+
+* quinta, 07-02-2019...
+
+** Journal
+
+*** Some tips with Pedro
+
+**** Headers
+
+**** Tags
+
+**** etc
+
+** Research
+
+*** BATSIM
+
+**** WAITING First examples on BATSIM website
+:LOGBOOK:  
+- State "WAITING"    from "TODO"       [2019-02-07 qui 17:52] \\
+  The installation is not working
+:END:      
+
+**** WAITING First example on GitLab Prototype repo
+:LOGBOOK:  
+- State "WAITING"    from "TODO"       [2019-02-07 qui 17:52] \\
+  The installation of BATSIM is not working
+:END:      
