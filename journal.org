@@ -79,14 +79,99 @@
 
 *** BATSIM
 
-**** WAITING First examples on BATSIM website
+**** DONE First examples on BATSIM website
 :LOGBOOK:  
+- State "DONE"       from ""           [2019-02-08 sex 18:00]
 - State "WAITING"    from "TODO"       [2019-02-07 qui 17:52] \\
   The installation is not working
 :END:      
 
 **** WAITING First example on GitLab Prototype repo
+DEADLINE: <2019-02-08 sex>
 :LOGBOOK:  
 - State "WAITING"    from "TODO"       [2019-02-07 qui 17:52] \\
   The installation of BATSIM is not working
-:END:      
+:
+* sexta, 08-02-2019
+** Batsim
+*** I installed it and performed the first example that includes: exectution and statistics.
+*** If I understood well the structure. It is:
+1. Batsim -> Simulates everything.
+2. A scheduler -> Takes the decisions.
+
+**** To see everything running, we can use 2 windows, one for each thing.
+*NOTE:* Here, everything was setted to be in the /tmp.
+
+#+NAME: batsim-side
+#+BEGIN_SRC <bash> 
+  batsim -p /tmp/batsim-v3.0.0/platforms/cluster512.xml        
+         -w /tmp/batsim-v3.0.0/workloads/test_batsim_paper_workload_seed1.json
+         -e "/tmp/expe-out/out"
+#+END_SRC
+It will keep the batsim oppened, waiting for the scheduler.
+
+#+NAME: scheduler-side
+#+BEGIN_SRC <bash>
+  robin generate ./expe.yaml       
+                    --output-dir=/tmp/expe-out       
+                    --batcmd="batsim -p /tmp/batsim-v3.0.0/platforms/cluster512.xml 
+                 -w /tmp/batsim-v3.0.0/workloads/test_batsim_paper_workload_seed1.json 
+                 -e /tmp/expe-out/out"       
+                    --schedcmd='batsched -v easy_bf'
+#+END_SRC 
+ It will use robin to run the scheduler batsched with the mode easy_bf.
+** pybatsim
+*** Runs a schedular for the batsim.
+*** Configuration
+**** To install by: pip install pybatsim
+**** To clone [[https://gitlab.inria.fr/batsim/pybatsim][PyBatsim-repository]] to have access to the schedulers implemented there.
+*** To run its scheduler:
+**** To run the batsim as the same way.
+**** To run the schedulers, acess the repository and try:
+***** pybatsim schedulers/scheduler.py
+**** I tried:
+***** pybatsim schedulers/fillerSched.py
+***** pybatsim schedulers/schedFcfs.py
+** statistics
+*** The batsim mainpage offer a example of statistic analysis:
+ #+NAME: batsim-analysis
+ #+BEGIN_SRC <bash>
+ #!/usr/bin/env Rscript
+  library('tidyverse') # Use the tidyverse library.
+  theme_set(theme_bw()) # Cosmetics.
+
+  jobs = read_csv('out_jobs.csv') # Read the jobs file.
+
+  # Manually compute some metrics on each job.
+  jobs = jobs %>% mutate(slowdown = (finish_time - starting_time) /
+                                  (finish_time - submission_time),
+                       longer_than_one_minute = execution_time > 60)
+
+  # Manually compute aggregated metrics.
+  # Here, the mean waiting time/slowdown for jobs with small execution time.
+  metrics = jobs %>% filter(longer_than_one_minute == FALSE) %>%
+    summarize(mean_waiting_time = mean(waiting_time),
+              mean_slowdown = mean(slowdown))
+
+  print(metrics) # Print aggregated metrics.
+
+  # Visualize what you want...
+  # Is there a link between jobs' waiting time and size?
+  ggplot(jobs) +
+    geom_point(aes(y=waiting_time, x=requested_number_of_resources)) +
+    ggsave('plot_wt_size.pdf')
+
+  # Is this still true depending on job execution time?
+  ggplot(jobs) +
+    geom_point(aes(y=waiting_time, x=requested_number_of_resources)) +
+    facet_wrap(~longer_than_one_minute) +
+    ggsave('plot_wt_size_exectime.pdf')
+
+  # Is there a link with job size and execution time?
+  ggplot(jobs) +
+    geom_violin(aes(factor(requested_number_of_resources), execution_time)) +
+    ggsave('plot_exectime_size.pdf')
+
+ #+END_SRC
+*** Running this analysis on both pybatsimexamples we can check the different results.
+
