@@ -6,7 +6,7 @@
 #+LANGUAGE:    en
 #+TAGS: noexport(n) Stats(S)
 #+TAGS: Teaching(T) R(R) OrgMode(O) Python(P)
-#+TAGS: Book(b) DOE(D) Code(C) NODAL(N) FPGA(F) Autotuning(A) Arnaud(r)
+#+TAGS: Book(b) Code(C) Paper(P) Scheduler(S) Denis(d)
 #+TAGS: DataVis(v) PaperReview(W)
 #+EXPORT_SELECT_TAGS: Blog
 #+OPTIONS:   H:3 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
@@ -50,21 +50,26 @@
 - State "TODO"       from "WAITING"    [2019-02-07 qui 14:29]
 - State "WAITING"    from "TODO"       [2019-02-07 qui 14:28] \\
   Waiting ...
+***** WAITIGN Read about it
 :END:      
-***** WAITING Red about it
-:LOGBOOK:  
+*:LOGBOOK:  
 - State "WAITING"    from "TODO"       [2019-02-07 qui 14:36] \\
-  read
+  GBOOK:  
+- State "DONE"       from "TODO"       [2019-02-11 seg 17:35]
 :END:      
-***** TODO Configure
-***** TODO Install
-***** TODO First examples
-**** TODO Read two papers
+:END:
+***** DONE First examples
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-02-11 seg 17:* TODO Install
+**** WAITING Read two papers
+:LOGBOOK:  
+- State "WAITING"    from "DONE"       [2019-02-11 seg 17:35]
+- State "DONE"       from "TODO"       [2019-02-11 seg 17:35]
+:END:      
 ***** TODO How future buildings...
 ***** TODO Heating as a cloud...
 
 * quinta, 07-02-2019...
-
 ** Journal
 
 *** Some tips with Pedro
@@ -86,9 +91,10 @@
   The installation is not working
 :END:      
 
-**** WAITING First example on GitLab Prototype repo
+**** DONE First example on GitLab Prototype repo
 DEADLINE: <2019-02-08 sex>
 :LOGBOOK:  
+- State "DONE"       from "WAITING"    [2019-02-11 seg 17:33]
 - State "WAITING"    from "TODO"       [2019-02-07 qui 17:52] \\
   The installation of BATSIM is not working
 :
@@ -175,3 +181,93 @@ It will keep the batsim oppened, waiting for the scheduler.
  #+END_SRC
 *** Running this analysis on both pybatsimexamples we can check the different results.
 
+* segunda, 11-02-2019
+
+** DONE To understand:
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-02-11 seg 17:07]
+:END:      
+
+*** DONE The INPUT format for batsim;
+:LOGBOOK:  
+- State "DONE"       from "CANCELLED"  [2019-02-11 seg 17:07]
+:END:      
+
+*** DONE Some schedular examples;
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-02-11 seg 17:07]
+:END:
+
+** The workflow:
+
+*** Batsim-Scheduler communication:
+
+**** Messages, JSON, via request-reply model:
+
+***** Contraints format:
+
+****** now
+
+****** events
+
+******* timestamp
+
+******* type
+
+******* data
+
+****** And to differ the message, we change the *event type* as :
+
+******* BIDIRECTIONAL
+
+******* BATSIM => SCHEDULER
+
+******* SCHEDULER => BATSIM
+
+**** Workload:
+
+***** The workload is an Input combined as:
+
+****** Jobs: Users requests. It has:
+
+******* id, subtime, res, profile, walltime, +
+****** Profiles: Defines how the job execution should be simulated. It has:
+******* type, etc. Where the type could be:
+******** delay, prallel task, homogeneous pararllel task, etc.
+
+*** Batsim requires to start:
+
+**** a plataform; a workload; an output folder.
+
+***** Providing a worload, it will have the jobs that should be scheduled.
+
+**** Then, batsim will be learning, waiting for a scheduler to manage the jobs.
+
+*** The scheduler:
+
+**** Once the Batsim is already runnig, when we run the scheduler it will communicate with the Batsim by the messages, doing the requested decision.
+
+**** The schdulers should implement all possible actions asked by the message types. For example: JobInitialize,kill,resquest. onBatSimInit,onJobSubmission, onJobCompletion.
+*** An example:
+
+**** I understood the fillerSched.py scheduler. It works following:
+
+1. Initialize everything after Batsim intialized.
+2. Schedule the jobs.
+ 2.2 _OnAfterBatsimInit_: // _Read_ a list of jobs *OpenJob* and a list of resources *availableResources* 
+ 2.1 _scheduleJobs_: // _Check_ all jobs in *OpenJob*
+   2.1.1 _if_ (job.resourcesRequested > *aivailableResources*)
+            discard it and remove from the *OpenJob*
+   2.1.2 _else_
+            scheduleJobs.append(job)
+            *availableResources* -= jog.resourceRequested
+            updateConsumptionTime
+ 2.2 _OnJobSubmission_:
+  2.2.1 openJob.add(job)
+  2.2.2 scheduleJobs()
+ 2.3 _OnJobCompletion_:
+  2.3.1 *availableResources* += job.resourceRequested
+  2.3.2 scheduleJobs()
+**** I ran it as:
+batsim -p platform52.xml -w test_batsim_paper_workload_seed1.json -e test-out-2
+launcher.py scheduler/fillerSched.py 
