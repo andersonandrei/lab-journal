@@ -43,7 +43,10 @@
 ******* Local data
 ******* Status(how full it is)
 
-*** TODO LIST
+*** DONE LIST
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-02-13 qua 18:16]
+:END:      
 **** DONE Learn BatSim
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-02-07 qui 14:29]
@@ -61,13 +64,20 @@
 ***** DONE First examples
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-02-11 seg 17:* TODO Install
-**** WAITING Read two papers
+**** DONE Read two papers
 :LOGBOOK:  
+- State "DONE"       from "WAITING"    [2019-02-13 qua 18:16]
 - State "WAITING"    from "DONE"       [2019-02-11 seg 17:35]
 - State "DONE"       from "TODO"       [2019-02-11 seg 17:35]
 :END:      
-***** TODO How future buildings...
-***** TODO Heating as a cloud...
+***** DONE How future buildings...
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-02-13 qua 18:16]
+:END:      
+***** DONE Heating as a cloud...
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-02-13 qua 18:16]
+:END:      
 
 * quinta, 07-02-2019...
 ** Journal
@@ -140,8 +150,14 @@ It will keep the batsim oppened, waiting for the scheduler.
 ***** pybatsim schedulers/schedFcfs.py
 ** statistics
 *** The batsim mainpage offer a example of statistic analysis:
+#+BEGIN_LaTeX
+
+#+END_LaTe
+#+BEGIN_LaTeX
+
+#+END_LaTeX
  #+NAME: batsim-analysis
- #+BEGIN_SRC <bash>
+ #+BEGIN_SRC sh
  #!/usr/bin/env Rscript
   library('tidyverse') # Use the tidyverse library.
   theme_set(theme_bw()) # Cosmetics.
@@ -270,4 +286,46 @@ It will keep the batsim oppened, waiting for the scheduler.
   2.3.2 scheduleJobs()
 **** I ran it as:
 batsim -p platform52.xml -w test_batsim_paper_workload_seed1.json -e test-out-2
-launcher.py scheduler/fillerSched.py 
+launcher.py scheduler/fillerSched.py
+
+* terça, 12-02-2019
+** DONE on Batsim
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-02-13 qua 18:18]
+:END:      
+*** DONE Check about the data asked for the jobs. How to locate or transfer it.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-02-13 qua 08:57]
+:END:
+**** It is done by writing and checking the NFS file after and before to write or to remove some data from some QBox.
+** DONE on Papers
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-02-13 qua 18:18]
+:END:      
+
+*** DONE Check on the Qarnot gitlab if there are some techniques for the schedulers.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-02-13 qua 18:17]
+:END:
+
+**** There is a Deliverable2.2a that show the algortith to be implemented.
+*** DONE Search some papers for schedulers on Cloud Computing
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-02-13 qua 18:17]
+:END:      
+** TODO Source block configuration orgmode
+:LOGBOOK:  
+- State "TODO"       from ""           [2019-02-12 ter 12:54]
+:END:
+** TODO ESS library
+:LOGBOOK:  
+- State "TODO"       from ""           [2019-02-12 ter 12:56]
+:END:
+* quarta, 13-02-2019
+** Qarnot meeting
+*** Administrative and update things with other teams.
+*** About my part I should finish the current version of the QNodes scheduler. This way we will have a full system working.
+*** With a full system working we will submit a paper to *SC2019*.
+** Papers and techniques
+*** I read the both papers that I selected on 06-02 and 12-02 and selected some algorthms to check later.
+*** But, as our plan now is to finish the current scheduler version, I will work on the current code and think about improvements after (aka. read about techniques now).
