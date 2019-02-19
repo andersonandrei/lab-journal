@@ -329,3 +329,64 @@ launcher.py scheduler/fillerSched.py
 ** Papers and techniques
 *** I read the both papers that I selected on 06-02 and 12-02 and selected some algorthms to check later.
 *** But, as our plan now is to finish the current scheduler version, I will work on the current code and think about improvements after (aka. read about techniques now).
+* quinta, 14-02-2019
+** DONE Modify the schedulers on pybatsim and compare the differences.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-02-15 sex 10:47]
+:END:      
+ I did it on the fillerSched. Now I will start to try to write a pseudocode for the QNodes scheduler.
+* sexta, 15-02-2019
+** I should implement the algorithm of the Deliverable 2.2a. But, it asks for a function to predict the time to download a dataset for a specific QBox.
+** I asked to Alex, by Slack, and he answered me that they do not have idea how to implement it now. So, I should skip it now, and after choose another rule to use.
+** DONE Start to write a pseudocode to the algorithm on dlv.2.2a. 
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-02-15 sex 21:21]
+:END:      
+*** def schedule(self, job): 
+        print("Haaaaaaaaaaeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeey-------\n")
+        
+        print("Job: ", job.id)
+        print("Subtime: ", job.submit_time)
+        print("Job.profile", job.profile)
+        print("Profile", type(self.bs.profiles))
+        list_of_datasets = {}
+        for key in self.bs.profiles:
+            print(self.bs.profiles[key][job.profile]['datasets'])
+            qbox_key = job.profile
+            list_of_datasets[qbox_key] = self.bs.profiles[key][job.profile]['datasets']
+
+        for s in self.storage_controller._storages:
+            st = self.storage_controller.get_storage(s)
+            print("Datasets on Qbox: ", st.get_datas
+*** It is current : 
+**** getting the datasets asked by a job
+**** listing all the storages on the StorageControl and its datasets.
+** 
+** TODO Talk with Clement
+*** nix-shell https://github.com/oar-team/kapack/archive/master.tar.gz -A pybatsim
+*** Cant found batsim using it.
+*** 
+*** On the batsim command: --events ../events/greco/events.json . There is no events.json on the folder.
+*** 
+*** Should I populate the Storage on the QNodeSched?
+* segunda 18-02-2019
+** I finished my first version of the list of QBoxes that already has the specified dataset.
+** DONE 
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-02-19 ter 10:46]
+:END:      
+*** DONE Ask Clément
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-02-19 ter 10:45]
+:END:      
+**** Should I consider only one dataset per job and profile?
+***** If more than one dataset per job: Should I do a matrix of QBoxes that has each dataset and chose the one that has more datasets?
+***** No.
+**** Should I consider a dataset as ["ds1"] or at the presented way ["QB...:inpu, QB:...:0, QB...:..."] ?
+**** Can I commit and push my modifications in my branch on github?
+***** Yes.
+**** Mainly, I should put in the List only the QBoxes that already have ALL the required datasets from a job.
+* terça 19-02-2019
+** TODO
+*** Check to put the list_qboxes_with_datasets() on the StorageController.
+*** Dispatche some jobs to some QBoxes to test.
