@@ -390,3 +390,26 @@ launcher.py scheduler/fillerSched.py
 ** TODO
 *** Check to put the list_qboxes_with_datasets() on the StorageController.
 *** Dispatche some jobs to some QBoxes to test.
+* quarta 20-02-2019
+** I attended the presentation:
+*** David Shmoys: Models and algorithms for the Operation and Design of Bike-Sharing System
+** I finished my report to HPC course.
+* quinta 21-02-2019
+** Checked one more time the function to do the list L (the list of qboxes that already has the required datasets)
+** Try to submitt the jobs to the QBoxes.
+*** Here, the QNode uses onSubmission(job) to send it to the QBox.
+*** It is receiving the message JOB_REJECTED. Maybe I need to use the "events" to change the event type of the jobs.
+** Algorithm
+*** Im thinking in:
+**** for each job j:
+***** l = L(j)
+***** if l != null:
+****** for li in l:
+******* if li.requiresHeating():
+******** mapping[qbox] = j
+******** break
+******* else :
+******** ??
+***** else :
+****** qbox =  max_requiringHeating()
+****** mapping[qbox] = j
