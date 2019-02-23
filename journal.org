@@ -422,16 +422,33 @@ launcher.py scheduler/fillerSched.py
 *** TODO How to run a job, and why mine are been rejected?          :Clément:
 *** WAITING Verify how to manage the instances of a job           :Clément:
 :LOGBOOK:  
+- State "WAITING"    from "WAITING"    [2019-02-23 sáb 04:08] \\
+  I need to confirm, but, as I understood, in the workload we have jobs like: 
+    job 0 = {id=codeX-0 ...} job 1 = {id=codeX-1 ...} ... Job n = {id = codeX-n} }
+  So, each job with id started with "codeX" , for real, are tasks for the same job.
+  So, a job could be a unique job, or, if are composed by others, its not a job, it is a task.
+  Then, we read the jobs as QTask().
 - State "WAITING"    from "TODO"       [2019-02-22 sex 15:06] \\
   Is each instance a QTask on the new qarnotQNodeSched?
 :END:
 *** WAITING Why the QTask now? What did change?                   :Clément:
-*** TODO Verify which qbox had preemption
+:LOGBOOK:  
+- State "WAITING"    from "WAITING"    [2019-02-23 sáb 04:12] \\
+  As I commit above, I think that these Taks are jobs that composes other bigger jobs.
+:END:      
+*** WAITING Verify which qbox had preemption
+:LOGBOOK:  
+- State "WAITING"    from "TODO"       [2019-02-23 sáb 04:14] \\
+  I need to confirm. But as I understood. There are nothing registrating if some QBox has preemption.
+  By definition, preemption occurs when some executing job is stopped because another one with more priority arrives.
+  I think I need to check, by the priority of each job, if I would put the current job in some QBoxes, 
+  it would cause a preemption. So, I need to check the priority of the jobs that are already runnig in that QBox.
+:END:      
 *** WAITING Verify the qbox that require more work for the next hour
 :LOGBOOK:  
 - State "WAITING"    from "TODO"       [2019-02-22 sex 10:49] \\
   I did it, but not for the next hour exactly. I do not know how to check it.
   Also, I need to test it, but I do not know how to add heating requirement to a qbox.
-:END:      
-
-
+:END:
+* sabado 23-02-2019
+** I think I understood some previous questions. They are in the TODO list of last day. So, I noted there what I think tha I understood.
