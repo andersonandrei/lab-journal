@@ -452,3 +452,7 @@ launcher.py scheduler/fillerSched.py
 :END:
 * sabado 23-02-2019
 ** I think I understood some previous questions. They are in the TODO list of last day. So, I noted there what I think tha I understood.
+* domingo 24-02-2019
+** I changeg the workload in use, putting the "real data" from the qarnot-examples.
+** I started to do a function to get all indexes of jobs that compose the same main job.
+*** This way, each job is thinked as a task, then, the idea is to dispatch as many as possible taks to the same qbox.
