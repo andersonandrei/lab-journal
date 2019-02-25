@@ -502,3 +502,35 @@ launcher.py scheduler/fillerSched.py
   It is almost done. I should check it.
 :END:      
 **** TODO 2. The predicted downloads time of the datasets.        :Qarnot:
+** Andrei's algortihm:
+
+'''
+The idea is to order a waiting list of tasks by the profile.
+Then, find a list of qboxes that already has the required data set. 
+Then, for each qbox in this list, dispacth as many tasks, of the same profile, as possible.
+  If there are not enough qboxes to dispatch this tasks, find another options, with other rule.
+Update the list and start for the next group (ordered by profiles) of tasks.
+'''
+
+ waiting_lits
+ ordered_l = waiting_lists.orderedByProfile()
+ nb = len(ordered_l)
+ while (nb > 0):
+
+   #The amount of tasks with the same profiles, counted by the beginning of the list, until the first task with a different profile.
+   nb_same_profile = get_nb_same_profile(ordered_l) 
+   
+   qboxes_for_profile = L(ordered_l[ 0 ])
+
+   for qb in qboxes_for_profile:
+     nqb = qb.resources
+     if (nqb >= nb_same_profile):
+       dispatch(ordered_l[0:nb_same_profile], qb)
+     else:
+       dispatch(ordered_l[0:nqb], qb)
+       nb_same_profile -= nqb
+       ordered_l = ordered_l[nqb:]
+   
+   if(nb_same_profile > 0):
+     findQBoxAndDispatch()
+     ordered_l = ordered_l[nb_same_profile:]
