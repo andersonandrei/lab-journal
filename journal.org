@@ -16,7 +16,7 @@
 #+COLUMNS: %25ITEM %TODO %3PRIORITY %TAGS
 #+SEQ_TODO: TODO(t!) STARTED(s!) WAITING(w@) APPT(a!) | DONE(d!) CANCELLED(c!) DEFERRED(f!)
 
-* quarta, 06-02-2019
+* wednesday, 06-02-2019
 
 ** 18:02 Meeting, org-journal                                      :OrgMode:
 
@@ -79,7 +79,7 @@
 - State "DONE"       from "TODO"       [2019-02-13 qua 18:16]
 :END:      
 
-* quinta, 07-02-2019...
+* thursday, 07-02-2019...
 ** Journal
 
 *** Some tips with Pedro
@@ -108,7 +108,7 @@ DEADLINE: <2019-02-08 sex>
 - State "WAITING"    from "TODO"       [2019-02-07 qui 17:52] \\
   The installation of BATSIM is not working
 :
-* sexta, 08-02-2019
+* friday, 08-02-2019
 ** Batsim
 *** I installed it and performed the first example that includes: exectution and statistics.
 *** If I understood well the structure. It is:
@@ -197,7 +197,7 @@ It will keep the batsim oppened, waiting for the scheduler.
  #+END_SRC
 *** Running this analysis on both pybatsimexamples we can check the different results.
 
-* segunda, 11-02-2019
+* monday, 11-02-2019
 
 ** DONE To understand:
 :LOGBOOK:  
@@ -321,7 +321,7 @@ launcher.py scheduler/fillerSched.py
 :LOGBOOK:  
 - State "TODO"       from ""           [2019-02-12 ter 12:56]
 :END:
-* quarta, 13-02-2019
+* wednesday, 13-02-2019
 ** Qarnot meeting
 *** Administrative and update things with other teams.
 *** About my part I should finish the current version of the QNodes scheduler. This way we will have a full system working.
@@ -329,13 +329,13 @@ launcher.py scheduler/fillerSched.py
 ** Papers and techniques
 *** I read the both papers that I selected on 06-02 and 12-02 and selected some algorthms to check later.
 *** But, as our plan now is to finish the current scheduler version, I will work on the current code and think about improvements after (aka. read about techniques now).
-* quinta, 14-02-2019
+* thursday, 14-02-2019
 ** DONE Modify the schedulers on pybatsim and compare the differences.
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-02-15 sex 10:47]
 :END:      
  I did it on the fillerSched. Now I will start to try to write a pseudocode for the QNodes scheduler.
-* sexta, 15-02-2019
+* friday, 15-02-2019
 ** I should implement the algorithm of the Deliverable 2.2a. But, it asks for a function to predict the time to download a dataset for a specific QBox.
 ** I asked to Alex, by Slack, and he answered me that they do not have idea how to implement it now. So, I should skip it now, and after choose another rule to use.
 ** DONE Start to write a pseudocode to the algorithm on dlv.2.2a. 
@@ -369,7 +369,7 @@ launcher.py scheduler/fillerSched.py
 *** On the batsim command: --events ../events/greco/events.json . There is no events.json on the folder.
 *** 
 *** Should I populate the Storage on the QNodeSched?
-* segunda 18-02-2019
+* monday, 18-02-2019
 ** I finished my first version of the list of QBoxes that already has the specified dataset.
 ** DONE 
 :LOGBOOK:  
@@ -386,15 +386,15 @@ launcher.py scheduler/fillerSched.py
 **** Can I commit and push my modifications in my branch on github?
 ***** Yes.
 **** Mainly, I should put in the List only the QBoxes that already have ALL the required datasets from a job.
-* terça 19-02-2019
+* tuesday, 19-02-2019
 ** TODO
 *** Check to put the list_qboxes_with_datasets() on the StorageController.
 *** Dispatche some jobs to some QBoxes to test.
-* quarta 20-02-2019
+* wednesday, 20-02-2019
 ** I attended the presentation:
 *** David Shmoys: Models and algorithms for the Operation and Design of Bike-Sharing System
 ** I finished my report to HPC course.
-* quinta 21-02-2019
+* thursday, 21-02-2019
 ** Checked one more time the function to do the list L (the list of qboxes that already has the required datasets)
 ** Try to submitt the jobs to the QBoxes.
 *** Here, the QNode uses onSubmission(job) to send it to the QBox.
@@ -417,7 +417,7 @@ launcher.py scheduler/fillerSched.py
 ***** else:
 ****** waitingList.append(j)
 **** 
-* sexta 22-02-2019
+* friday, 22-02-2019
 ** TODO Verify how to:
 *** DONE How to run a job, and why mine are been rejected?        :Clément:
 :LOGBOOK:  
@@ -467,13 +467,13 @@ launcher.py scheduler/fillerSched.py
 
   *??* CHECK IT
 :END:
-* sabado 23-02-2019
+* saturday, 23-02-2019
 ** I think I understood some previous questions. They are in the TODO list of last day. So, I noted there what I think tha I understood.
-* domingo 24-02-2019
+* sunday, 24-02-2019
 ** I changeg the workload in use, putting the "real data" from the qarnot-examples.
 ** I started to do a function to get all indexes of jobs that compose the same main job.
 *** This way, each job is thinked as a task, then, the idea is to dispatch as many as possible taks to the same qbox.
-* segunda 25-02-2019
+* monday, 25-02-2019
 ** I will start to work with the last version of the scheduler in the pybatsim-temperature branch.
 ** It uses QTask as the read input from the workload (aka. each input is a task and many tasks compose a job).
 ** This new one are implement almost the scheduler of the delivrable 2.2a. Like:
@@ -534,3 +534,5 @@ Update the list and start for the next group (ordered by profiles) of tasks.
    if(nb_same_profile > 0):
      findQBoxAndDispatch()
      ordered_l = ordered_l[nb_same_profile:]
+** New command                                                      :OrgMode:
+*** To find and replace text: M + %
