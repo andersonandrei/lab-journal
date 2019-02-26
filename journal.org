@@ -536,3 +536,10 @@ Update the list and start for the next group (ordered by profiles) of tasks.
      ordered_l = ordered_l[nb_same_profile:]
 ** New command                                                      :OrgMode:
 *** To find and replace text: M + %
+* tuesday, 26-02-2019
+** DONE Implement the previous algorithm
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-02-26 ter 18:42]
+- The structure are done. But BATSIM is not working with this version of scheduler. 
+  So, I need to wait the fixes to check.
+:END:      
