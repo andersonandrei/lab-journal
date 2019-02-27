@@ -542,4 +542,26 @@ Update the list and start for the next group (ordered by profiles) of tasks.
 - State "DONE"       from "TODO"       [2019-02-26 ter 18:42]
 - The structure are done. But BATSIM is not working with this version of scheduler. 
   So, I need to wait the fixes to check.
+:END:
+* wednesday, 27-02-2019
+** TODO Work on
+*** TODO the priority of QBoxes that have available QRads without preemption
+**** (aka. Run the taks using the priority levels: background, low and high.
+*** CANCELLED the priority of QBoxes that requires the most work in the next hour
+:LOGBOOK:  
+- State "CANCELLED"  from "TODO"       [2019-02-27 qua 11:10]
 :END:      
+**** (skip it now)
+*** TODO the count of available QRads for the priority of j in descending order
+**** (aka. The same as the first TODO)
+*** WAITING the predicted download time of the data sets.
+:LOGBOOK:  
+- State "WAITING"    from "CANCELLED"  [2019-02-27 qua 11:10] \\
+  Waiting the other team develop it.
+- State "CANCELLED"  from "TODO"       [2019-02-27 qua 11:10]
+:END:
+*** DONE To merge my modifications on the StorageController with the Clément temperature branch.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-02-27 qua 17:17]
+:END:      
+*** TODO Organize the code. Use the doDispatch() as the main peace of the method schedule(). At the moment, it is duplicated.
