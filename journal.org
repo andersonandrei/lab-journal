@@ -545,14 +545,20 @@ Update the list and start for the next group (ordered by profiles) of tasks.
 :END:
 * wednesday, 27-02-2019
 ** TODO Work on
-*** TODO the priority of QBoxes that have available QRads without preemption
+*** DONE the priority of QBoxes that have available QRads without preemption
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-03-01 sex 15:43]
+:END:      
 **** (aka. Run the taks using the priority levels: background, low and high.
 *** CANCELLED the priority of QBoxes that requires the most work in the next hour
 :LOGBOOK:  
 - State "CANCELLED"  from "TODO"       [2019-02-27 qua 11:10]
 :END:      
 **** (skip it now)
-*** TODO the count of available QRads for the priority of j in descending order
+*** DONE the count of available QRads for the priority of j in descending order
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-03-01 sex 15:44]
+:END:      
 **** (aka. The same as the first TODO)
 *** WAITING the predicted download time of the data sets.
 :LOGBOOK:  
@@ -564,4 +570,13 @@ Update the list and start for the next group (ordered by profiles) of tasks.
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-02-27 qua 17:17]
 :END:      
-*** TODO Organize the code. Use the doDispatch() as the main peace of the method schedule(). At the moment, it is duplicated.
+*** DONE Organize the code. Use the doDispatch() as the main peace of the method schedule(). At the moment, it is duplicated.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-03-01 sex 15:44]
+- [01-03-2019] As I found the error, I rewrote the code.
+:END:      
+* friday, 01-03-2019
+** I found an erro in my last algorithm.
+** Let's rewrite it. Done.
+** Clément fixed batsim and changed something in the QNodeSched. I merged the codes.
+** TODO Check on next monday, how to run this version ?
