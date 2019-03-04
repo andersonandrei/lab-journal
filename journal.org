@@ -580,3 +580,30 @@ Update the list and start for the next group (ordered by profiles) of tasks.
 ** Let's rewrite it. Done.
 ** Clément fixed batsim and changed something in the QNodeSched. I merged the codes.
 ** TODO Check on next monday, how to run this version ?
+* saturday, 02-03-2019
+** I added the structure to use the predicted download time of the data sets, when it is ready.
+* monday, 04-03-2019
+** DONE 
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-03-04 seg 18:23]
+:END:      
+*** DONE Run the updated batsim and qarnotNodeSched.py
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-03-04 seg 18:22]
+:END:      
+**** To run it, I copied the folder sample-data/simple from simulator-prototype to batsim to make it easier.
+**** The command is: ./batsim -p ../sample-data/simple/platform_simple.xml -T 1 --enable-dynamic-jobs --events ../sample-data/simple/events_simple.json -w ../sample-data/simple/workload_simple.json
+*** DONE Try to run mine and correct the possible *errors*
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-03-04 seg 18:22]
+:END:      
+**** DONE To decide if I will create a QTask using the job.profile, or if I will get it after using the task.job_id :Clément:
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-03-04 seg 15:47]
+- I choose to add into the QTask() the profile. I should merge it with the main qarnotBoxSched.py
+:END:
+** I got a little error in the qarnotNodeSched.py. It is getting the number of slot of bkgd, low or hight priority for each qmobo :Clément:
+** but, it is not verifying if the value is zero. So, the execution have never passed from the first priority case, bkgd.
+*** Clément already fixed it in his official version.
+** I ran my first version of the scheduler !!!!!!!!!!!!!!  
+*** It is working. Now, the next step is to check some more workloads and compare the performance with the official one. 
