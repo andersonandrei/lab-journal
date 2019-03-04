@@ -606,4 +606,9 @@ Update the list and start for the next group (ordered by profiles) of tasks.
 ** but, it is not verifying if the value is zero. So, the execution have never passed from the first priority case, bkgd.
 *** Clément already fixed it in his official version.
 ** I ran my first version of the scheduler !!!!!!!!!!!!!!  
-*** It is working. Now, the next step is to check some more workloads and compare the performance with the official one. 
+*** It is working.
+*** I generated the csv files to it and to the qarnotNodeSched to try to compare some values:
+**** The allocated_resources in the _jobs.csv changed. Mine has in almost the cases, less allocation.
+**** If I understood well, it shows how many resources were allocated for each job. So, it show that mine is allocating less resources,
+**** I am concluding it means that the allocation decision is working, and the tasks or jobs with the same profile (the tasks that composes the same job) are not allocating new resources everytime.
+*** Now, the next step is to check some more workloads and really compare the performance with the official one.
