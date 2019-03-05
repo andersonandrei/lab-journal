@@ -6,7 +6,7 @@
 #+LANGUAGE:    en
 #+TAGS: noexport(n) Stats(S)
 #+TAGS: Teaching(T) R(R) OrgMode(O) Python(P)
-#+TAGS: Book(b) Code(C) Paper(P) Scheduler(S) Denis(d) Clément(c) Andrei(a) Qarnot(q)
+#+TAGS: Book(b) Code(C) Paper(P) Presentation(p) Scheduler(S) Denis(d) Clément(c) Andrei(a) Qarnot(q)
 #+TAGS: DataVis(v) PaperReview(W)
 #+EXPORT_SELECT_TAGS: Blog
 #+OPTIONS:   H:3 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
@@ -612,3 +612,92 @@ Update the list and start for the next group (ordered by profiles) of tasks.
 **** If I understood well, it shows how many resources were allocated for each job. So, it show that mine is allocating less resources,
 **** I am concluding it means that the allocation decision is working, and the tasks or jobs with the same profile (the tasks that composes the same job) are not allocating new resources everytime.
 *** Now, the next step is to check some more workloads and really compare the performance with the official one.
+* thursday, 05-03-2019
+** TODO To Compare the results
+*** DONE First point: [Evalys][https://gitlab.inria.fr/batsim/evalys]
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-03-05 ter 18:28]
+- It shows some parameter for the jobs and workload. Using it right now, I am looking to the Gantt Chart to see how the tasks are beeing scheduled.
+:END:
+*** TODO To compare the temparatures at the beggining and end of the simulation.
+** Presentation: *Parallel Scheduling of DAGs under Memory Constraints* :Presentation:
+*** Use DAGs to describe
+*** Problem: Shared memory (Limitade resources)
+** Results                                                           :ATTACH: :ATTACH:
+
+:PROPERTIES:
+:Attachments: qarnotNodeSchedAndrei_jobs_results_first.png qarnotNodeSchedAndrei_jobs_results_first_second.png qarnotNodeSchedAndrei_jobs_results_triplet.png qarnotNodeSched_jobs_results.png qarnotNodeSchedAndrei_jobs_results_first13.png qarnotNodeSchedAndrei_jobs_results_first_triplet.png
+:ID:       88869df9-d5d4-400e-b11e-b8e41a439426
+:END:
+ 
+To compare the difference between the qarnotNodeSched and my implementation I am running the same workload for both and then, I am using the evalys to plot some results and compare it.
+For the first moment, I ran the simple wokload, with 8 jobs.
+I got the following results:
+
+First of all, the current scheduler does not use anything about location, neither download or transfer data sets to the QBox where the tasks are dispatched.
+It just simulate the job's execution but does not do nothing about the data managment.
+So, to check my scheduler, I am adding at the beggining of the simulation some data sets in some QBoxes.
+My implementation check if exists a list (L) of QBoxes that already have the required data sets. Then, dispatch the tasks considering this list (L) and the status of the Mobos into the QBoxes (bkgd, low and high).
+If L is empty it just consider the status of the Mobos, as the current scheduler.
+
+Here we have the plots for the current qarnotNodeSched:
+#+NAME: fig:0
+#+ATTR_ORG: :width 500px
+[[file:data/88/869df9-d5d4-400e-b11e-b8e41a439426/qarnotNodeSched_jobs_results.png]]
+
+Note that we have tasks from the same job scheduled to different QBoxes.
+
+Now, for all plots, I am adding data sets in some QBoxes, which will change plot by plot.
+I will use q1 to the qbox above and q2 to the qbox under:
+
+_______________________________________________________________
+
+
+DATASET_ADDED: first on q2
+
+#+NAME: fig:1
+#+attr_org: :width 500px
+[[file:data/88/869df9-d5d4-400e-b11e-b8e41a439426/qarnotNodeSchedAndrei_jobs_results_first.png]]
+
+We can see that all first tasks came down.
+______________________________________________________________
+
+DATASET_ADDED: first and second on q2
+
+#+NAME: fig:2
+#+attr_org: :width 500px
+[[file:data/88/869df9-d5d4-400e-b11e-b8e41a439426/qarnotNodeSchedAndrei_jobs_results_first_second.png]]
+
+We can see that all first tasks came down, as the second task.
+_____________________________________________________________
+
+DATASET_ADDED: triple on q2
+
+#+NAME: fig:3
+#+attr_orf: :width 500px
+[[file:data/88/869df9-d5d4-400e-b11e-b8e41a439426/qarnotNodeSchedAndrei_jobs_results_triplet.png]]
+
+We can see that all triplet tasks came down.
+
+DATASET_ADDED: first on q1
+
+#+NAME: fig:4
+#+ATTR_ORG: :width 500px
+[[file:data/88/869df9-d5d4-400e-b11e-b8e41a439426/qarnotNodeSchedAndrei_jobs_results_first13.png]]
+
+We can see that all first tasks goes up.
+
+______________________________________________________________
+
+DATASET_ADDED: first and triplet on q2
+
+#+NAME: fig:5
+#+ATTR_ORG: :width 500px
+[[file:data/88/869df9-d5d4-400e-b11e-b8e41a439426/qarnotNodeSchedAndrei_jobs_results_first_triplet.png]]
+
+We can see that all triplet taks came down, as the first tasks.
+_______________________________________________________________
+
+So, I am concluding that my implementation are working in the sens of take care about the location of the data sets that already exists on the QBoxes. :)
+
+
