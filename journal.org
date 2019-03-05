@@ -623,6 +623,8 @@ Update the list and start for the next group (ordered by profiles) of tasks.
 ** Presentation: *Parallel Scheduling of DAGs under Memory Constraints* :Presentation:
 *** Use DAGs to describe
 *** Problem: Shared memory (Limitade resources)
+** TODO To check the code
+*** I am build the list L before checking all states (bkgd, low and high). It is not wrong for results, but maybe I could do only one time and get a better performance.
 ** Results                                                           :ATTACH: :ATTACH:
 
 :PROPERTIES:
@@ -699,5 +701,6 @@ We can see that all triplet taks came down, as the first tasks.
 _______________________________________________________________
 
 So, I am concluding that my implementation are working in the sens of take care about the location of the data sets that already exists on the QBoxes. :)
-
+** 
+* 
 
