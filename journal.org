@@ -614,7 +614,7 @@ Update the list and start for the next group (ordered by profiles) of tasks.
 *** Now, the next step is to check some more workloads and really compare the performance with the official one.
 * thursday, 05-03-2019
 ** TODO To Compare the results
-*** DONE First point: [Evalys][https://gitlab.inria.fr/batsim/evalys]
+*** DONE First point: [Evalys][[https://gitlab.inria.fr/batsim/evalys]]
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-03-05 ter 18:28]
 - It shows some parameter for the jobs and workload. Using it right now, I am looking to the Gantt Chart to see how the tasks are beeing scheduled.
@@ -628,12 +628,12 @@ Update the list and start for the next group (ordered by profiles) of tasks.
 ** Results                                                           :ATTACH: :ATTACH:
 
 :PROPERTIES:
-:Attachments: qarnotNodeSchedAndrei_jobs_results_first.png qarnotNodeSchedAndrei_jobs_results_first_second.png qarnotNodeSchedAndrei_jobs_results_triplet.png qarnotNodeSched_jobs_results.png qarnotNodeSchedAndrei_jobs_results_first13.png qarnotNodeSchedAndrei_jobs_results_first_triplet.png
+:Attachments: qarnotNodeSchedAndrei_jobs_results_first.png qarnotNodeSchedAndrei_jobs_results_first_second.png qarnotNodeSchedAndrei_jobs_results_triplet.png qarnotNodeSched_jobs_results.png qarnotNodeSchedAndrei_jobs_results_first13.png qarnotNodeSchedAndrei_jobs_results_first_triplet.png qarnotNodeSchedAndrei_big_jobs_results_first_triplet.png qarnotNodeSchedAndrei_big_jobs_results_first.png qarnotNodeSched_big_jobs_results.png
 :ID:       88869df9-d5d4-400e-b11e-b8e41a439426
 :END:
  
 To compare the difference between the qarnotNodeSched and my implementation I am running the same workload for both and then, I am using the evalys to plot some results and compare it.
-For the first moment, I ran the simple wokload, with 8 jobs.
+For the first moment, I ran the simple wokload, with 8 jobs, and 2 QBoxes which has 7 and 3 QMobos each one.
 I got the following results:
 
 First of all, the current scheduler does not use anything about location, neither download or transfer data sets to the QBox where the tasks are dispatched.
@@ -644,7 +644,7 @@ If L is empty it just consider the status of the Mobos, as the current scheduler
 
 Here we have the plots for the current qarnotNodeSched:
 #+NAME: fig:0
-#+ATTR_ORG: :width 500px
+#+ATTR_ORG: :width 700px
 [[file:data/88/869df9-d5d4-400e-b11e-b8e41a439426/qarnotNodeSched_jobs_results.png]]
 
 Note that we have tasks from the same job scheduled to different QBoxes.
@@ -700,7 +700,65 @@ DATASET_ADDED: first and triplet on q2
 We can see that all triplet taks came down, as the first tasks.
 _______________________________________________________________
 
-So, I am concluding that my implementation are working in the sens of take care about the location of the data sets that already exists on the QBoxes. :)
-** 
-* 
+*Looking to the dataset from the Qarnot extractor: 1-day*:
 
+Simulating with the current scheduler:
+
+#+NAME: fig:6
+#+ATTR_ORG: :width 500
+[[file:data/88/869df9-d5d4-400e-b11e-b8e41a439426/qarnotNodeSched_big_jobs_results.png]]
+
+________________________________________________________________
+
+Now, simulating with my scheduler, adding some datasets we can se the follow plots:
+
+DATASET_ADDED: one randomly 
+
+#+NAME: fig:7
+#+ATTR_ORG: :width 500
+[[file:data/88/869df9-d5d4-400e-b11e-b8e41a439426/qarnotNodeSchedAndrei_big_jobs_results_first.png]]
+
+_________________________________________________________________
+
+DATASET_ADDED: two randomly
+
+#+NAME: fig:8
+#+ATTR_ORG: :width 500
+[[file:data/88/869df9-d5d4-400e-b11e-b8e41a439426/qarnotNodeSchedAndrei_big_jobs_results_first_triplet.png]]
+
+
+For both we can see modifications in the GANTT Chart. As it has a lot of information, it is not so clear to read. 
+But we can see the behavior changing in order of the data sets modifications.
+_________________________________________________________________
+
+So, I am concluding that my implementation are working in the sens of take care about the location of the data sets that already exists on the QBoxes. :)
+
+* wednesday, 06-02-2019
+** Meeting about the project
+*** Continue working on my implementation
+*** Pierre's feedback: Try to draw an overview of the actions
+**** Like this diagrams:                                             :ATTACH:
+:PROPERTIES:
+:Attachments: diagram%20model1.jpeg diagram%20model2.jpeg
+:ID:       336b7389-3c9a-47f4-af8e-473d7e0891a6
+:END:
+
+#+ATTR_ORG :width 200
+[[file:data/33/6b7389-3c9a-47f4-af8e-473d7e0891a6/diagram model1.jpeg]]
+
+#+ATTR_ORG :width 200
+[[file:data/33/6b7389-3c9a-47f4-af8e-473d7e0891a6/diagram model2.jpeg]]
+
+** TODO 
+*** TODO To talk with Alex to get the current state of the StorageController
+*** DONE To talk with Pierre to check the worflow and how to analyze the temperature
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-03-06 qua 16:21]
+- We will aks the other team to extract this data from the DB. And so, I can check and plot it.
+  It will be a plot like: 3 lines, 1 from the real Qarnot data, 1 from each scheduler. So, it will possible to compare which one is better at this sense.
+:END:      
+*** WAITING To generate different kinds of workloads (more taks than resources) to test it.
+:LOGBOOK:  
+- State "WAITING"    from "TODO"       [2019-03-06 qua 16:23] \\
+  The generator uses the real Qarnot Serves/DB, it is so busy now.
+:END:      
