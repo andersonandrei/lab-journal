@@ -761,4 +761,28 @@ So, I am concluding that my implementation are working in the sens of take care 
 :LOGBOOK:  
 - State "WAITING"    from "TODO"       [2019-03-06 qua 16:23] \\
   The generator uses the real Qarnot Serves/DB, it is so busy now.
+:END:
+* tuesday, 07-02-2019
+** TODO
+*** WAITING To make the qarnotScheduler works with 1week workload :Clément:
+:LOGBOOK:  
+- State "WAITING"    from "TODO"       [2019-03-07 qui 17:34] \\
+  Almost done. 
+  * We added one more line in the QBoxSched, need to commit it.
 :END:      
+*** WAITING To get one day more of simulation data using the qarnot-extractor
+:LOGBOOK:  
+- State "WAITING"    from "TODO"       [2019-03-07 qui 17:31] \\
+  Still waiting for a good moment.
+:END:      
+*** DONE To generate a bigger workload 
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-03-07 qui 17:31]
+- I took the 1 day workload and removed many Qboxes. Now it has more jobs than resources.
+:END:      
+**** TODO To put two days together
+**** TODO TO try to do something like this with the simple workload
+** I also changed the simple workloads. Now it has 4 Mobos and so, jobs are been rejected.
+** It still allocate the jobs as the data set location, but, if there ia a conflict in the submission time with another task,
+** it is rejected.
+** TODO To check with Clément this rejections. I think the jobs should be reeschedule, but we do not have it yet, I think.
