@@ -762,7 +762,7 @@ So, I am concluding that my implementation are working in the sens of take care 
 - State "WAITING"    from "TODO"       [2019-03-06 qua 16:23] \\
   The generator uses the real Qarnot Serves/DB, it is so busy now.
 :END:
-* tuesday, 07-02-2019
+* tuesday, 07-03-2019
 ** TODO
 *** WAITING To make the qarnotScheduler works with 1week workload :Clément:
 :LOGBOOK:  
@@ -790,9 +790,42 @@ So, I am concluding that my implementation are working in the sens of take care 
 - State "DONE"       from "TODO"       [2019-03-08 sex 10:47]
 It happened because the 'gambiarra' that we did to try to run the 1-week workload.
 :END:      
-* friday, 08-02-2019
+* friday, 08-03-2019
 ** TODO
 *** TODO Implement the re-schedule method.
 **** The QBoxes should 'reject' and so, the QNode should put it again in the waiting_list.
 **** It is already implemented, but it is confuse because it adds and removes from differente instances of the waiting_list and is getting error because are deleting more than adding.
 ***** So, I will try to create a reject_list to manage during some bigger step, then put it back on the wainting list.
+* sunday, 10-03-2019
+** To continue testing the case of workloads failing.
+** DONE 
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-03-10 dom 20:49]
+:END:      
+*** DEFERRED Create a new workload, smaller, but also with more taks than resources.
+:LOGBOOK:  
+- State "DEFERRED"   from "DONE"       [2019-03-10 dom 20:49]
+- State "DONE"       from "TODO"       [2019-03-10 dom 20:49]
+:END:      
+*** DONE Organize the prints to output
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-03-10 dom 20:49]
+:END:      
+** To try to do some automatic tests for different workloads
+** TODO Correct: Possible Bug's list
+*** TODO The taks are not removed from the queue_task after dispatched. Only onJobCompletion(). This way, every doDispatch() try to re-dispatch all taks. 
+**** Which does not happen because the number of instances for them is 0. But, anyway, doDispatch() consume times trying to do it.
+*** DONE When a job is rejected, the number_instances_left is not increased.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-03-10 dom 21:21]
+:END:      
+*** DONE When a job is rejected, the num of available_mobos in tup[] is not increased.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-03-10 dom 21:21]
+:END:       
+*** TODO On the QBoxSched:
+**** On onDispatchedInstances() :
+***** The method scheduleInstace() are receiving the waiting_instances duplicated. So, it is happening in the onDispatchedInstances() at some point.
+**** It prints "Still have x instances" already with the duplicated list. 
+**** It is possible to be verified printing the waiting_list between the logs "received x intances" and "still have x instances".
+*** TODO To verify the mapToQbox() and then implement a removeFromQBox().
