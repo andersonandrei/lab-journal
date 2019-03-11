@@ -829,3 +829,14 @@ It happened because the 'gambiarra' that we did to try to run the 1-week workloa
 **** It prints "Still have x instances" already with the duplicated list. 
 **** It is possible to be verified printing the waiting_list between the logs "received x intances" and "still have x instances".
 *** TODO To verify the mapToQbox() and then implement a removeFromQBox().
+* monday, 11-03-2019
+** Some Corrections
+*** There was an error on JobCompletion(). It was direct dispatching a job, but was not adding it in the qtask.running_instances.
+**** Solved.
+*** There was a Bug on the updateAndReport() on the QBox level. It was getting wrong the available resources, then inform wrong values to the doDispatch() on the QNode level.
+**** Because it, NodeSched was dispatching more tasks than possible, making the QBox creates a waiting_instances list.      
+**** It was corrected and now the doDispatch are sending valid amount of tasks to each QBox. 
+*** In the simple_more workload, the triplet_ tasks are not ending. It is dispatched but have never end. Then, Batsim becomes in deadlock.
+**** I changed the priority value of triplet_ from -5 to 15 and it works well for this case. 
+*** For 1 week it still not working.
+*** TODO To check the priority conditions
