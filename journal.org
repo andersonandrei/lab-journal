@@ -839,4 +839,22 @@ It happened because the 'gambiarra' that we did to try to run the 1-week workloa
 *** In the simple_more workload, the triplet_ tasks are not ending. It is dispatched but have never end. Then, Batsim becomes in deadlock.
 **** I changed the priority value of triplet_ from -5 to 15 and it works well for this case. 
 *** For 1 week it still not working.
-*** TODO To check the priority conditions
+*** DONE To check the priority conditions.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-03-12 ter 16:36]
+- The problem was the direct_dispatch().
+:END:      
+* tuesday, 12-03-2019
+** Experiment table design
+
+| *Workload*  | *Workload* |  *Workload* |          |   |   |
+| *Name*      |    *Tasks* | *Resources* | *Status* |   |   |
+|             |            |             |          |   |   |
+| simple      |          8 |          10 | PASS     |   |   |
+| simple_more |          8 |           4 | PASS     |   |   |
+| 1day        |        418 |        1000 | PASS     |   |   |
+| 1day_more   |        418 |         724 | PASS     |   |   |
+| 1week       |          x |           x | PASS     |   |   |
+| 1week_more  |          x |           x | PASS     |   |   |
+|             |            |             |          |   |   |
+** The simulation ran correclty wihtou the direct_dispatch(). So we will will keep like this for the momento and try to re-implement it.
