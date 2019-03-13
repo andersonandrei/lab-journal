@@ -16,13 +16,17 @@
 #+COLUMNS: %25ITEM %TODO %3PRIORITY %TAGS
 #+SEQ_TODO: TODO(t!) STARTED(s!) WAITING(w@) APPT(a!) | DONE(d!) CANCELLED(c!) DEFERRED(f!)
 
-* wednesday, 06-02-2019
+* Week 06-12 / 13-02
+** wednesday, 06-02-2019
+:LOGBOOK:  
+- State "TODO"       from ""           [2019-03-13 qua 15:16]
+:END:      
 
-** 18:02 Meeting, org-journal                                      :OrgMode:
+*** 18:02 Meeting, org-journal                                    :OrgMode:
 
-*** Starting on org-journal
-**** Trying o do something in the org-jornal1. 
-***** Creating a list
+**** Starting on org-journal
+***** Trying o do something in the org-jornal1. 
+****** Creating a list
      1. Hello
      2. Hi
      3. Salut
@@ -30,30 +34,30 @@
      4. Learning how to do some lists
      5. Creating a lot of topics
 
-*** Todays meeting:
-**** Specified each part in the project.
-**** Actually, we have two main layers to keep attention: scheduler and allocation.
-**** My work will be on the allocation: *DO THE FIRST VERSION OF THE SCHEDULER*:
-***** For this, I will use some data from:
-****** The INPUT (jobs)
-******* Priority
-******* Client
-******* etc
-****** The QBoxes (status from each QBOX):
-******* Local data
-******* Status(how full it is)
+**** Todays meeting:
+***** Specified each part in the project.
+***** Actually, we have two main layers to keep attention: scheduler and allocation.
+***** My work will be on the allocation: *DO THE FIRST VERSION OF THE SCHEDULER*:
+****** For this, I will use some data from:
+******* The INPUT (jobs)
+******** Priority
+******** Client
+******** etc
+******* The QBoxes (status from each QBOX):
+******** Local data
+******** Status(how full it is)
 
-*** DONE LIST
+**** DONE LIST
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-02-13 qua 18:16]
 :END:      
-**** DONE Learn BatSim
+***** DONE Learn BatSim
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-02-07 qui 14:29]
 - State "TODO"       from "WAITING"    [2019-02-07 qui 14:29]
 - State "WAITING"    from "TODO"       [2019-02-07 qui 14:28] \\
   Waiting ...
-***** WAITIGN Read about it
+****** WAITIGN Read about it
 :END:      
 *:LOGBOOK:  
 - State "WAITING"    from "TODO"       [2019-02-07 qui 14:36] \\
@@ -61,61 +65,61 @@
 - State "DONE"       from "TODO"       [2019-02-11 seg 17:35]
 :END:      
 :END:
-***** DONE First examples
+****** DONE First examples
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-02-11 seg 17:* TODO Install
-**** DONE Read two papers
+***** DONE Read two papers
 :LOGBOOK:  
 - State "DONE"       from "WAITING"    [2019-02-13 qua 18:16]
 - State "WAITING"    from "DONE"       [2019-02-11 seg 17:35]
 - State "DONE"       from "TODO"       [2019-02-11 seg 17:35]
 :END:      
-***** DONE How future buildings...
+****** DONE How future buildings...
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-02-13 qua 18:16]
 :END:      
-***** DONE Heating as a cloud...
+****** DONE Heating as a cloud...
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-02-13 qua 18:16]
 :END:      
 
-* thursday, 07-02-2019...
-** Journal
+** thursday, 07-02-2019...
+*** Journal
 
-*** Some tips with Pedro
+**** Some tips with Pedro
 
-**** Headers
+***** Headers
 
-**** Tags
+***** Tags
 
-**** etc
+***** etc
 
-** Research
+*** Research
 
-*** BATSIM
+**** BATSIM
 
-**** DONE First examples on BATSIM website
+***** DONE First examples on BATSIM website
 :LOGBOOK:  
 - State "DONE"       from ""           [2019-02-08 sex 18:00]
 - State "WAITING"    from "TODO"       [2019-02-07 qui 17:52] \\
   The installation is not working
 :END:      
 
-**** DONE First example on GitLab Prototype repo
+***** DONE First example on GitLab Prototype repo
 DEADLINE: <2019-02-08 sex>
 :LOGBOOK:  
 - State "DONE"       from "WAITING"    [2019-02-11 seg 17:33]
 - State "WAITING"    from "TODO"       [2019-02-07 qui 17:52] \\
   The installation of BATSIM is not working
 :
-* friday, 08-02-2019
-** Batsim
-*** I installed it and performed the first example that includes: exectution and statistics.
-*** If I understood well the structure. It is:
+** friday, 08-02-2019
+*** Batsim
+**** I installed it and performed the first example that includes: exectution and statistics.
+**** If I understood well the structure. It is:
 1. Batsim -> Simulates everything.
 2. A scheduler -> Takes the decisions.
 
-**** To see everything running, we can use 2 windows, one for each thing.
+***** To see everything running, we can use 2 windows, one for each thing.
 *NOTE:* Here, everything was setted to be in the /tmp.
 
 #+NAME: batsim-side
@@ -136,20 +140,20 @@ It will keep the batsim oppened, waiting for the scheduler.
                     --schedcmd='batsched -v easy_bf'
 #+END_SRC 
  It will use robin to run the scheduler batsched with the mode easy_bf.
-** pybatsim
-*** Runs a schedular for the batsim.
-*** Configuration
-**** To install by: pip install pybatsim
-**** To clone [[https://gitlab.inria.fr/batsim/pybatsim][PyBatsim-repository]] to have access to the schedulers implemented there.
-*** To run its scheduler:
-**** To run the batsim as the same way.
-**** To run the schedulers, acess the repository and try:
-***** pybatsim schedulers/scheduler.py
-**** I tried:
-***** pybatsim schedulers/fillerSched.py
-***** pybatsim schedulers/schedFcfs.py
-** statistics
-*** The batsim mainpage offer a example of statistic analysis:
+*** pybatsim
+**** Runs a schedular for the batsim.
+**** Configuration
+***** To install by: pip install pybatsim
+***** To clone [[https://gitlab.inria.fr/batsim/pybatsim][PyBatsim-repository]] to have access to the schedulers implemented there.
+**** To run its scheduler:
+***** To run the batsim as the same way.
+***** To run the schedulers, acess the repository and try:
+****** pybatsim schedulers/scheduler.py
+***** I tried:
+****** pybatsim schedulers/fillerSched.py
+****** pybatsim schedulers/schedFcfs.py
+*** statistics
+**** The batsim mainpage offer a example of statistic analysis:
 #+BEGIN_LaTeX
 
 #+END_LaTe
@@ -195,78 +199,78 @@ It will keep the batsim oppened, waiting for the scheduler.
     ggsave('plot_exectime_size.pdf')
 
  #+END_SRC
-*** Running this analysis on both pybatsimexamples we can check the different results.
+**** Running this analysis on both pybatsimexamples we can check the different results.
 
-* monday, 11-02-2019
+** monday, 11-02-2019
 
-** DONE To understand:
+*** DONE To understand:
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-02-11 seg 17:07]
 :END:      
 
-*** DONE The INPUT format for batsim;
+**** DONE The INPUT format for batsim;
 :LOGBOOK:  
 - State "DONE"       from "CANCELLED"  [2019-02-11 seg 17:07]
 :END:      
 
-*** DONE Some schedular examples;
+**** DONE Some schedular examples;
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-02-11 seg 17:07]
 :END:
 
-** The workflow:
+*** The workflow:
 
-*** Batsim-Scheduler communication:
+**** Batsim-Scheduler communication:
 
-**** Messages, JSON, via request-reply model:
+***** Messages, JSON, via request-reply model:
 
-***** Contraints format:
+****** Contraints format:
 
-****** now
+******* now
 
-****** events
+******* events
 
-******* timestamp
+******** timestamp
 
-******* type
+******** type
 
-******* data
+******** data
 
-****** And to differ the message, we change the *event type* as :
+******* And to differ the message, we change the *event type* as :
 
-******* BIDIRECTIONAL
+******** BIDIRECTIONAL
 
-******* BATSIM => SCHEDULER
+******** BATSIM => SCHEDULER
 
-******* SCHEDULER => BATSIM
+******** SCHEDULER => BATSIM
 
-**** Workload:
+***** Workload:
 
-***** The workload is an Input combined as:
+****** The workload is an Input combined as:
 
-****** Jobs: Users requests. It has:
+******* Jobs: Users requests. It has:
 
-******* id, subtime, res, profile, walltime, +
-****** Profiles: Defines how the job execution should be simulated. It has:
-******* type, etc. Where the type could be:
-******** delay, prallel task, homogeneous pararllel task, etc.
+******** id, subtime, res, profile, walltime, +
+******* Profiles: Defines how the job execution should be simulated. It has:
+******** type, etc. Where the type could be:
+********* delay, prallel task, homogeneous pararllel task, etc.
 
-*** Batsim requires to start:
+**** Batsim requires to start:
 
-**** a plataform; a workload; an output folder.
+***** a plataform; a workload; an output folder.
 
-***** Providing a worload, it will have the jobs that should be scheduled.
+****** Providing a worload, it will have the jobs that should be scheduled.
 
-**** Then, batsim will be learning, waiting for a scheduler to manage the jobs.
+***** Then, batsim will be learning, waiting for a scheduler to manage the jobs.
 
-*** The scheduler:
+**** The scheduler:
 
-**** Once the Batsim is already runnig, when we run the scheduler it will communicate with the Batsim by the messages, doing the requested decision.
+***** Once the Batsim is already runnig, when we run the scheduler it will communicate with the Batsim by the messages, doing the requested decision.
 
-**** The schdulers should implement all possible actions asked by the message types. For example: JobInitialize,kill,resquest. onBatSimInit,onJobSubmission, onJobCompletion.
-*** An example:
+***** The schdulers should implement all possible actions asked by the message types. For example: JobInitialize,kill,resquest. onBatSimInit,onJobSubmission, onJobCompletion.
+**** An example:
 
-**** I understood the fillerSched.py scheduler. It works following:
+***** I understood the fillerSched.py scheduler. It works following:
 
 1. Initialize everything after Batsim intialized.
 2. Schedule the jobs.
@@ -284,65 +288,66 @@ It will keep the batsim oppened, waiting for the scheduler.
  2.3 _OnJobCompletion_:
   2.3.1 *availableResources* += job.resourceRequested
   2.3.2 scheduleJobs()
-**** I ran it as:
+***** I ran it as:
 batsim -p platform52.xml -w test_batsim_paper_workload_seed1.json -e test-out-2
 launcher.py scheduler/fillerSched.py
 
-* terça, 12-02-2019
-** DONE on Batsim
+** tuesday, 12-02-2019
+*** DONE on Batsim
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-02-13 qua 18:18]
 :END:      
-*** DONE Check about the data asked for the jobs. How to locate or transfer it.
+**** DONE Check about the data asked for the jobs. How to locate or transfer it.
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-02-13 qua 08:57]
 :END:
-**** It is done by writing and checking the NFS file after and before to write or to remove some data from some QBox.
-** DONE on Papers
+***** It is done by writing and checking the NFS file after and before to write or to remove some data from some QBox.
+*** DONE on Papers
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-02-13 qua 18:18]
 :END:      
 
-*** DONE Check on the Qarnot gitlab if there are some techniques for the schedulers.
+**** DONE Check on the Qarnot gitlab if there are some techniques for the schedulers.
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-02-13 qua 18:17]
 :END:
 
-**** There is a Deliverable2.2a that show the algortith to be implemented.
-*** DONE Search some papers for schedulers on Cloud Computing
+***** There is a Deliverable2.2a that show the algortith to be implemented.
+**** DONE Search some papers for schedulers on Cloud Computing
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-02-13 qua 18:17]
 :END:      
-** TODO Source block configuration orgmode
+*** TODO Source block configuration orgmode
 :LOGBOOK:  
 - State "TODO"       from ""           [2019-02-12 ter 12:54]
 :END:
-** TODO ESS library
+*** TODO ESS library
 :LOGBOOK:  
 - State "TODO"       from ""           [2019-02-12 ter 12:56]
 :END:
-* wednesday, 13-02-2019
-** Qarnot meeting
-*** Administrative and update things with other teams.
-*** About my part I should finish the current version of the QNodes scheduler. This way we will have a full system working.
-*** With a full system working we will submit a paper to *SC2019*.
-** Papers and techniques
-*** I read the both papers that I selected on 06-02 and 12-02 and selected some algorthms to check later.
-*** But, as our plan now is to finish the current scheduler version, I will work on the current code and think about improvements after (aka. read about techniques now).
-* thursday, 14-02-2019
-** DONE Modify the schedulers on pybatsim and compare the differences.
+** wednesday, 13-02-2019
+*** Qarnot meeting
+**** Administrative and update things with other teams.
+**** About my part I should finish the current version of the QNodes scheduler. This way we will have a full system working.
+**** With a full system working we will submit a paper to *SC2019*.
+*** Papers and techniques
+**** I read the both papers that I selected on 06-02 and 12-02 and selected some algorthms to check later.
+**** But, as our plan now is to finish the current scheduler version, I will work on the current code and think about improvements after (aka. read about techniques now).
+* Week 14-02 / 20-02
+** thursday, 14-02-2019
+*** DONE Modify the schedulers on pybatsim and compare the differences.
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-02-15 sex 10:47]
 :END:      
  I did it on the fillerSched. Now I will start to try to write a pseudocode for the QNodes scheduler.
-* friday, 15-02-2019
-** I should implement the algorithm of the Deliverable 2.2a. But, it asks for a function to predict the time to download a dataset for a specific QBox.
-** I asked to Alex, by Slack, and he answered me that they do not have idea how to implement it now. So, I should skip it now, and after choose another rule to use.
-** DONE Start to write a pseudocode to the algorithm on dlv.2.2a. 
+** friday, 15-02-2019
+*** I should implement the algorithm of the Deliverable 2.2a. But, it asks for a function to predict the time to download a dataset for a specific QBox.
+*** I asked to Alex, by Slack, and he answered me that they do not have idea how to implement it now. So, I should skip it now, and after choose another rule to use.
+*** DONE Start to write a pseudocode to the algorithm on dlv.2.2a. 
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-02-15 sex 21:21]
 :END:      
-*** def schedule(self, job): 
+**** def schedule(self, job): 
         print("Haaaaaaaaaaeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeey-------\n")
         
         print("Job: ", job.id)
@@ -358,74 +363,75 @@ launcher.py scheduler/fillerSched.py
         for s in self.storage_controller._storages:
             st = self.storage_controller.get_storage(s)
             print("Datasets on Qbox: ", st.get_datas
-*** It is current : 
-**** getting the datasets asked by a job
-**** listing all the storages on the StorageControl and its datasets.
-** 
-** TODO Talk with Clement
-*** nix-shell https://github.com/oar-team/kapack/archive/master.tar.gz -A pybatsim
-*** Cant found batsim using it.
+**** It is current : 
+***** getting the datasets asked by a job
+***** listing all the storages on the StorageControl and its datasets.
 *** 
-*** On the batsim command: --events ../events/greco/events.json . There is no events.json on the folder.
-*** 
-*** Should I populate the Storage on the QNodeSched?
-* monday, 18-02-2019
-** I finished my first version of the list of QBoxes that already has the specified dataset.
-** DONE 
+*** TODO Talk with Clement
+**** nix-shell https://github.com/oar-team/kapack/archive/master.tar.gz -A pybatsim
+**** Cant found batsim using it.
+**** 
+**** On the batsim command: --events ../events/greco/events.json . There is no events.json on the folder.
+**** 
+**** Should I populate the Storage on the QNodeSched?
+** monday, 18-02-2019
+*** I finished my first version of the list of QBoxes that already has the specified dataset.
+*** DONE 
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-02-19 ter 10:46]
 :END:      
-*** DONE Ask Clément
+**** DONE Ask Clément
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-02-19 ter 10:45]
 :END:      
-**** Should I consider only one dataset per job and profile?
-***** If more than one dataset per job: Should I do a matrix of QBoxes that has each dataset and chose the one that has more datasets?
-***** No.
-**** Should I consider a dataset as ["ds1"] or at the presented way ["QB...:inpu, QB:...:0, QB...:..."] ?
-**** Can I commit and push my modifications in my branch on github?
-***** Yes.
-**** Mainly, I should put in the List only the QBoxes that already have ALL the required datasets from a job.
-* tuesday, 19-02-2019
-** TODO
-*** Check to put the list_qboxes_with_datasets() on the StorageController.
-*** Dispatche some jobs to some QBoxes to test.
-* wednesday, 20-02-2019
-** I attended the presentation:
-*** David Shmoys: Models and algorithms for the Operation and Design of Bike-Sharing System
-** I finished my report to HPC course.
-* thursday, 21-02-2019
-** Checked one more time the function to do the list L (the list of qboxes that already has the required datasets)
-** Try to submitt the jobs to the QBoxes.
-*** Here, the QNode uses onSubmission(job) to send it to the QBox.
-*** It is receiving the message JOB_REJECTED. Maybe I need to use the "events" to change the event type of the jobs.
-** Algorithm
-*** Im thinking in:
-**** for each job j:
-***** sched = True
-***** l = L(j)
-***** if l != null:
-****** qbox = maxHeatingReq(l):
-****** if qbox == null:
-******* qbox = l [ 0 ]
-***** else :
-****** qbox = maxHeating()
-****** if qbox == null:
-******* sched = False
-***** if sched:
-****** qbox =  max_requiringHeating()
-***** else:
-****** waitingList.append(j)
-**** 
-* friday, 22-02-2019
-** TODO Verify how to:
-*** DONE How to run a job, and why mine are been rejected?        :Clément:
+***** Should I consider only one dataset per job and profile?
+****** If more than one dataset per job: Should I do a matrix of QBoxes that has each dataset and chose the one that has more datasets?
+****** No.
+***** Should I consider a dataset as ["ds1"] or at the presented way ["QB...:inpu, QB:...:0, QB...:..."] ?
+***** Can I commit and push my modifications in my branch on github?
+****** Yes.
+***** Mainly, I should put in the List only the QBoxes that already have ALL the required datasets from a job.
+** tuesday, 19-02-2019
+*** TODO
+**** Check to put the list_qboxes_with_datasets() on the StorageController.
+**** Dispatche some jobs to some QBoxes to test.
+** wednesday, 20-02-2019
+*** I attended the presentation:
+**** David Shmoys: Models and algorithms for the Operation and Design of Bike-Sharing System
+*** I finished my report to HPC course.
+* Week 21-02 / 27-02
+** thursday, 21-02-2019
+*** Checked one more time the function to do the list L (the list of qboxes that already has the required datasets)
+*** Try to submitt the jobs to the QBoxes.
+**** Here, the QNode uses onSubmission(job) to send it to the QBox.
+**** It is receiving the message JOB_REJECTED. Maybe I need to use the "events" to change the event type of the jobs.
+*** Algorithm
+**** Im thinking in:
+***** for each job j:
+****** sched = True
+****** l = L(j)
+****** if l != null:
+******* qbox = maxHeatingReq(l):
+******* if qbox == null:
+******** qbox = l [ 0 ]
+****** else :
+******* qbox = maxHeating()
+******* if qbox == null:
+******** sched = False
+****** if sched:
+******* qbox =  max_requiringHeating()
+****** else:
+******* waitingList.append(j)
+***** 
+** friday, 22-02-2019
+*** TODO Verify how to:
+**** DONE How to run a job, and why mine are been rejected?      :Clément:
 :LOGBOOK:  
 - State "DONE"       from "WAITING"    [2019-02-25 seg 11:05]
 - State "WAITING"    from "TODO"       [2019-02-25 seg 11:05] \\
   Ignore it now. I will start to work in the last version of the code.
 :END:      
-*** DONE Verify how to manage the instances of a job              :Clément:
+**** DONE Verify how to manage the instances of a job            :Clément:
 :LOGBOOK:  
 - State "DONE"       from "WAITING"    [2019-02-25 seg 11:05]
 - State "WAITING"    from "WAITING"    [2019-02-23 sáb 04:08] \\
@@ -440,7 +446,7 @@ launcher.py scheduler/fillerSched.py
 - State "WAITING"    from "TODO"       [2019-02-22 sex 15:06] \\
   Is each instance a QTask on the new qarnotQNodeSched?
 :END:
-*** DONE Why the QTask now? What did change?                      :Clément:
+**** DONE Why the QTask now? What did change?                    :Clément:
 :LOGBOOK:  
 - State "DONE"       from "WAITING"    [2019-02-25 seg 11:05]
 - State "WAITING"    from "WAITING"    [2019-02-23 sáb 04:12] \\
@@ -448,7 +454,7 @@ launcher.py scheduler/fillerSched.py
 
   *YES*
 :END:      
-*** DONE Verify which qbox had preemption
+**** DONE Verify which qbox had preemption
 :LOGBOOK:  
 - State "DONE"       from "WAITING"    [2019-02-25 seg 11:05]
 - State "WAITING"    from "TODO"       [2019-02-23 sáb 04:14] \\
@@ -459,7 +465,7 @@ launcher.py scheduler/fillerSched.py
 
   *YES*
 :END:
-*** WAITING Verify the qbox that require more work for the next hour
+**** WAITING Verify the qbox that require more work for the next hour
 :LOGBOOK:  
 - State "WAITING"    from "TODO"       [2019-02-22 sex 10:49] \\
   I did it, but not for the next hour exactly. I do not know how to check it.
@@ -467,42 +473,42 @@ launcher.py scheduler/fillerSched.py
 
   *??* CHECK IT
 :END:
-* saturday, 23-02-2019
-** I think I understood some previous questions. They are in the TODO list of last day. So, I noted there what I think tha I understood.
-* sunday, 24-02-2019
-** I changeg the workload in use, putting the "real data" from the qarnot-examples.
-** I started to do a function to get all indexes of jobs that compose the same main job.
-*** This way, each job is thinked as a task, then, the idea is to dispatch as many as possible taks to the same qbox.
-* monday, 25-02-2019
-** I will start to work with the last version of the scheduler in the pybatsim-temperature branch.
-** It uses QTask as the read input from the workload (aka. each input is a task and many tasks compose a job).
-** This new one are implement almost the scheduler of the delivrable 2.2a. Like:
-** TODO Algorithm peaces:
-*** WAITING L <- List of QBOX that already has the required dataset. :Andrei:
+** saturday, 23-02-2019
+*** I think I understood some previous questions. They are in the TODO list of last day. So, I noted there what I think tha I understood.
+** sunday, 24-02-2019
+*** I changeg the workload in use, putting the "real data" from the qarnot-examples.
+*** I started to do a function to get all indexes of jobs that compose the same main job.
+**** This way, each job is thinked as a task, then, the idea is to dispatch as many as possible taks to the same qbox.
+** monday, 25-02-2019
+*** I will start to work with the last version of the scheduler in the pybatsim-temperature branch.
+*** It uses QTask as the read input from the workload (aka. each input is a task and many tasks compose a job).
+*** This new one are implement almost the scheduler of the delivrable 2.2a. Like:
+*** TODO Algorithm peaces:
+**** WAITING L <- List of QBOX that already has the required dataset. :Andrei:
 :LOGBOOK:  
 - State "WAITING"    from "TODO"       [2019-02-25 seg 11:19] \\
   It is done in the previous scheduler. I should put it in the new one.
 :END:      
-*** WAITING Dispatch as many instances of j as possible on the selected QBox. :Clément:
+**** WAITING Dispatch as many instances of j as possible on the selected QBox. :Clément:
 :LOGBOOK:  
 - State "WAITING"    from "TODO"       [2019-02-25 seg 11:20] \\
   Almost done. I should check.
 :END:      
-*** WAITING Check the priority to QBoxes that have available QRads without preemption. :Clément:
+**** WAITING Check the priority to QBoxes that have available QRads without preemption. :Clément:
 :LOGBOOK:  
 - State "WAITING"    from "TODO"       [2019-02-25 seg 11:20] \\
   It is almost done. I should check.
 :END:      
-*** TODO Check the QBoxes that requires the most work in the next hour. :Qarnot:
-*** TODO Download time prediction of the datasets                  :Qarnot:
-*** TODO LQ <- List of QBoxes sorted as 1. and 2.
-**** WAITING 1. The count of available QRads for the priority of j in descending order. :Clément:
+**** TODO Check the QBoxes that requires the most work in the next hour. :Qarnot:
+**** TODO Download time prediction of the datasets                :Qarnot:
+**** TODO LQ <- List of QBoxes sorted as 1. and 2.
+***** WAITING 1. The count of available QRads for the priority of j in descending order. :Clément:
 :LOGBOOK:  
 - State "WAITING"    from "TODO"       [2019-02-25 seg 11:20] \\
   It is almost done. I should check it.
 :END:      
-**** TODO 2. The predicted downloads time of the datasets.        :Qarnot:
-** Andrei's algortihm:
+***** TODO 2. The predicted downloads time of the datasets.      :Qarnot:
+*** Andrei's algortihm:
 
 '''
 The idea is to order a waiting list of tasks by the profile.
@@ -534,98 +540,99 @@ Update the list and start for the next group (ordered by profiles) of tasks.
    if(nb_same_profile > 0):
      findQBoxAndDispatch()
      ordered_l = ordered_l[nb_same_profile:]
-** New command                                                      :OrgMode:
-*** To find and replace text: M + %
-* tuesday, 26-02-2019
-** DONE Implement the previous algorithm
+*** New command                                                   :OrgMode:
+**** To find and replace text: M + %
+** tuesday, 26-02-2019
+*** DONE Implement the previous algorithm
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-02-26 ter 18:42]
 - The structure are done. But BATSIM is not working with this version of scheduler. 
   So, I need to wait the fixes to check.
 :END:
-* wednesday, 27-02-2019
-** TODO Work on
-*** DONE the priority of QBoxes that have available QRads without preemption
+** wednesday, 27-02-2019
+*** TODO Work on
+**** DONE the priority of QBoxes that have available QRads without preemption
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-03-01 sex 15:43]
 :END:      
-**** (aka. Run the taks using the priority levels: background, low and high.
-*** CANCELLED the priority of QBoxes that requires the most work in the next hour
+***** (aka. Run the taks using the priority levels: background, low and high.
+**** CANCELLED the priority of QBoxes that requires the most work in the next hour
 :LOGBOOK:  
 - State "CANCELLED"  from "TODO"       [2019-02-27 qua 11:10]
 :END:      
-**** (skip it now)
-*** DONE the count of available QRads for the priority of j in descending order
+***** (skip it now)
+**** DONE the count of available QRads for the priority of j in descending order
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-03-01 sex 15:44]
 :END:      
-**** (aka. The same as the first TODO)
-*** WAITING the predicted download time of the data sets.
+***** (aka. The same as the first TODO)
+**** WAITING the predicted download time of the data sets.
 :LOGBOOK:  
 - State "WAITING"    from "CANCELLED"  [2019-02-27 qua 11:10] \\
   Waiting the other team develop it.
 - State "CANCELLED"  from "TODO"       [2019-02-27 qua 11:10]
 :END:
-*** DONE To merge my modifications on the StorageController with the Clément temperature branch.
+**** DONE To merge my modifications on the StorageController with the Clément temperature branch.
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-02-27 qua 17:17]
 :END:      
-*** DONE Organize the code. Use the doDispatch() as the main peace of the method schedule(). At the moment, it is duplicated.
+**** DONE Organize the code. Use the doDispatch() as the main peace of the method schedule(). At the moment, it is duplicated.
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-03-01 sex 15:44]
 - [01-03-2019] As I found the error, I rewrote the code.
-:END:      
-* friday, 01-03-2019
-** I found an erro in my last algorithm.
-** Let's rewrite it. Done.
-** Clément fixed batsim and changed something in the QNodeSched. I merged the codes.
-** TODO Check on next monday, how to run this version ?
-* saturday, 02-03-2019
-** I added the structure to use the predicted download time of the data sets, when it is ready.
-* monday, 04-03-2019
-** DONE 
+:END:
+* Week 01-03 / 13-03
+** friday, 01-03-2019
+*** I found an erro in my last algorithm.
+*** Let's rewrite it. Done.
+*** Clément fixed batsim and changed something in the QNodeSched. I merged the codes.
+*** TODO Check on next monday, how to run this version ?
+** saturday, 02-03-2019
+*** I added the structure to use the predicted download time of the data sets, when it is ready.
+** monday, 04-03-2019
+*** DONE 
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-03-04 seg 18:23]
 :END:      
-*** DONE Run the updated batsim and qarnotNodeSched.py
+**** DONE Run the updated batsim and qarnotNodeSched.py
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-03-04 seg 18:22]
 :END:      
-**** To run it, I copied the folder sample-data/simple from simulator-prototype to batsim to make it easier.
-**** The command is: ./batsim -p ../sample-data/simple/platform_simple.xml -T 1 --enable-dynamic-jobs --events ../sample-data/simple/events_simple.json -w ../sample-data/simple/workload_simple.json
-*** DONE Try to run mine and correct the possible *errors*
+***** To run it, I copied the folder sample-data/simple from simulator-prototype to batsim to make it easier.
+***** The command is: ./batsim -p ../sample-data/simple/platform_simple.xml -T 1 --enable-dynamic-jobs --events ../sample-data/simple/events_simple.json -w ../sample-data/simple/workload_simple.json
+**** DONE Try to run mine and correct the possible *errors*
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-03-04 seg 18:22]
 :END:      
-**** DONE To decide if I will create a QTask using the job.profile, or if I will get it after using the task.job_id :Clément:
+***** DONE To decide if I will create a QTask using the job.profile, or if I will get it after using the task.job_id :Clément:
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-03-04 seg 15:47]
 - I choose to add into the QTask() the profile. I should merge it with the main qarnotBoxSched.py
 :END:
-** I got a little error in the qarnotNodeSched.py. It is getting the number of slot of bkgd, low or hight priority for each qmobo :Clément:
-** but, it is not verifying if the value is zero. So, the execution have never passed from the first priority case, bkgd.
-*** Clément already fixed it in his official version.
-** I ran my first version of the scheduler !!!!!!!!!!!!!!  
-*** It is working.
-*** I generated the csv files to it and to the qarnotNodeSched to try to compare some values:
-**** The allocated_resources in the _jobs.csv changed. Mine has in almost the cases, less allocation.
-**** If I understood well, it shows how many resources were allocated for each job. So, it show that mine is allocating less resources,
-**** I am concluding it means that the allocation decision is working, and the tasks or jobs with the same profile (the tasks that composes the same job) are not allocating new resources everytime.
-*** Now, the next step is to check some more workloads and really compare the performance with the official one.
-* thursday, 05-03-2019
-** TODO To Compare the results
-*** DONE First point: [Evalys][[https://gitlab.inria.fr/batsim/evalys]]
+*** I got a little error in the qarnotNodeSched.py. It is getting the number of slot of bkgd, low or hight priority for each qmobo :Clément:
+*** but, it is not verifying if the value is zero. So, the execution have never passed from the first priority case, bkgd.
+**** Clément already fixed it in his official version.
+*** I ran my first version of the scheduler !!!!!!!!!!!!!!  
+**** It is working.
+**** I generated the csv files to it and to the qarnotNodeSched to try to compare some values:
+***** The allocated_resources in the _jobs.csv changed. Mine has in almost the cases, less allocation.
+***** If I understood well, it shows how many resources were allocated for each job. So, it show that mine is allocating less resources,
+***** I am concluding it means that the allocation decision is working, and the tasks or jobs with the same profile (the tasks that composes the same job) are not allocating new resources everytime.
+**** Now, the next step is to check some more workloads and really compare the performance with the official one.
+** tuesday, 05-03-2019
+*** TODO To Compare the results
+**** DONE First point: [Evalys][[https://gitlab.inria.fr/batsim/evalys]]
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-03-05 ter 18:28]
 - It shows some parameter for the jobs and workload. Using it right now, I am looking to the Gantt Chart to see how the tasks are beeing scheduled.
 :END:
-*** TODO To compare the temparatures at the beggining and end of the simulation.
-** Presentation: *Parallel Scheduling of DAGs under Memory Constraints* :Presentation:
-*** Use DAGs to describe
-*** Problem: Shared memory (Limitade resources)
-** TODO To check the code
-*** I am build the list L before checking all states (bkgd, low and high). It is not wrong for results, but maybe I could do only one time and get a better performance.
-** Results                                                           :ATTACH: :ATTACH:
+**** TODO To compare the temparatures at the beggining and end of the simulation.
+*** Presentation: *Parallel Scheduling of DAGs under Memory Constraints* :Presentation:
+**** Use DAGs to describe
+**** Problem: Shared memory (Limitade resources)
+*** TODO To check the code
+**** I am build the list L before checking all states (bkgd, low and high). It is not wrong for results, but maybe I could do only one time and get a better performance.
+*** Results                                                           :ATTACH: :ATTACH:
 
 :PROPERTIES:
 :Attachments: qarnotNodeSchedAndrei_jobs_results_first.png qarnotNodeSchedAndrei_jobs_results_first_second.png qarnotNodeSchedAndrei_jobs_results_triplet.png qarnotNodeSched_jobs_results.png qarnotNodeSchedAndrei_jobs_results_first13.png qarnotNodeSchedAndrei_jobs_results_first_triplet.png qarnotNodeSchedAndrei_big_jobs_results_first_triplet.png qarnotNodeSchedAndrei_big_jobs_results_first.png qarnotNodeSched_big_jobs_results.png
@@ -733,11 +740,11 @@ _________________________________________________________________
 
 So, I am concluding that my implementation are working in the sens of take care about the location of the data sets that already exists on the QBoxes. :)
 
-* wednesday, 06-02-2019
-** Meeting about the project
-*** Continue working on my implementation
-*** Pierre's feedback: Try to draw an overview of the actions
-**** Like this diagrams:                                             :ATTACH:
+** wednesday, 06-02-2019
+*** Meeting about the project
+**** Continue working on my implementation
+**** Pierre's feedback: Try to draw an overview of the actions
+***** Like this diagrams:                                        :ATTACH:
 :PROPERTIES:
 :Attachments: diagram%20model1.jpeg diagram%20model2.jpeg
 :ID:       336b7389-3c9a-47f4-af8e-473d7e0891a6
@@ -749,112 +756,148 @@ So, I am concluding that my implementation are working in the sens of take care 
 #+ATTR_ORG :width 200
 [[file:data/33/6b7389-3c9a-47f4-af8e-473d7e0891a6/diagram model2.jpeg]]
 
-** TODO 
-*** TODO To talk with Alex to get the current state of the StorageController
-*** DONE To talk with Pierre to check the worflow and how to analyze the temperature
+*** TODO 
+**** TODO To talk with Alex to get the current state of the StorageController
+**** DONE To talk with Pierre to check the worflow and how to analyze the temperature
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-03-06 qua 16:21]
 - We will aks the other team to extract this data from the DB. And so, I can check and plot it.
   It will be a plot like: 3 lines, 1 from the real Qarnot data, 1 from each scheduler. So, it will possible to compare which one is better at this sense.
 :END:      
-*** WAITING To generate different kinds of workloads (more taks than resources) to test it.
+**** WAITING To generate different kinds of workloads (more taks than resources) to test it.
 :LOGBOOK:  
 - State "WAITING"    from "TODO"       [2019-03-06 qua 16:23] \\
   The generator uses the real Qarnot Serves/DB, it is so busy now.
 :END:
-* tuesday, 07-03-2019
-** TODO
-*** WAITING To make the qarnotScheduler works with 1week workload :Clément:
+** thursday, 07-03-2019
+*** TODO
+**** WAITING To make the qarnotScheduler works with 1week workload :Clément:
 :LOGBOOK:  
 - State "WAITING"    from "TODO"       [2019-03-07 qui 17:34] \\
   Almost done. 
   * We added one more line in the QBoxSched, it was a "gambiarra". We should implement the 're-schedule' there.
 :END:      
-*** WAITING To get one day more of simulation data using the qarnot-extractor
+**** WAITING To get one day more of simulation data using the qarnot-extractor
 :LOGBOOK:  
 - State "WAITING"    from "TODO"       [2019-03-07 qui 17:31] \\
   Still waiting for a good moment.
 :END:      
-*** DONE To generate a bigger workload 
+**** DONE To generate a bigger workload 
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-03-07 qui 17:31]
 - I took the 1 day workload and removed many Qboxes. Now it has more jobs than resources.
 :END:      
-**** TODO To put two days together
-**** TODO TO try to do something like this with the simple workload
-** I also changed the simple workloads. Now it has 4 Mobos and so, jobs are been rejected.
-** It still allocate the jobs as the data set location, but, if there ia a conflict in the submission time with another task,
-** it is rejected.
-** DONE To check with Clément this rejections. I think the jobs should be reeschedule, but we do not have it yet, I think.
+***** TODO To put two days together
+***** TODO TO try to do something like this with the simple workload
+*** I also changed the simple workloads. Now it has 4 Mobos and so, jobs are been rejected.
+*** It still allocate the jobs as the data set location, but, if there ia a conflict in the submission time with another task,
+*** it is rejected.
+*** DONE To check with Clément this rejections. I think the jobs should be reeschedule, but we do not have it yet, I think.
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-03-08 sex 10:47]
 It happened because the 'gambiarra' that we did to try to run the 1-week workload.
 :END:      
-* friday, 08-03-2019
-** TODO
-*** TODO Implement the re-schedule method.
-**** The QBoxes should 'reject' and so, the QNode should put it again in the waiting_list.
-**** It is already implemented, but it is confuse because it adds and removes from differente instances of the waiting_list and is getting error because are deleting more than adding.
-***** So, I will try to create a reject_list to manage during some bigger step, then put it back on the wainting list.
-* sunday, 10-03-2019
-** To continue testing the case of workloads failing.
-** DONE 
+** friday, 08-03-2019
+*** TODO
+**** TODO Implement the re-schedule method.
+***** The QBoxes should 'reject' and so, the QNode should put it again in the waiting_list.
+***** It is already implemented, but it is confuse because it adds and removes from differente instances of the waiting_list and is getting error because are deleting more than adding.
+****** So, I will try to create a reject_list to manage during some bigger step, then put it back on the wainting list.
+** sunday, 10-03-2019
+*** To continue testing the case of workloads failing.
+*** DONE 
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-03-10 dom 20:49]
 :END:      
-*** DEFERRED Create a new workload, smaller, but also with more taks than resources.
+**** DEFERRED Create a new workload, smaller, but also with more taks than resources.
 :LOGBOOK:  
 - State "DEFERRED"   from "DONE"       [2019-03-10 dom 20:49]
 - State "DONE"       from "TODO"       [2019-03-10 dom 20:49]
 :END:      
-*** DONE Organize the prints to output
+**** DONE Organize the prints to output
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-03-10 dom 20:49]
 :END:      
-** To try to do some automatic tests for different workloads
-** TODO Correct: Possible Bug's list
-*** TODO The taks are not removed from the queue_task after dispatched. Only onJobCompletion(). This way, every doDispatch() try to re-dispatch all taks. 
-**** Which does not happen because the number of instances for them is 0. But, anyway, doDispatch() consume times trying to do it.
-*** DONE When a job is rejected, the number_instances_left is not increased.
+*** To try to do some automatic tests for different workloads
+*** TODO Correct: Possible Bug's list
+**** TODO The taks are not removed from the queue_task after dispatched. Only onJobCompletion(). This way, every doDispatch() try to re-dispatch all taks. 
+***** Which does not happen because the number of instances for them is 0. But, anyway, doDispatch() consume times trying to do it.
+**** DONE When a job is rejected, the number_instances_left is not increased.
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-03-10 dom 21:21]
 :END:      
-*** DONE When a job is rejected, the num of available_mobos in tup[] is not increased.
+**** DONE When a job is rejected, the num of available_mobos in tup[] is not increased.
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-03-10 dom 21:21]
 :END:       
-*** TODO On the QBoxSched:
-**** On onDispatchedInstances() :
-***** The method scheduleInstace() are receiving the waiting_instances duplicated. So, it is happening in the onDispatchedInstances() at some point.
-**** It prints "Still have x instances" already with the duplicated list. 
-**** It is possible to be verified printing the waiting_list between the logs "received x intances" and "still have x instances".
-*** TODO To verify the mapToQbox() and then implement a removeFromQBox().
-* monday, 11-03-2019
-** Some Corrections
-*** There was an error on JobCompletion(). It was direct dispatching a job, but was not adding it in the qtask.running_instances.
-**** Solved.
-*** There was a Bug on the updateAndReport() on the QBox level. It was getting wrong the available resources, then inform wrong values to the doDispatch() on the QNode level.
-**** Because it, NodeSched was dispatching more tasks than possible, making the QBox creates a waiting_instances list.      
-**** It was corrected and now the doDispatch are sending valid amount of tasks to each QBox. 
-*** In the simple_more workload, the triplet_ tasks are not ending. It is dispatched but have never end. Then, Batsim becomes in deadlock.
-**** I changed the priority value of triplet_ from -5 to 15 and it works well for this case. 
-*** For 1 week it still not working.
-*** DONE To check the priority conditions.
+**** TODO On the QBoxSched:
+***** On onDispatchedInstances() :
+****** The method scheduleInstace() are receiving the waiting_instances duplicated. So, it is happening in the onDispatchedInstances() at some point.
+***** It prints "Still have x instances" already with the duplicated list. 
+***** It is possible to be verified printing the waiting_list between the logs "received x intances" and "still have x instances".
+**** TODO To verify the mapToQbox() and then implement a removeFromQBox().
+** monday, 11-03-2019
+*** Some Corrections
+**** There was an error on JobCompletion(). It was direct dispatching a job, but was not adding it in the qtask.running_instances.
+***** Solved.
+**** There was a Bug on the updateAndReport() on the QBox level. It was getting wrong the available resources, then inform wrong values to the doDispatch() on the QNode level.
+***** Because it, NodeSched was dispatching more tasks than possible, making the QBox creates a waiting_instances list.      
+***** It was corrected and now the doDispatch are sending valid amount of tasks to each QBox. 
+**** In the simple_more workload, the triplet_ tasks are not ending. It is dispatched but have never end. Then, Batsim becomes in deadlock.
+***** I changed the priority value of triplet_ from -5 to 15 and it works well for this case. 
+**** For 1 week it still not working.
+**** DONE To check the priority conditions.
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-03-12 ter 16:36]
 - The problem was the direct_dispatch().
 :END:      
-* tuesday, 12-03-2019
-** Experiment table design
+** tuesday, 12-03-2019
+*** Experiment table design
 
-| *Workload*  | *Workload* |  *Workload* |          |   |   |
-| *Name*      |    *Tasks* | *Resources* | *Status* |   |   |
-|             |            |             |          |   |   |
-| simple      |          8 |          10 | PASS     |   |   |
-| simple_more |          8 |           4 | PASS     |   |   |
-| 1day        |        418 |        1000 | PASS     |   |   |
-| 1day_more   |        418 |         724 | PASS     |   |   |
-| 1week       |          x |           x | PASS     |   |   |
-| 1week_more  |          x |           x | PASS     |   |   |
-|             |            |             |          |   |   |
-** The simulation ran correclty wihtou the direct_dispatch(). So we will will keep like this for the momento and try to re-implement it.
+| *Workload*  | *Workload* |  *Workload* | *Status*          | *Status*                | *Status*           |
+| *Name*      |    *Tasks* | *Resources* | *qarnotNodeSched* | *qarnotNodeSchedAndrei* | *Final allocation* |
+|             |            |             |                   |                         |                    |
+| simple      |          8 |          10 | PASS              | PASS                    | MODIFIED           |
+| simple_more |          8 |           4 | PASS              | PASS                    | MODIFIED           |
+| 1day        |        418 |        1000 | PASS              | PASS                    | MODIFIED           |
+| 1day_more   |        418 |         724 | PASS              | PASS                    | MODIFIED           |
+| 1week       |       3010 |         991 | PASS              | PASS                    | MODIFIED           |
+| 1week_more  |       3010 |           x | PASS              | WAITING                 |                    |
+|             |            |             |                   |                         |                    |
+*** The simulation ran correclty wihtou the direct_dispatch(). So we will will keep like this for the momento and try to re-implement it.
+** wednesday, 13-03-2019
+*** Qartnot meeting
+**** TODO Checks 
+***** DONE To check with Alex the status of the StorageController
+:LOGBOOK:  
+- State "DONE"       from "WAITING"    [2019-03-13 qua 10:25]
+- State "WAITING"    from "TODO"       [2019-03-13 qua 10:22] \\
+  They have something done, but did not push yet.
+:END:
+**** SC is too near, so we will drop :(
+**** The goal is to finish a full implementation until April 16,17 and then, to build a full paper describing the platform.
+**** ClustComput could be a conference to apply. https://clustercomp.org/2019/technical/
+
+*** TODO Next steps
+**** TODO Comparison for job locations
+***** TODO Different workloads
+***** TODO Set automatically when Alex finished the StorageController
+**** TODO Comparison for the temperature
+***** TODO Implements first versions
+**** TODO Presentation of the scheduler
+***** TODO Draw the workflow
+**** TODO Organize my workflow with batsim aka. run_scripts and results
+*** Im looking conferences
+**** http://www.lanoms.org/2019/#topics
+***** Smart Devices and Home Networks
+***** Smart Cities, Smart Grids
+***** 
+**** http://sbqs.sbc.org.br/index.php/pt/chamada-de-trabalho
+**** https://webmedia.org.br/2019/
+**** http://www.inf.ufrgs.br/er2019/
+*** DONE Mater2 -> Register my presentation in June with an external expert.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-03-13 qua 14:14]
+:END:      
+**** Title: Job allocation in a distribued private cloud
+**** External Expert: Christophe Cérin
