@@ -6,7 +6,7 @@
 #+LANGUAGE:    en
 #+TAGS: noexport(n) Stats(S)
 #+TAGS: Teaching(T) R(R) OrgMode(O) Python(P)
-#+TAGS: Book(b) Code(C) Paper(P) Presentation(p) Scheduler(S) Denis(d) Clément(c) Andrei(a) Qarnot(q)
+#+TAGS: Book(b) Code(C) Paper(P) Presentation(p) Scheduler(S) Denis(d) Clément(c) Andrei(a) Qarnot(q) WeekReview(w)
 #+TAGS: DataVis(v) PaperReview(W)
 #+EXPORT_SELECT_TAGS: Blog
 #+OPTIONS:   H:3 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
@@ -14,16 +14,14 @@
 #+EXPORT_SELECT_TAGS: export
 #+EXPORT_EXCLUDE_TAGS: noexport
 #+COLUMNS: %25ITEM %TODO %3PRIORITY %TAGS
-#+SEQ_TODO: TODO(t!) STARTED(s!) WAITING(w@) APPT(a!) | DONE(d!) CANCELLED(c!) DEFERRED(f!)
+#+SEQ_TODO: TODO(t!) STARTED(s!) WAITING(w@) APPT(a!) | DONE(d!) CANCELLED(c!) DEFERRED(f!) | REPORT(r!)
 
 * Week 06-12 / 13-02
 ** wednesday, 06-02-2019
 :LOGBOOK:  
 - State "TODO"       from ""           [2019-03-13 qua 15:16]
 :END:      
-
 *** 18:02 Meeting, org-journal                                    :OrgMode:
-
 **** Starting on org-journal
 ***** Trying o do something in the org-jornal1. 
 ****** Creating a list
@@ -333,6 +331,7 @@ launcher.py scheduler/fillerSched.py
 *** Papers and techniques
 **** I read the both papers that I selected on 06-02 and 12-02 and selected some algorthms to check later.
 **** But, as our plan now is to finish the current scheduler version, I will work on the current code and think about improvements after (aka. read about techniques now).
+** REPORT I worked, mainly, understanding the problem and the behvaior. :WeekReview:
 * Week 14-02 / 20-02
 ** thursday, 14-02-2019
 *** DONE Modify the schedulers on pybatsim and compare the differences.
@@ -399,6 +398,7 @@ launcher.py scheduler/fillerSched.py
 *** I attended the presentation:
 **** David Shmoys: Models and algorithms for the Operation and Design of Bike-Sharing System
 *** I finished my report to HPC course.
+** REPORT I kept working to understand the environment and to learn how to use the Batsim and PyBatsim. :WeekReview:
 * Week 21-02 / 27-02
 ** thursday, 21-02-2019
 *** Checked one more time the function to do the list L (the list of qboxes that already has the required datasets)
@@ -581,9 +581,10 @@ Update the list and start for the next group (ordered by profiles) of tasks.
 - State "DONE"       from "TODO"       [2019-03-01 sex 15:44]
 - [01-03-2019] As I found the error, I rewrote the code.
 :END:
-* Week 01-03 / 13-03
+** REPORT I did the first steps on my implementation             :WeekReview:
+* Week 28-02 / 06-03
 ** friday, 01-03-2019
-*** I found an erro in my last algorithm.
+*** I found an error in my last algorithm.
 *** Let's rewrite it. Done.
 *** Clément fixed batsim and changed something in the QNodeSched. I merged the codes.
 *** TODO Check on next monday, how to run this version ?
@@ -769,6 +770,9 @@ So, I am concluding that my implementation are working in the sens of take care 
 - State "WAITING"    from "TODO"       [2019-03-06 qua 16:23] \\
   The generator uses the real Qarnot Serves/DB, it is so busy now.
 :END:
+
+** REPORT I finished the my first version, calculated some results and presented it. :WeekReview:
+* Week 07-03 / 13-03
 ** thursday, 07-03-2019
 *** TODO
 **** WAITING To make the qarnotScheduler works with 1week workload :Clément:
@@ -901,3 +905,48 @@ It happened because the 'gambiarra' that we did to try to run the 1-week workloa
 :END:      
 **** Title: Job allocation in a distribued private cloud
 **** External Expert: Christophe Cérin
+** REPORT I worked testing both implementation with different workloads. This way I found problem in the main implementation. :WeekReview:
+** REPORT It was not working with workloads composed by more jobs than resources. :WeekReview:
+** REPORT The problem was the direct_dispatch(), then I commented it for the moment, and I checked both implementation with the 1day and 1week workloads. :WeekReview:
+** REPORT Both ran and the location-based implementation is working as well. :WeekReview:
+* Week 14-03 / 20/03
+** thuersday, 14-03-2019
+*** I have started to draw the scheduler workflow
+** friday, 15-03-2019
+*** I discussed with Clément some components and versions of the diagram and then finish a first version.
+*** I made the detailed description of all steps.
+*** I showed and discussed improvements with Pierre.
+** saturday, 16-03-2019
+*** I drew a new version of the diagram, regarding the real components instead of the simulation.
+** monday, 18-03-2019
+*** WAITING Discuss and repair the new draw
+:LOGBOOK:  
+- State "WAITING"    from "TODO"       [2019-03-19 ter 10:27] \\
+  I showed it to Denis and did few repairs.
+:END:      
+*** WAITING Check updates on the StorageController implementation, if any.
+:LOGBOOK:  
+- State "WAITING"    from "TODO"       [2019-03-19 ter 10:27] \\
+  Clément will check the merge requested form Alex.
+:END:
+** tuesday, 19-03-2019
+*** DONE Check the repairs in the NodeSched, on directDispacth(), and run all workloads.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-03-19 ter 16:32]
+:END:
+*** WAITING Use the .csv about the temperature on the platform-extractor to measure the difference of the final temperature between NodeSched e NodeSchedAndrei.
+:LOGBOOK:  
+- State "WAITING"    from "TODO"       [2019-03-19 ter 16:32] \\
+  I draw two plots and have been started to script it.
+:END:      
+**** Im thinking to do 2 kinds of plots:
+***** 1. For a selected QRad, plot the time on axe x and the temperature on axe y for the three data source (real, sched, schedAndrei)
+***** 2. For all QRads, plot the BoxPlots (for whole data source) on axe x, and the temperature on axe y.
+**** BUT, there are 228 jobs for 1022 QRads, how to plot for all? How to select which one to plot?
+*** I also showed the new version of the diagram (focused on the real platform and componenets).
+**** He adviced me to keep both, onde for the simulation and onde for the real platform).
+**** He advided me to separate more the component and the lines and explicit more somethings.
+** REPORT I have been waiting for the correction in the qarnotNodeSched and for the StorageController. :WeekReview:
+** REPORT While it is not done I have been worked on the diagram. :WeekReview:
+** REPORT Clément repaired the qarnotNodeSched then I merge it with my version. :WeekReview:
+** REPORT Now we have the _temperature.csv as output of the simulation, then I also have been started to script the plot of the graphs to view the temperature behavior. :WeekReview:
