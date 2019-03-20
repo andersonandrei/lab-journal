@@ -946,6 +946,20 @@ It happened because the 'gambiarra' that we did to try to run the 1-week workloa
 *** I also showed the new version of the diagram (focused on the real platform and componenets).
 **** He adviced me to keep both, onde for the simulation and onde for the real platform).
 **** He advided me to separate more the component and the lines and explicit more somethings.
+** wednesday, 20-03-2019
+*** WAITING The script to analyze the _temperatures.csv with R.
+:LOGBOOK:  
+- State "WAITING"    from "TODO"       [2019-03-20 qua 16:14] \\
+  In progress...
+:END:      
+**** Installed: r-base, r-studio, ess
+**** This link shows something like I want to do : https://stackoverflow.com/questions/14604439/plot-multiple-boxplot-in-one-graph
+***** It uses the function 'melt'. Here I found some details https://www.statmethods.net/management/reshape.html
+*** DONE Finalize a first version of diagrams.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-03-20 qua 16:14]
+I showed to Pierre and modified some more details. Shower do Clément and Denis also. So, the first version is done.
+:END:      
 ** REPORT I have been waiting for the correction in the qarnotNodeSched and for the StorageController. :WeekReview:
 ** REPORT While it is not done I have been worked on the diagram. :WeekReview:
 ** REPORT Clément repaired the qarnotNodeSched then I merge it with my version. :WeekReview:
