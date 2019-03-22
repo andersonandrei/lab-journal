@@ -975,3 +975,66 @@ I showed to Pierre and modified some more details. Shower do Clément and Denis 
 *** I started to use the Jupyter Notebook with R to plot the results.
 **** The problem is that the two .csv are not of the same dimension and the rads are not ordered at the same way.
 **** So, I'm trying to get the same times and order at the same way.
+** friday, 22-03-2019
+*** Pedro helped me a lot, he taught me many things in R and many ways to plot what I want.
+library(dplyr)
+library(tidyr)
+
+set.seed(1234)
+
+df$origin <- "simulation"
+df2$origin <- "real"
+
+df3 <- df2[ , names(df2) %in% names(df)]
+df_all <- rbind(df, df3) 
+
+#str(df_all)
+#names(df_all)[3]
+#tail(names(df_all), 1)
+df_all_melted <- gather(df_all, factor_key = TRUE, key = "machine", value = "temperature", QRAD.0400.91a3.6f05.000000000000:QRAD.adf0.074e.5988.000000000000)
+#str(df_all_melted)
+
+#sample(levels(df_all_melted$machine), 10)
+#df_plot <- subset(df_all_melted, machine %in% sample(levels(df_all_melted$machine), 300))
+
+# aprender mutate & summarize
+df_means <- df_plot %>%
+    group_by(machine, origin) %>%
+    summarize(temperature_mean = mean(temperature)) %>%
+    ungroup()
+
+#str(df_plot)
+#str(df_means)
+
+#str(df$timestamp)
+#str(df2$timestamp)
+
+# procurar como colocar o alpha da legenda = 1
+ggplot(df_means, aes(y = temperature_mean, x = machine, color = origin)) +
+    #geom_jitter(width = 0.2, alpha = 0.1) +
+    geom_point(alpha = 1.0) +
+    theme_bw() +
+    theme(
+        axis.text.x = element_blank(),
+        axis.ticks.x = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+*** gather 
+ Gather takes multiple columns and collapses into key-value pairs, duplicating all other columns as needed. You use gather() when you notice that you have columns that are not variables.
+ https://www.rdocumentation.org/packages/tidyr/versions/0.8.3/topics/gather
+*** sample
+sample takes a sample of the specified size from the elements of x using either with or without replacement.
+ https://www.rdocumentation.org/packages/base/versions/3.5.3/topics/sample
+*** jitter 
+ The jitter geom is a convenient shortcut for geom_point(position = "jitter"). It adds a small amount of random variation to the location of each point, and is a useful way of handling overplotting caused by discreteness in smaller datasets.
+ https://ggplot2.tidyverse.org/reference/geom_jitter.html
+*** means and error bars
+http://www.cookbook-r.com/Graphs/Plotting_means_and_error_bars_(ggplot2)
+*** others
+https://stackoverflow.com/questions/16251966/controlling-the-alpha-level-in-a-ggplot2-legend
+http://www.sthda.com/english/wiki/ggplot2-axis-ticks-a-guide-to-customize-tick-marks-and-labels
+https://felixfan.github.io/ggplot2-remove-grid-background-margin/
+https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf
+rcolorbrewer scales
+*** TODO to check mutate, summarize, ggrepel
+*** TODO to search how to put alpha of subtitles = 1
