@@ -1065,3 +1065,13 @@ rcolorbrewer scales
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-03-25 seg 18:35]
 :END:      
+** tuesday, 26-03-2019
+*** TODO To work on the scheduler
+**** TODO ReSchedule a job killed because it has lower priority than a new one.
+**** The point is, now, it is killing the jobs regarding the simulation time, not the priority of the jobs.
+**** BATSIM should recreate the job, neither PyBatsim !!!!
+***** So, I need to do something to PyBatsim says to BatSim to recreate the Job.
+***** I'm using bs.resubmit(job) and it looks working. When I filter the Batsim log by "resubmit" Im receiving 604 matching, the number of killed jobs.
+***** I think that the real problem are in how the simulation are been finished.
+***** TODO To check it.
+*** I added a new plot for the temperature analyzes.
