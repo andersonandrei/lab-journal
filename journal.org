@@ -1075,3 +1075,6 @@ rcolorbrewer scales
 ***** I think that the real problem are in how the simulation are been finished.
 ***** TODO To check it.
 *** I added a new plot for the temperature analyzes.
+** wednesday, 27-03-2019
+*** I used rpy2 to do a new Jupyter Notebook running Python and R code together. It already has the Job_Allocation and Temperature analyzes.
+*** Working on simple workload with less resources, we are receiving rejected jobs.
