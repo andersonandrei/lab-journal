@@ -6,7 +6,7 @@
 #+LANGUAGE:    en
 #+TAGS: noexport(n) Stats(S)
 #+TAGS: Teaching(T) R(R) OrgMode(O) Python(P)
-#+TAGS: Book(b) Code(C) Paper(P) Presentation(p) Scheduler(S) Denis(d) Clément(c) Andrei(a) Qarnot(q) WeekReview(w)
+#+TAGS: Book(b) Paper(p) Presentation(p) Scheduler(S) Denis(D) Clément(C) Andrei(a) Qarnot(q) WeekReview(w) CodeReviewed(c)
 #+TAGS: DataVis(v) PaperReview(W)
 #+EXPORT_SELECT_TAGS: Blog
 #+OPTIONS:   H:3 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
@@ -758,15 +758,19 @@ So, I am concluding that my implementation are working in the sens of take care 
 [[file:data/33/6b7389-3c9a-47f4-af8e-473d7e0891a6/diagram model2.jpeg]]
 
 *** TODO 
-**** TODO To talk with Alex to get the current state of the StorageController
+**** WAITING To talk with Alex to get the current state of the StorageController
+:LOGBOOK:  
+- State "WAITING"    from "TODO"       [2019-03-29 sex 11:39]
+:END:      
 **** DONE To talk with Pierre to check the worflow and how to analyze the temperature
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-03-06 qua 16:21]
 - We will aks the other team to extract this data from the DB. And so, I can check and plot it.
   It will be a plot like: 3 lines, 1 from the real Qarnot data, 1 from each scheduler. So, it will possible to compare which one is better at this sense.
 :END:      
-**** WAITING To generate different kinds of workloads (more taks than resources) to test it.
+**** DONE To generate different kinds of workloads (more taks than resources) to test it.
 :LOGBOOK:  
+- State "DONE"       from "WAITING"    [2019-03-29 sex 11:39]
 - State "WAITING"    from "TODO"       [2019-03-06 qua 16:23] \\
   The generator uses the real Qarnot Serves/DB, it is so busy now.
 :END:
@@ -775,14 +779,16 @@ So, I am concluding that my implementation are working in the sens of take care 
 * Week 07-03 / 13-03
 ** thursday, 07-03-2019
 *** TODO
-**** WAITING To make the qarnotScheduler works with 1week workload :Clément:
+**** DONE To make the qarnotScheduler works with 1week workload  :Clément:
 :LOGBOOK:  
+- State "DONE"       from "WAITING"    [2019-03-29 sex 11:31]
 - State "WAITING"    from "TODO"       [2019-03-07 qui 17:34] \\
   Almost done. 
   * We added one more line in the QBoxSched, it was a "gambiarra". We should implement the 're-schedule' there.
 :END:      
-**** WAITING To get one day more of simulation data using the qarnot-extractor
+**** DONE To get one day more of simulation data using the qarnot-extractor
 :LOGBOOK:  
+- State "DONE"       from "WAITING"    [2019-03-29 sex 11:31]
 - State "WAITING"    from "TODO"       [2019-03-07 qui 17:31] \\
   Still waiting for a good moment.
 :END:      
@@ -844,7 +850,10 @@ It happened because the 'gambiarra' that we did to try to run the 1-week workloa
 *** Some Corrections
 **** There was an error on JobCompletion(). It was direct dispatching a job, but was not adding it in the qtask.running_instances.
 ***** Solved.
-**** There was a Bug on the updateAndReport() on the QBox level. It was getting wrong the available resources, then inform wrong values to the doDispatch() on the QNode level.
+**** REPORT There was a Bug on the updateAndReport() on the QBox level. It was getting wrong the available resources, then inform wrong values to the doDispatch() on the QNode level.
+:LOGBOOK:  
+- State "REPORT"     from ""           [2019-03-29 sex 11:35]
+:END:      
 ***** Because it, NodeSched was dispatching more tasks than possible, making the QBox creates a waiting_instances list.      
 ***** It was corrected and now the doDispatch are sending valid amount of tasks to each QBox. 
 **** In the simple_more workload, the triplet_ tasks are not ending. It is dispatched but have never end. Then, Batsim becomes in deadlock.
@@ -854,6 +863,7 @@ It happened because the 'gambiarra' that we did to try to run the 1-week workloa
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-03-12 ter 16:36]
 - The problem was the direct_dispatch().
+- In the availableResouces check().
 :END:      
 ** tuesday, 12-03-2019
 *** Experiment table design
@@ -871,7 +881,10 @@ It happened because the 'gambiarra' that we did to try to run the 1-week workloa
 *** The simulation ran correclty wihtou the direct_dispatch(). So we will will keep like this for the momento and try to re-implement it.
 ** wednesday, 13-03-2019
 *** Qartnot meeting
-**** TODO Checks 
+**** WAITING Checks 
+:LOGBOOK:  
+- State "WAITING"    from "TODO"       [2019-03-29 sex 11:36]
+:END:      
 ***** DONE To check with Alex the status of the StorageController
 :LOGBOOK:  
 - State "DONE"       from "WAITING"    [2019-03-13 qua 10:25]
@@ -899,7 +912,7 @@ It happened because the 'gambiarra' that we did to try to run the 1-week workloa
 **** http://sbqs.sbc.org.br/index.php/pt/chamada-de-trabalho
 **** https://webmedia.org.br/2019/
 **** http://www.inf.ufrgs.br/er2019/
-*** DONE Mater2 -> Register my presentation in June with an external expert.
+*** DONE Master2 -> Register my presentation in June with an external expert.
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-03-13 qua 14:14]
 :END:      
@@ -964,7 +977,7 @@ I showed to Pierre and modified some more details. Shower do Clément and Denis 
 ** REPORT While it is not done I have been worked on the diagram. :WeekReview:
 ** REPORT Clément repaired the qarnotNodeSched then I merge it with my version. :WeekReview:
 ** REPORT Now we have the _temperature.csv as output of the simulation, then I also have been started to script the plot of the graphs to view the temperature behavior. :WeekReview:
-** REPORT I finished the first version of the diagrams (real platform and simulations)
+** REPORT I finished the first version of the diagrams (real platform and simulations) :WeekReview:
 * Week 21-03 / 27-03
 ** thuersday, 21-03-2019
 *** DONE Check the rpy2
@@ -1276,17 +1289,40 @@ rcolorbrewer scales
 {"id": "QJOB-long:user-input:41428146", "size": 41428146}
 {"id": "QJOB-long:docker:1305968769", "size": 262144}
 {"id": "QJOB-long:user-input:0", "size": 32375882}
-** REPORT I have continuing waiting for the StorageController implementatio.
-** REPORT I am debugging the last version of Clément and testing differente workloads.
-** REPORT I have started to work on the re-submition
-** REPORT I fininshed the first plots for the temperature analyzes (1. looking for the means of all rads; 2. looking for whole data for some specific QRads)
+** REPORT I have continuing waiting for the StorageController implementatio. :WeekReview:
+** REPORT I am debugging the last version of Clément and testing differente workloads. :WeekReview:
+** REPORT I have started to work on the re-submition            :WeekReview:
+** REPORT I fininshed the first plots for the temperature analyzes (1. looking for the means of all rads; 2. looking for whole data for some specific QRads) :WeekReview:
 * Week 28-03 / 03-04
 ** thuersday, 28-03-2019
 *** I was think about the energy consumption.
 *** I corrected the analyzes on jupyter notebook using the Magic Commands. aka. %%command. To use rpy2 at the correct way.
 *** Im reading the initial papers of the Qarnot description and the scheduler problem to start to think about my Objectives and Introduction for my final report.
 *** I attended a presentation.
-*** TODO To Check: Is the availableMobos method working properly?? Because we are killing jobs but it shows available mobos !!!
-**** Line 337 - BoxSched: # Some instances were dispatched by cannot be started yet, return them to the QNode
+*** REPORT To Check: Is the availableMobos method working properly?? Because we are killing jobs but it shows available mobos !!! :WeekReview:
+:LOGBOOK:  
+- State "REPORT"     from "DONE"       [2019-03-29 sex 11:01]
+- State "DONE"       from "TODO"       [2019-03-29 sex 11:01]
+Yes, it was not working correctly. Clément fixed it.
+:END:      
+***** Line 337 - BoxSched: # Some instances were dispatched by cannot be started yet, return them to the QNode
 ** friday, 29-03-2019
-*** TODO To check the train to Paris and send to samantha.sanchez@imag.fr
+*** DONE To check the train to Paris and send to samantha.sanchez@imag.fr
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-03-29 sex 11:01]
+Asked for the same as Clément.
+:END:
+*** REPORT Algorithm: Available Resources
+ - The method returns the number of available resouces (empty mobos or possible to be preempted).
+ - For the first moment, all Mobos count on bkgd, because it depends on the temperature.
+ - So, for example: 
+   If we have only one Mobo in the QRad:
+   At the first moment, it will return: bkgd/low/high : 1/0/0
+   If we dispatch for this QRad a LOW priority job and ask the available resources, it should returns: 0/0/1
+      The Mobo is running the job, but it is possible to be preempted by a HIGH priority JOB.
+   If we dispatch for this QRad a HIGH priority job and ask the available resources, it should returns: 0/0/0
+      Because a HIGH priority job can not be preempted.
+ - Another example: QRad with 2 Mobos -> 2/0/0
+   - Dispatch a LOW priority => 1/0/1
+   - Dispatch a HIGH priority => 0/1/0
+   - Dispatch a HIGH priority => 0/0/0
