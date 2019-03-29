@@ -1326,3 +1326,32 @@ Asked for the same as Clément.
    - Dispatch a LOW priority => 1/0/1
    - Dispatch a HIGH priority => 0/1/0
    - Dispatch a HIGH priority => 0/0/0
+*** TODO Re-submission
+**** Without resubmition: 
+simple: Job submitted: 8 , scheduled: 8 , rejected: 0 , killed: 2 , changed: 0 , timeout: 0 , success 6 , complete: 8
+1 day: Job submitted: 221 , scheduled: 221 , rejected: 0 , killed: 0 , changed: 0 , timeout: 0 , success 221 , complete: 221
+1 week: Job submitted: 11831 , scheduled: 11831 , rejected: 0 , killed: 501 , changed: 0 , timeout: 0 , success 11330 , complete: 11831
+2 weeks : Job submitted: 15922 , scheduled: 15922 , rejected: 0 , killed: 588 , changed: 0 , timeout: 0 , success 15334 , complete: 15922
+
+**** Looking to the flow of the process:
+***** At the QBox side:
+****** There is a job running in a QBox
+***** At the QNode side:
+****** The QNode dispatches to the same QBox a job with higher priority.
+***** At the QBox side:
+****** The QBox will kill the running task => Informs BATSIM.
+****** The QBox will start to run the new task => Informs BATSIM.
+***** At the BATSIM side:
+****** BATSIM will take the killed task as COMPLETED_KILLED => Informs the QNode.
+****** BATSIM will take the new task as RUNNIN (?? confirm the "therm")
+***** At the QNode side:
+****** The QNode will receive on JobCompletion the killes task as COMPLETED_KILEED.
+****** TODO Then, we need to resubmit it.
+**** TODO Change the event time to finish the simulation, the priority of the jobs, and etc, to force preemption situations.
+*** TODO Energy Consumption plots
+**** TODO To check the parameters
+*** TODO Discuss the final status:
+ Job submitted: 8 , scheduled: 2 , rejected: 6 , killed: 1 , changed: 0 , timeout: 0 , success 1 , complete: 2
+ Here, 1 job was COMPLETED_SUCCESFULY, 1 killed because was running when BATSIM asked to finish the simulation, 6 rejected because were not scheduled before BATSIM ask to finish the simulation.
+ So, my point is, the final status should be : rejected: 6, killed: 1, changed: 0, timout: 0, success 1, complete: 1.
+ In my opnion, the "complete" does not make a lot of sense. 
