@@ -1354,4 +1354,16 @@ simple: Job submitted: 8 , scheduled: 8 , rejected: 0 , killed: 2 , changed: 0 ,
  Job submitted: 8 , scheduled: 2 , rejected: 6 , killed: 1 , changed: 0 , timeout: 0 , success 1 , complete: 2
  Here, 1 job was COMPLETED_SUCCESFULY, 1 killed because was running when BATSIM asked to finish the simulation, 6 rejected because were not scheduled before BATSIM ask to finish the simulation.
  So, my point is, the final status should be : rejected: 6, killed: 1, changed: 0, timout: 0, success 1, complete: 1.
- In my opnion, the "complete" does not make a lot of sense. 
+ In my opnion, the "complete" does not make a lot of sense.
+** sunday, 31-03-2019
+*** Working on Re-submission
+ Using a workload to enforce a preemption. It is possible to verify that the job is preempted, the new one starts to run and the previous run is killed.
+ When the re-submission is done, the new job is created with '#' to be identified.
+ Then all other job are been finished and the resubmitted dont.
+ I think that the resubmission method just create the new job, but did not add send to pybatsim to be ran. 
+ Two options:
+ - To try to change the resubmission method.
+ - To try to calls resubmission_job() and another method in batsim to ask the job execution.
+ I also think that the resumission does not add the event: "EXECUTE_JOB", so it does not look like a job to be executed. Just some job that already ran or something like this.
+ Opntio:
+ - To try to modify the resubmission method to chang this value. 
