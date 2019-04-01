@@ -1366,4 +1366,10 @@ simple: Job submitted: 8 , scheduled: 8 , rejected: 0 , killed: 2 , changed: 0 ,
  - To try to calls resubmission_job() and another method in batsim to ask the job execution.
  I also think that the resumission does not add the event: "EXECUTE_JOB", so it does not look like a job to be executed. Just some job that already ran or something like this.
  Opntio:
- - To try to modify the resubmission method to chang this value. 
+ - To try to modify the resubmission method to chang this value.
+** monday, 01-04-2019
+*** I filled the files to the Mission in Qarnot
+*** Working on re-submission
+ I have been done the methos in the NodeSched. It is called in the OnJobCompletion if(job.state == COMPLETED_KILLED).
+ Then I'm creating a new job, register_job and copying the mainly values as profile, id, etc, and adding the field "metadata" with job_parent, nb_resubmitted ...
+ It have been resubmitted, but, something is occuring when the resubmitted job is completed. Because is not possible to access the job.qtask_id when the job arrive on the jobCompletion.
