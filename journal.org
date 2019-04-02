@@ -960,8 +960,9 @@ It happened because the 'gambiarra' that we did to try to run the 1-week workloa
 **** He adviced me to keep both, onde for the simulation and onde for the real platform).
 **** He advided me to separate more the component and the lines and explicit more somethings.
 ** wednesday, 20-03-2019
-*** WAITING The script to analyze the _temperatures.csv with R.
+*** DONE The script to analyze the _temperatures.csv with R.
 :LOGBOOK:  
+- State "DONE"       from "WAITING"    [2019-04-02 ter 14:42]
 - State "WAITING"    from "TODO"       [2019-03-20 qua 16:14] \\
   In progress..
 :END:      
@@ -1071,7 +1072,10 @@ rcolorbrewer scales
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-03-28 qui 13:17]
 :END:      
-*** TODO To check and fix the JobCompletio TODO in the NodeSched.
+*** DONE To check and fix the JobCompletio TODO in the NodeSched.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-04-02 ter 14:42]
+:END:      
 **** TODO On checkSimulationFinished() -> Its receiving from Batsim : NoMoreStatic and NoMoreExternal.
 ***** It makes sense, because when Batsim dispatch the last jobs could there are noMoreStatic or External. But, should we killorRejectAllJobs???
 **** TODO On jobCompletion() -> If a job is COMPLETED_KILLED the task is killed.
@@ -1086,8 +1090,14 @@ rcolorbrewer scales
 - State "DONE"       from "TODO"       [2019-03-25 seg 18:35]
 :END:      
 ** tuesday, 26-03-2019
-*** TODO To work on the scheduler
-**** TODO ReSchedule a job killed because it has lower priority than a new one.
+*** DONE To work on the scheduler
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-04-02 ter 14:43]
+:END:      
+**** DONE ReSchedule a job killed because it has lower priority than a new one.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-04-02 ter 14:43]
+:END:      
 **** The point is, now, it is killing the jobs regarding the simulation time, not the priority of the jobs.
 **** BATSIM should recreate the job, neither PyBatsim !!!!
 ***** So, I need to do something to PyBatsim says to BatSim to recreate the Job.
@@ -1326,7 +1336,10 @@ Asked for the same as Clément.
    - Dispatch a LOW priority => 1/0/1
    - Dispatch a HIGH priority => 0/1/0
    - Dispatch a HIGH priority => 0/0/0
-*** TODO Re-submission
+*** DONE Re-submission
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-04-02 ter 14:46]
+:END:      
 **** Without resubmition: 
 simple: Job submitted: 8 , scheduled: 8 , rejected: 0 , killed: 2 , changed: 0 , timeout: 0 , success 6 , complete: 8
 1 day: Job submitted: 221 , scheduled: 221 , rejected: 0 , killed: 0 , changed: 0 , timeout: 0 , success 221 , complete: 221
@@ -1373,3 +1386,35 @@ simple: Job submitted: 8 , scheduled: 8 , rejected: 0 , killed: 2 , changed: 0 ,
  I have been done the methos in the NodeSched. It is called in the OnJobCompletion if(job.state == COMPLETED_KILLED).
  Then I'm creating a new job, register_job and copying the mainly values as profile, id, etc, and adding the field "metadata" with job_parent, nb_resubmitted ...
  It have been resubmitted, but, something is occuring when the resubmitted job is completed. Because is not possible to access the job.qtask_id when the job arrive on the jobCompletion.
+** tuesday, 02-04-2019
+*** Working on re-submission                                   :WeekReview:
+ In the QBoxSched, when a subqtask would be created, it was considering a "dataset" list for all instances. But, for the empty one it was getting error. Clément fixed it.
+ For the re-submission I created a new method on batsim.py to register a job resubmitted.
+ OBS: The update_period defined in the qarnotNodeSched changes the decision, aka, changes the final status. 
+      Ex: with the simple_more workload, update_period = [100, 140] => 1 killed job; update_period = [150,300] => 0 killed jobs.
+*** Results:
+**** period_time = 300
+***** 2_week: Job submitted: 15922 , scheduled: 17323 , rejected: 0 , killed: 1424 , changed: 0 , timeout: 0 , success 15899 , complete: 17323
+***** 1_week: Job submitted: 11831 , scheduled: 12738 , rejected: 0 , killed: 911 , changed: 0 , timeout: 0 , success 11827 , complete: 12738
+***** 1_day: Job submitted: 221 , scheduled: 221 , rejected: 0 , killed: 0 , changed: 0 , timeout: 0 , success 221 , complete: 221
+***** simple_more: Job submitted: 8 , scheduled: 8 , rejected: 0 , killed: 0 , changed: 0 , timeout: 0 , success 8 , complete: 8
+**** period_time = 140
+***** 1_week: Job submitted: 11831 , scheduled: 12784 , rejected: 0 , killed: 960 , changed: 0 , timeout: 0 , success 11824 , complete: 12784
+***** 1_day: Job submitted: 221 , scheduled: 221 , rejected: 0 , killed: 0 , changed: 0 , timeout: 0 , success 221 , complete: 221
+***** simple_more: Job submitted: 8 , scheduled: 9 , rejected: 0 , killed: 1 , changed: 0 , timeout: 0 , success 8 , complete: 9
+*** TODO Add the following values in the final status: resubmitted and real killed (maybe, "preempted").
+*** DONE Save the output of the simple_more with preemption and put in the scripts repository, to plot the gantt chart.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-04-02 ter 15:24]
+- But, I did not update the qarnotNodeSchedAndrei. I'm still waiting for the StorageController.
+:END:      
+*** TODO To solve the problems with the packages in the Jupyter Notebook
+ python3 -m ipykernel install --user
+** wednesday, 03-04-2019
+*** TODO To check the jupyter notebook with Pierre.
+*** TODO To do the simulation runs on Jupyter Notebook.
+** 
+** REPORT Resubmission was done.                                :WeekReview:
+** REPORT To do the resubmission I created a new method on batsim.py. :WeekReview:
+** REPORT Jupyter Notebook for whole analyzes (job allocation and temperature). :WeekReview:
+** REPORT I though to analyze the energy consumption.           :WeekReview:
