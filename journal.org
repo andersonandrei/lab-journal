@@ -1,4 +1,4 @@
-# -- mode: org --
+-# -- mode: org --
 # -- coding: utf-8 --
 #+STARTUP: overview indent inlineimages logdrawer
 #+TITLE:  Andrei's Journal
@@ -1413,8 +1413,25 @@ simple: Job submitted: 8 , scheduled: 8 , rejected: 0 , killed: 2 , changed: 0 ,
 ** wednesday, 03-04-2019
 *** TODO To check the jupyter notebook with Pierre.
 *** TODO To do the simulation runs on Jupyter Notebook.
-** 
+*** Meeting
+**** Mission in Paris
+***** To prepare the agenda
+***** To prepare the presentation
+***** Objectives
+****** To show that the platform are full implemented
+****** To show the edge computing things
+****** ..?
+***** TODO Presentation
+****** Workflow diagram
+******* Simulation of real platform AND our improvements
+******* Real components
+****** Analyzes
+******* Temperature
+******* Job Allocation
 ** REPORT Resubmission was done.                                :WeekReview:
-** REPORT To do the resubmission I created a new method on batsim.py. :WeekReview:
+** REPORT About the the resubmission, I created a new method on batsim.py. :WeekReview:
 ** REPORT Jupyter Notebook for whole analyzes (job allocation and temperature). :WeekReview:
-** REPORT I though to analyze the energy consumption.           :WeekReview:
+** REPORT I though about analyze the energy consumption.         :WeekReview:
+* Week 04-04 / 10-04
+** thuersday, 04-04-2019
+*** Journée des doctorants 
