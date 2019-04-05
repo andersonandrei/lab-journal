@@ -1411,8 +1411,17 @@ simple: Job submitted: 8 , scheduled: 8 , rejected: 0 , killed: 2 , changed: 0 ,
 *** TODO To solve the problems with the packages in the Jupyter Notebook
  python3 -m ipykernel install --user
 ** wednesday, 03-04-2019
-*** TODO To check the jupyter notebook with Pierre.
-*** TODO To do the simulation runs on Jupyter Notebook.
+*** DONE To check the jupyter notebook with Pierre.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-04-05 sex 10:47]
+I need to describe the experiments.
+:END:      
+*** DONE To do the simulation runs on Jupyter Notebook.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-04-05 sex 10:46]
+We decided that we dont have more time to do it. And we will not run the full simulation during the presentation.
+I will finish the Jupyter Notebook file about the analyzes to keep it available for any doubts.
+:END:      
 *** Meeting
 **** Mission in Paris
 ***** To prepare the agenda
@@ -1434,4 +1443,50 @@ simple: Job submitted: 8 , scheduled: 8 , rejected: 0 , killed: 2 , changed: 0 ,
 ** REPORT I though about analyze the energy consumption.         :WeekReview:
 * Week 04-04 / 10-04
 ** thuersday, 04-04-2019
-*** Journée des doctorants 
+*** Journée des doctorants
+*** I have been started to write the description of analyzes.
+** friday, 05-04-2019
+*** DONE To decide the experiments metrics
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-04-05 sex 17:04]
+:END:      
+**** TODO To write de full descriptions.
+*** DONE To define the final version of the diagram
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-04-05 sex 17:04]
+:END:      
+**** TODO To draw the slides, step by step
+*** Experiment design board                                          :ATTACH:
+:PROPERTIES:
+:Attachments: experiments.jpg
+:ID:       d57b0d1c-3e5e-4e23-8298-7d787a065b0c
+:END:
+
+#+NAME: fig: experiments_board
+#+ATTR_ORG: :width 500
+file:data/d5/7b0d1c-3e5e-4e23-8298-7d787a065b0c/experiments.jpg
+**** From the csv, outputs:
+***** a. consumed_energy
+***** b. jobs
+***** c. machine_states
+***** d. ps_change
+***** e. schedule
+***** f. temperature
+***** TODO g. new_status [nb_preempted, cpu_burn, data_staging, nb_killed_at_end]
+**** Metrics :
+***** 1. from f. : get the temperature over time -> To validate that the standard version is correct and close to the real data.
+***** 2. from b. : plot the gantt chart
+***** 3. from g. : Compare if there are more or less preempted jobs, data_staging.
+***** 4. from e. : Compare if the max_values, as waiting_time, are bigger or smaller. 
+***** 5. from e. : Compare if the data_transfer_time is bigger or smaller. 
+***** 6. from e. : Compare the consumed_joules, time_computing, time_scheduling. Is the diff. smaller or bigger?
+**** Overview:
+***** TODO 1,2,4,6. The csv are ready, just script it.
+***** WAITING 2. Discuss with the team if is usefull to extract the real job allocation data.
+***** WAITING 5, 7. We need to implement it.
+
+** monday, 08-04-2019
+*** TODO Draw the slides for the diagrams
+*** TODO To finish to wite the experiment descriptions
+**** TODO To check how and who will implement the modification to get the .csv as 5. and 7.
+*** TODO To run the experiment with both schedulers
