@@ -1490,3 +1490,10 @@ file:data/d5/7b0d1c-3e5e-4e23-8298-7d787a065b0c/experiments.jpg
 *** TODO To finish to wite the experiment descriptions
 **** TODO To check how and who will implement the modification to get the .csv as 5. and 7.
 *** TODO To run the experiment with both schedulers
+ | Workload    | NodeSched | NodeSchedAndrei |   |
+ | simple      |           |                 |   |
+ | simple_more |           |                 |   |
+ | 1_day       |           |                 |   |
+ | 1_week      |           |                 |   |
+ | 2_weeks     |           |                 |   |
+**** I need to check the data movements, because the scheduling is not changing.
