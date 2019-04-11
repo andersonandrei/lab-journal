@@ -1505,9 +1505,16 @@ file:data/d5/7b0d1c-3e5e-4e23-8298-7d787a065b0c/experiments.jpg
 **** I worked on the updates between the branches. I got the last version of the temperature branch and updated my version of the scheduler.
 **** I need to check the data movements, because the scheduling is not changing.
 ** tuesday, 09-04-2019
-*** TODO To check the data movements, aka., the job allocation of my scheduler.
+*** DONE To check the data movements, aka., the job allocation of my scheduler.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-04-11 qui 09:56]
+:END:      
 **** Looking as working :D. See example: triplet1 and 2 at subtime:300
-*** TODO To change the print of names in the GanttChart with Evalys
+*** DONE To change the print of names in the GanttChart with Evalys
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-04-11 qui 18:32]
+- If the name_id is deleted, so the ganttChart is plotted without names. Its not the perfect solution. I should check how to do it properly.
+:END:      
 In the documentation:  labeler – The strategy to label jobs. By default, the jobID column is used to label jobs. To disable the labeling of jobs, simply return an empty string.
 So, I deleted all values from the ID Column.
 *** TODO To take a look in the Batsim demo [https://gitlab.inria.fr/batsim/batsim/blob/master/demo/BatsimDemo.ipynb], to plot some similar graphs.
@@ -1515,7 +1522,10 @@ Good link [http://www.sthda.com/english/articles/24-ggpubr-publication-ready-plo
 Gantt Chart with R [https://adrien-faure.fr/post/ganttcharts/]
 *** I did the presentation for the diagram.
 ** wednesday, 10-04-2019
-*** TODO To colletct other weeks
+*** DONE To colletct other weeks
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-04-11 qui 18:33]
+:END:      
 *** Progress
 | Task              | Status         | What is missing? |
 | Plot GanttChart   |                |                  |
@@ -1527,6 +1537,18 @@ Gantt Chart with R [https://adrien-faure.fr/post/ganttcharts/]
 | Plot 7            |                |                  |
 | Text Description  | ALMOST         |                  |
 | Full experiments  | ALMOST         |                  |
-| Workflow diagram  | WAITING REVIEW | REVIEW           |
+| Workflow diagram  | DONE           |                  |
 |                   |                |                  |
 
+** thuesday, 11-04-2019
+*** DONE rbind the _schedule.csv to get the columns as keys and the values as values. Also add a column origin = {standard, andrei}
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-04-11 qui 10:42]
+:END:      
+*** WAITING To save as csv the new outputs of pybatsim.
+:LOGBOOK:  
+- State "WAITING"    from "TODO"       [2019-04-11 qui 20:43] \\
+  Coded to be saved as _schedule_plus.csv in the current directory of pybatsim. Check the correct place.
+:END:      
+*** TODO Count the number of new downloads done by the scheduler.
+*** We had a meeting with Alex to discuss wat we will present in the Qarnot meeting.
