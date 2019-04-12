@@ -1552,3 +1552,25 @@ Gantt Chart with R [https://adrien-faure.fr/post/ganttcharts/]
 :END:      
 *** TODO Count the number of new downloads done by the scheduler.
 *** We had a meeting with Alex to discuss wat we will present in the Qarnot meeting.
+
+** friday, 12-04-2019
+*** TODO Target in 9 plot
+*** TODO diff_mean of real and target
+*** Good practices for plots:
+https://measuringu.com/graphing-displaying-data/
+http://datalearning.eu/wp-content/uploads/2016/02/Data-Viz-Best-Practices.pdf
+https://www.amazon.com/dp/0961392177/?tag=stackoverfl08-20
+https://www.amazon.com/o/ASIN/0961392142/ref=nosim/gettgenedone-20
+*** Good link for legends in R https://cran.r-project.org/web/packages/lemon/vignettes/legends.html
+https://rpkgs.datanovia.com/ggpubr/reference/rremove.html
+https://rpkgs.datanovia.com/ggpubr/reference/ggarrange.html
+*** List of Graphs
+**** Real and standard
+***** Means
+***** Means_diff
+***** 9 for whole week
+**** Standard and new
+***** Means
+***** Metrics
+***** GanttChart
+**** TODO Reduce the standard with real
