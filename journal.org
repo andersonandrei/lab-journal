@@ -1517,7 +1517,10 @@ file:data/d5/7b0d1c-3e5e-4e23-8298-7d787a065b0c/experiments.jpg
 :END:      
 In the documentation:  labeler – The strategy to label jobs. By default, the jobID column is used to label jobs. To disable the labeling of jobs, simply return an empty string.
 So, I deleted all values from the ID Column.
-*** TODO To take a look in the Batsim demo [https://gitlab.inria.fr/batsim/batsim/blob/master/demo/BatsimDemo.ipynb], to plot some similar graphs.
+*** DONE To take a look in the Batsim demo [https://gitlab.inria.fr/batsim/batsim/blob/master/demo/BatsimDemo.ipynb], to plot some similar graphs.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-04-15 seg 10:24]
+:END:      
 Good link [http://www.sthda.com/english/articles/24-ggpubr-publication-ready-plots/81-ggplot2-easy-way-to-mix-multiple-graphs-on-the-same-page/]
 Gantt Chart with R [https://adrien-faure.fr/post/ganttcharts/]
 *** I did the presentation for the diagram.
@@ -1529,8 +1532,8 @@ Gantt Chart with R [https://adrien-faure.fr/post/ganttcharts/]
 *** Progress
 | Task              | Status         | What is missing? |
 | Plot GanttChart   |                |                  |
-| Plot Temperature  |                |                  |
-| Plot Many metrics |                |                  |
+| Plot Temperature  | DONE           |                  |
+| Plot Many metrics | DONE           |                  |
 | Plot 4            |                |                  |
 | Plot 5            |                |                  |
 | Plot 6            |                |                  |
@@ -1540,6 +1543,7 @@ Gantt Chart with R [https://adrien-faure.fr/post/ganttcharts/]
 | Workflow diagram  | DONE           |                  |
 |                   |                |                  |
 
+* Week 11-04 / 17-04 
 ** thuesday, 11-04-2019
 *** DONE rbind the _schedule.csv to get the columns as keys and the values as values. Also add a column origin = {standard, andrei}
 :LOGBOOK:  
@@ -1550,12 +1554,22 @@ Gantt Chart with R [https://adrien-faure.fr/post/ganttcharts/]
 - State "WAITING"    from "TODO"       [2019-04-11 qui 20:43] \\
   Coded to be saved as _schedule_plus.csv in the current directory of pybatsim. Check the correct place.
 :END:      
-*** TODO Count the number of new downloads done by the scheduler.
+*** DONE Count the number of new downloads done by the scheduler.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-04-15 seg 10:24]
+- As Clément said, this number is the numbe of staging jobs.
+:END:      
 *** We had a meeting with Alex to discuss wat we will present in the Qarnot meeting.
 
 ** friday, 12-04-2019
-*** TODO Target in 9 plot
-*** TODO diff_mean of real and target
+*** DONE Target in 9 plot
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-04-15 seg 10:23]
+:END:      
+*** DONE diff_mean of real and target
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-04-15 seg 10:23]
+:END:      
 *** Good practices for plots:
 https://measuringu.com/graphing-displaying-data/
 http://datalearning.eu/wp-content/uploads/2016/02/Data-Viz-Best-Practices.pdf
@@ -1568,9 +1582,29 @@ https://rpkgs.datanovia.com/ggpubr/reference/ggarrange.html
 **** Real and standard
 ***** Means
 ***** Means_diff
-***** 9 for whole week
+***** 9 rads week
 **** Standard and new
 ***** Means
 ***** Metrics
 ***** GanttChart
-**** TODO Reduce the standard with real
+**** DONE Reduce the standard with real
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-04-15 seg 10:24]
+:END:      
+** saturday, 13-04-2019
+*** I plotted everything in the metrics graph (all metrics in the same graphic, using facet_wrap) and the diff of means for the real data and standard simulation togheter.
+** sunday, 14-04-2019
+*** I fixed the labels of all graphics, orginized the notebook and put all graphs in sequence of presentation and analyzes.
+*** TODO To fix the diagram slides
+*** TODO To check the diff for the real one.
+*** TODO To add an arrow to show were we are doing the modifications in the new sched
+** monday, 15-04-2019
+** Danilo's call
+*** TODO To say that the measurement of the temperatures was achivied soon.
+*** TODO To run different kinds of workloads
+*** TODO How to validate the the simulator looking to the temperatures,considering external factors.
+*** TODO TO show the graphs of the diff, unexpected results
+*** TODO How to explain more preempted
+*** TODO Staging jobs is how we are simulating. When we want to process and requires an data set, we create a staging_job to simulate the data tranfer.
+*** TODO What is the difference between the preempted and the rejected jobs?
+*** TODO QNode to QBox
