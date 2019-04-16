@@ -1595,16 +1595,64 @@ https://rpkgs.datanovia.com/ggpubr/reference/ggarrange.html
 *** I plotted everything in the metrics graph (all metrics in the same graphic, using facet_wrap) and the diff of means for the real data and standard simulation togheter.
 ** sunday, 14-04-2019
 *** I fixed the labels of all graphics, orginized the notebook and put all graphs in sequence of presentation and analyzes.
-*** TODO To fix the diagram slides
-*** TODO To check the diff for the real one.
-*** TODO To add an arrow to show were we are doing the modifications in the new sched
+*** DONE To fix the diagram slides
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-04-16 ter 12:24]
+:END:      
+*** DONE To check the diff for the real one.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-04-16 ter 12:24]
+:END:      
+*** DONE To add an arrow to show were we are doing the modifications in the new sched
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-04-16 ter 12:24]
+:END:      
 ** monday, 15-04-2019
-** Danilo's call
-*** TODO To say that the measurement of the temperatures was achivied soon.
-*** TODO To run different kinds of workloads
-*** TODO How to validate the the simulator looking to the temperatures,considering external factors.
-*** TODO TO show the graphs of the diff, unexpected results
-*** TODO How to explain more preempted
-*** TODO Staging jobs is how we are simulating. When we want to process and requires an data set, we create a staging_job to simulate the data tranfer.
-*** TODO What is the difference between the preempted and the rejected jobs?
-*** TODO QNode to QBox
+*** I worked on the plots, verifyng if the data about the diff of the means plotted was correct.
+*** Danilo's call
+**** DONE To say that the measurement of the temperatures was achivied soon.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-04-16 ter 15:48]
+:END:      
+**** TODO To run different kinds of workloads
+**** STARTED How to validate the the simulator looking to the temperatures,considering external factors.
+:LOGBOOK:  
+- State "STARTED"    from "TODO"       [2019-04-16 ter 15:48]
+- Maybe, isolating a QRad, as the Bordeaux.
+:END:      
+**** DONE TO show the graphs of the diff, unexpected results
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-04-16 ter 15:48]
+:END:      
+**** DEFERRED How to explain more preempted
+:LOGBOOK:  
+- State "DEFERRED"   from "DONE"       [2019-04-16 ter 15:49]
+:END:      
+**** DEFERRED Staging jobs is how we are simulating. When we want to process and requires an data set, we create a staging_job to simulate the data tranfer.
+:LOGBOOK:  
+- State "DEFERRED"   from "TODO"       [2019-04-16 ter 15:49]
+:END:      
+**** DEFERRED What is the difference between the preempted and the rejected jobs?
+:LOGBOOK:  
+- State "DEFERRED"   from "TODO"       [2019-04-16 ter 15:49]
+:END:      
+**** DONE QNode to QBox
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-04-16 ter 15:49]
+:END:      
+** tuesday, 16-04-2019
+*** Qartnot's meeting
+**** TODO To validate the simulation                               :Paper:
+**** To use different external events
+**** To design a simple environment to study
+**** Before looking for the temperatures, we should look to the allocation.
+**** The data extracted is the mean for that our
+**** Alex has results about the popularity of the data sets, it could justify or not a location-based scheduler.
+**** Maybe will be produced a real simple scenario, to be compared.
+**** We want to submmit to the Cluster [https://clustercomp.org/2019/] :Paper:
+**** TODO To compare with a real isolate scenario
+**** TODO To select wich QRad
+**** TODO This QRad could be one in Bordeaux, during the weekend.
+**** TODO To fix the diagram. The steps 3-5 are not too accurate. The Node does not ask the update of the resources. It is done time by time. :Paper:
+**** Digitalisation, energy and data demand: The impact of Internet trafficonoverall and peak electricity consumption
+**** TODO To do a static scheduler to base the paper               :Paper:
