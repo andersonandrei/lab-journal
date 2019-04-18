@@ -1643,18 +1643,23 @@ https://rpkgs.datanovia.com/ggpubr/reference/ggarrange.html
 ** tuesday, 16-04-2019
 *** Qartnot's meeting
 **** TODO To validate the simulation                               :Paper:
+***** We should use a simple scenario
+***** To start comparing the GanttCharts
+***** After, the temperatures
 **** To use different external events
 **** To design a simple environment to study
 **** Before looking for the temperatures, we should look to the allocation.
 **** The data extracted is the mean for that our
 **** Alex has results about the popularity of the data sets, it could justify or not a location-based scheduler.
-**** Maybe will be produced a real simple scenario, to be compared.
 **** We want to submmit to the Cluster [https://clustercomp.org/2019/] :Paper:
 **** TODO To compare with a real isolate scenario
-**** TODO To select wich QRad
-**** TODO This QRad could be one in Bordeaux, during the weekend.
-**** TODO To fix the diagram. The steps 3-5 are not too accurate. The Node does not ask the update of the resources. It is done time by time. :Paper:
-**** Digitalisation, energy and data demand: The impact of Internet trafficonoverall and peak electricity consumption
+***** TODO To select wich QRad
+***** TODO This QRad could be one in Bordeaux, during the weekend.
+**** DONE To fix the diagram. The steps 3-5 are not too accurate. The Node does not ask the update of the resources. It is done time by time. :Paper:
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-04-18 qui 10:46]
+:END:      
+**** Paper about energy consumption:  Digitalisation, energy and data demand: The impact of Internet trafficonoverall and peak electricity consumption
 **** TODO To do a static scheduler to base the paper               :Paper:
 ***** It means that we will receive as input informations (real_allocation , real_start_time, real_finish_time, real_avg_speed)
 ** wednesday, 17-04-2019
@@ -1669,3 +1674,5 @@ https://rpkgs.datanovia.com/ggpubr/reference/ggarrange.html
 ***** We wont do decision about the jobs, just verify the mobo from where it should be sent.
 ***** I 
 *** BATSIM paper on Cluster 2017 [[https://gitlab.inria.fr/batsim/article-cluster17/blob/master/article/cluster17_energy_tradeoffs.pdf][Energy vs Responsiveness Trade-off in EASY Back Filling]] :Paper:
+** thuesday, 18-04-2019
+*** I worked on the staticScheduler.
