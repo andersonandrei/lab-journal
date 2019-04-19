@@ -1674,5 +1674,16 @@ https://rpkgs.datanovia.com/ggpubr/reference/ggarrange.html
 ***** We wont do decision about the jobs, just verify the mobo from where it should be sent.
 ***** I 
 *** BATSIM paper on Cluster 2017 [[https://gitlab.inria.fr/batsim/article-cluster17/blob/master/article/cluster17_energy_tradeoffs.pdf][Energy vs Responsiveness Trade-off in EASY Back Filling]] :Paper:
+* Week 18-04 / 24-04
 ** thuesday, 18-04-2019
 *** I worked on the staticScheduler.
+*** Rodinia, a benchmark to produce the jobs to be runned in the scheduler [https://rodinia.cs.virginia.edu/doku.php]
+** wednesday, 19-04-2019
+*** WAITING The workload modified with the real_* .
+*** WAITING The rads that are in Bordeaux to be filtered.
+*** I was trying to change a lot of things to adapt the static scheduler in a good way. But now starting again from the standard, Im trying to modify as less as possible.
+**** Its runnig, but killing jobs on beginning and are not resubmitting.
+**** TODO To write the correct values in the jobs.csv for the "real" logs, to be compared with the jobs.csv as output of the static scheduler.
+**** TODO To change the real_allocation from Rads to Mobos.
+**** TODO Use the dict_mobos to compare with the real_allocation from some job. Then I will now wich QBox has that mobo.
+***** So, the dict should connect the mobos and boxes.
