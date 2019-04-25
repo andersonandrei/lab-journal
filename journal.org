@@ -1687,3 +1687,10 @@ https://rpkgs.datanovia.com/ggpubr/reference/ggarrange.html
 **** TODO To change the real_allocation from Rads to Mobos.
 **** TODO Use the dict_mobos to compare with the real_allocation from some job. Then I will now wich QBox has that mobo.
 ***** So, the dict should connect the mobos and boxes.
+* Week 25-04 / 01-05
+** Working on my master report
+*** [[https://orgmode.org/manual/LaTeX-Export.html#LaTeX-Export][To export to LateX and process as PDF]]
+*** [[https://emacs.stackexchange.com/questions/29748/install-ess-with-use-package][To install ESS, to run code in the org mode
+]]
+*** I learned how to export it to PDF.
+*** TODO To check the errors with bibtex. Maybe copy all files from Pedro and try to export the pdf by it.
