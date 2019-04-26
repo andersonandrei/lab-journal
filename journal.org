@@ -1678,7 +1678,7 @@ https://rpkgs.datanovia.com/ggpubr/reference/ggarrange.html
 ** thuesday, 18-04-2019
 *** I worked on the staticScheduler.
 *** Rodinia, a benchmark to produce the jobs to be runned in the scheduler [https://rodinia.cs.virginia.edu/doku.php]
-** wednesday, 19-04-2019
+** friday, 19-04-2019
 *** WAITING The workload modified with the real_* .
 *** WAITING The rads that are in Bordeaux to be filtered.
 *** I was trying to change a lot of things to adapt the static scheduler in a good way. But now starting again from the standard, Im trying to modify as less as possible.
@@ -1687,10 +1687,31 @@ https://rpkgs.datanovia.com/ggpubr/reference/ggarrange.html
 **** TODO To change the real_allocation from Rads to Mobos.
 **** TODO Use the dict_mobos to compare with the real_allocation from some job. Then I will now wich QBox has that mobo.
 ***** So, the dict should connect the mobos and boxes.
+** monday, 22-04-2019
+*** Easter's holiday
+** tuesday, 23-04-2019
+*** Easter's holiday
+** wednesday, 24-04-2019
+*** Clément got to finish the Static-Scheduler.                   :Clément:
+*** I started to think about the real structure of my report.
 * Week 25-04 / 01-05
-** Working on my master report
+** thursday, 25-04-2019
+*** Working on my master report
 *** [[https://orgmode.org/manual/LaTeX-Export.html#LaTeX-Export][To export to LateX and process as PDF]]
 *** [[https://emacs.stackexchange.com/questions/29748/install-ess-with-use-package][To install ESS, to run code in the org mode
 ]]
 *** I learned how to export it to PDF.
 *** TODO To check the errors with bibtex. Maybe copy all files from Pedro and try to export the pdf by it.
+** friday, 26-04-2019
+*** Working on my master report
+*** I downloaded papers about SIMGRID, BARSIM and Qarnot platform.
+*** Read:                                                           :Paper:
+**** [Simgrid: a Toolkit for the Simulation of application Scheduling]
+**** [Versatile, Scalable, and Accurate Simulation of Distributed Applications and Platforms
+**** [Scheduling Distributed Applications: the SimGrid Simulation Framework]
+**** [Cooling Energy Integration in SimGrid]
+**** [Adding Storage Simulation Capacities to the SimGrid Toolkit: Concepts, Models, and API]
+**** [Batsim: a Realistic Language-Independent Resources and Jobs Management Systems Simulator]
+**** [Predicting the Energy Consumption of MPI Applications at Scale Using a Single Node]
+**** [Accuracy Study and Improvement of Network Simulation in the SimGrid Framework]
+*** I copied some text from each papar to my report file. Now I need to well structure it and check better how to cite these papers.
