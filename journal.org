@@ -1715,3 +1715,37 @@ https://rpkgs.datanovia.com/ggpubr/reference/ggarrange.html
 **** [Predicting the Energy Consumption of MPI Applications at Scale Using a Single Node]
 **** [Accuracy Study and Improvement of Network Simulation in the SimGrid Framework]
 *** I copied some text from each papar to my report file. Now I need to well structure it and check better how to cite these papers.
+** sunday, 28-04-2019
+*** I fixed the platform workflow, hiding text and reducing the size of the picture.
+*** I also organized the order of the references that I got.
+** monday, 29-04-2019
+*** Meeting paper                                                   :Paper:
+**** Skeleton from the Qarnot presentation
+**** Agree about the message ?
+**** TODO Experiments?? What to do?
+*** WAITING Finish the diagram for the paper
+:LOGBOOK:  
+- State "WAITING"    from "TODO"       [2019-04-29 seg 15:18] \\
+  I cleaned the workflow diagram (reduced the sizes, did the components near from each other and etc..)
+  I also need to ask Denis if we will keep or not the IoT submission.
+  I wrote the description of all steps. Also, I added the short description for each step again. All already added in the paper.
+:END:
+*** DONE A new script: to compare the new workloads in the static scheduler.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-04-29 seg 19:28]
+:END:      
+**** DONE Workload: 1_day_26_april
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-04-29 seg 19:28]
+:END:      
+**** DONE Workload: 3_day_26_april
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-04-29 seg 19:28]
+:END:      
+*** TODO To check the competitions:
+**** https://www.innovstreet.fr/index.html
+**** https://techandrelationships.org/hackathon/
+** tuesday, 30-04-2019
+*** TODO To verify how to show the job_allocation, now it is just TRUE or FALSE.
+*** TODO To check if we will put the workflow diagram in the paper, if, which one? Both or just one about the platform?
+*** TODO To check the description and design of the diagram in the paper.
