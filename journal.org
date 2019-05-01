@@ -1749,3 +1749,20 @@ https://rpkgs.datanovia.com/ggpubr/reference/ggarrange.html
 *** TODO To verify how to show the job_allocation, now it is just TRUE or FALSE.
 *** TODO To check if we will put the workflow diagram in the paper, if, which one? Both or just one about the platform?
 *** TODO To check the description and design of the diagram in the paper.
+** wednesday, 01-05-2019
+*** DONE On paper
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-05-01 qua 22:37]
+:END:      
+**** DONE Platform description based on Yannik's paper.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-05-01 qua 22:37]
+:END:      
+**** DONE Scheduler description
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-05-01 qua 22:37]
+:END:      
+**** DONE Job Allocation problem
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-05-01 qua 22:37]
+:END:      * 
