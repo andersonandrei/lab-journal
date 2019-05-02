@@ -1765,4 +1765,9 @@ https://rpkgs.datanovia.com/ggpubr/reference/ggarrange.html
 **** DONE Job Allocation problem
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-05-01 qua 22:37]
-:END:      * 
+:END:      *
+* Week 02-05 / 08-05
+** thursday, 02-05-2019
+*** TODO To compare the means properly, for the Static Scheduler. The qarnot_extracted_temperatures.csv has the mean measured for each hour. Our output has the timestamp for each 600s.
+*** Key-note: Contrasting artificial intelligence with human intelligence
+ Jean-Louis Dessalles - Telecom Paristech
