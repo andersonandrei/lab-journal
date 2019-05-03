@@ -1768,6 +1768,13 @@ https://rpkgs.datanovia.com/ggpubr/reference/ggarrange.html
 :END:      *
 * Week 02-05 / 08-05
 ** thursday, 02-05-2019
-*** TODO To compare the means properly, for the Static Scheduler. The qarnot_extracted_temperatures.csv has the mean measured for each hour. Our output has the timestamp for each 600s.
+*** DONE To compare the means properly, for the Static Scheduler. The qarnot_extracted_temperatures.csv has the mean measured for each hour. Our output has the timestamp for each 600s.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-05-03 sex 14:09]
+:END:      
 *** Key-note: Contrasting artificial intelligence with human intelligence
  Jean-Louis Dessalles - Telecom Paristech
+** friday, 03-05-2019
+*** I fixed the comparison between the means as the DONE topic one day before.
+*** I did the same for the first script
+*** I added a filter to see how the machines from Florestine behaves.
