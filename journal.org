@@ -1778,3 +1778,51 @@ https://rpkgs.datanovia.com/ggpubr/reference/ggarrange.html
 *** I fixed the comparison between the means as the DONE topic one day before.
 *** I did the same for the first script
 *** I added a filter to see how the machines from Florestine behaves.
+** monday, 06-05-2019
+*** Qarnot's meeting
+**** Paper
+***** Schedulers
+****** Location based
+******* It does change the job allocatoin a lot because there are not a lot of jobs dependents of the same data sets.
+***** Experiments
+****** Job Allocation
+******* Workloads??
+******** There are some workloads with more dependecies than others.
+******** DONE To check with ALex which one.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-05-06 seg 19:00]
+- They dont know specifically which one is good or not. So, I did a script to describe the workloads.
+:END:      
+******** TODO To define how many workloads we will simulate
+******** There are examples of plot in the Batsim paper showing results for different workloads.
+****** Data Movements
+******* Staging jobs
+******* Preempted jobs
+*** Maybe we will change to IEEE MASCOTS
+*** Plots [[https://towardsdatascience.com/the-art-of-effective-visualization-of-multi-dimensional-data-6c7202990c57][Good Blog]]
+*** Seaborn [[https://seaborn.pydata.org/generated/seaborn.kdeplot.html][plots]]
+*** DONE Experiment
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-05-06 seg 19:00]
+:END:      
+**** DONE Pie plots
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-05-06 seg 19:00]
+:END:      
+**** DONE Denstivie Charts (jobs proc_time)
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-05-06 seg 19:00]
+:END:      
+ Using both, the pie plot and the densitive chart regarding the processing time, is possible to justify, somehow, the situations:
+ Looking for the Job_Allocation, Pie_plot and Densitive_chart
+ if:
+ A) The Pie_plot show a strong depency of a big number of data sets
+ B) The Densitive_Charts shows that the jobs got a long time to process the job
+
+ A+B) Then, the Job_Allocation should look sparse as well, because although the Pie_plot show a strong depedency of data sets, the densitive_chart show a long time of processing means that the machines will be
+   unavailable for a log time, this way, to process the different jobs, it will be allocated to different machines.
+
+ A+B) In the same idea, if the jobs are executed fast and the pie plot show a strong dependency, the job_allocation should show a some machine as cluster of jobs, because, the jobs ends fast and then others
+   that depends on the same data sets will be allocated there.
+** tuesday, 07-05-2019
+*** TODO To extract new workloads to use the script.
