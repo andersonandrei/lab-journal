@@ -1825,4 +1825,18 @@ https://rpkgs.datanovia.com/ggpubr/reference/ggarrange.html
  A+B) In the same idea, if the jobs are executed fast and the pie plot show a strong dependency, the job_allocation should show a some machine as cluster of jobs, because, the jobs ends fast and then others
    that depends on the same data sets will be allocated there.
 ** tuesday, 07-05-2019
-*** TODO To extract new workloads to use the script.
+*** DONE To extract new workloads to use the script.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-05-07 ter 16:59]
+:END:
+*** I added a new plot in the data_sets_dependency analuzes. I'm filtering the jobs by a specific data set, ex: Null.
+*** I executed the new script with the new workloads. The problem is that the updated version of workloads are available only from 24/05
+*** so, we do not have only 1 week to use. I will try to plot everything with 3 or 5 days.
+
+** thursday, 09-05-2019
+*** TODO To update the location based scheduler regarding the last modifications in the standard one.
+*** TODO Extract more workloads
+*** TODO Run the simulation
+*** TODO Plot the log-analyzes (pre-analyzes) and the gantt-chart.
+*** TODO Ask Alex about the data-transfer validation
+*** TODO Analyze also the outputs of pybatsim: nb_preempted_jobs, staginf_jobs and etc.
