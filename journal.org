@@ -1833,6 +1833,19 @@ https://rpkgs.datanovia.com/ggpubr/reference/ggarrange.html
 *** I executed the new script with the new workloads. The problem is that the updated version of workloads are available only from 24/05
 *** so, we do not have only 1 week to use. I will try to plot everything with 3 or 5 days.
 
+** wednesday, 08-05-2019
+*** WAITING To run the standard simulation using Robin.
+:LOGBOOK:  
+- State "WAITING"    from "TODO"       [2019-05-08 qua 22:14] \\
+  Some error ??
+:END:      
+*** DONE To update the location-based using the last standard version
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-05-08 qua 22:14]
+:END:
+*** I ran both simulator using 1week_22April and 25April
+*** I ran the script to compare the GanttChart, but, the results are the same as the last time, just few differences.
+*** The temperature.csv for the location_based is empty. Need to check it.
 ** thursday, 09-05-2019
 *** TODO To update the location based scheduler regarding the last modifications in the standard one.
 *** TODO Extract more workloads
