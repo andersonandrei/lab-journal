@@ -1846,10 +1846,41 @@ https://rpkgs.datanovia.com/ggpubr/reference/ggarrange.html
 *** I ran both simulator using 1week_22April and 25April
 *** I ran the script to compare the GanttChart, but, the results are the same as the last time, just few differences.
 *** The temperature.csv for the location_based is empty. Need to check it.
+* Week 09-05 / 15-05 
 ** thursday, 09-05-2019
-*** TODO To update the location based scheduler regarding the last modifications in the standard one.
-*** TODO Extract more workloads
-*** TODO Run the simulation
-*** TODO Plot the log-analyzes (pre-analyzes) and the gantt-chart.
+*** DONE To update the location based scheduler regarding the last modifications in the standard one.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-05-09 qui 17:45]
+:END:      
+*** DONE Extract more workloads
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-05-09 qui 10:22]
+:END:      
+**** 1day: 25/04, 29/04, 04/05
+**** 3days: 26/04, 03/05
+*** DONE Run the simulation
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-05-09 qui 17:45]
+:END:      
+*** DONE Plot the log-analyzes (pre-analyzes) and the gantt-chart.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-05-09 qui 17:45]
+:END:      
 *** TODO Ask Alex about the data-transfer validation
-*** TODO Analyze also the outputs of pybatsim: nb_preempted_jobs, staginf_jobs and etc.
+*** DONE Analyze also the outputs of pybatsim: nb_preempted_jobs, staginf_jobs and etc.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-05-09 qui 17:45]
+:END:      
+*** I am thinking about the workloads size. It could be: 5 days for the week and more 2 days for the weekend, separetly.
+*** Table of experiments
+| Workload   | Standard | Location_based | Log_Analyzes | Allocation_Analyzes |
+| 1d_25April | DONE     | DONE           | DONE         | DONE                |
+| 1d_29April | DONE     | DONE           | DONE         | DONE                |
+| 1d_04May   | DONE     | DONE           | DONE         | DONE                |
+| 3d_26April | DONE     | DONE           | DONE         | DONE                |
+| 3d_03May   | DONE     | DONE           | DONE         | DONE                |
+| 1w_25April |          |                |              |                     |
+| 1w_29April | DONE     |                |              |                     |
+*** Attention: '1d_04May_two_months' -> All jobs have start_time and finish_time = 0
+*** Salah's presentation: One can only gain by replacing EASY Backfilling: A simple scheduling policies case study
+*** TODO Analyze all plots together.
