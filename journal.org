@@ -1750,7 +1750,7 @@ https://rpkgs.datanovia.com/ggpubr/reference/ggarrange.html
 *** TODO To check if we will put the workflow diagram in the paper, if, which one? Both or just one about the platform?
 *** TODO To check the description and design of the diagram in the paper.
 ** wednesday, 01-05-2019
-*** DONE On paper
+*** DONE On paper                                              :WeekReview:
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-05-01 qua 22:37]
 :END:      
@@ -1884,3 +1884,17 @@ https://rpkgs.datanovia.com/ggpubr/reference/ggarrange.html
 *** Attention: '1d_04May_two_months' -> All jobs have start_time and finish_time = 0
 *** Salah's presentation: One can only gain by replacing EASY Backfilling: A simple scheduling policies case study
 *** TODO Analyze all plots together.
+** monday, 13-05-2019
+*** DEFERRED To order the list of QBoxe by the len(datasets)
+:LOGBOOK:  
+- State "DEFERRED"   from "DONE"       [2019-05-13 seg 17:24]
+- State "DONE"       from "TODO"       [2019-05-13 seg 17:24]
+:END:      
+*** DONE To fix the DoDispatch to the location based.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-05-13 seg 17:24]
+:END:      
+**** I think I'm doing it wrong. I looking the BKGD with dataset + without dataset, then LOW with dataset + without, then HIGH with dataset + without.
+**** It should be BKGD with datasets, then LOW with datsets, then HIGH with datasets , THEN, BKGD, LOW and HIGH without datasets.
+*** I also created a new notebook to analyze only the allocation.
+*** I want to do a script to visualize how much equal were the allocated resources (%).
