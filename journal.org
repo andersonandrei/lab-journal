@@ -1872,7 +1872,7 @@ https://rpkgs.datanovia.com/ggpubr/reference/ggarrange.html
 - State "DONE"       from "TODO"       [2019-05-09 qui 17:45]
 :END:      
 *** I am thinking about the workloads size. It could be: 5 days for the week and more 2 days for the weekend, separetly.
-*** Table of experiments
+*** DONE Table of experiments
 | Workload   | Standard | Location_based | Log_Analyzes | Allocation_Analyzes |
 | 1d_25April | DONE     | DONE           | DONE         | DONE                |
 | 1d_29April | DONE     | DONE           | DONE         | DONE                |
@@ -1898,3 +1898,20 @@ https://rpkgs.datanovia.com/ggpubr/reference/ggarrange.html
 **** It should be BKGD with datasets, then LOW with datsets, then HIGH with datasets , THEN, BKGD, LOW and HIGH without datasets.
 *** I also created a new notebook to analyze only the allocation.
 *** I want to do a script to visualize how much equal were the allocated resources (%).
+** tuesday, 14-05-2019
+*** I extracted more two workloads: 1w_29April 1w_06May
+*** DONE Table of experiments
+| Workload   | Standard | Location_based | Log_Analyzes | Allocation_Analyzes |
+| 1d_25April | D        | D              | D            |                     |
+| 1d_29April | D        | D              | D            |                     |
+| 1d_04May   | D        | D              | D            |                     |
+| 3d_26April | D        | D              | D            |                     |
+| 3d_03May   | D        | D              | D            |                     |
+| 1w_29April | DONE     | D              | D            | D                   |
+| 1w_06April | DONE     | D              | D            | D                   |
+*** I wrote in the paper more two paragraphs about the platform and another two for the experiments explanations.
+** wednesday, 15-05-2019
+*** Qarnot's meeting
+**** TODO Ask:
+***** Which workload? How many time? Statistic definitions ...
+***** To chekc how will they show the data movements
