@@ -1915,3 +1915,14 @@ https://rpkgs.datanovia.com/ggpubr/reference/ggarrange.html
 **** TODO Ask:
 ***** Which workload? How many time? Statistic definitions ...
 ***** To chekc how will they show the data movements
+*** At the beggining of the simulation there are no data sets nowhere, so, the beggining should be the same for both schedulers.
+*** TODO Distribution of jobs by priority -> To understande the standart Gantt Chart
+*** I think that the gap in the aixe x between the cluster happens because the time_interval = 150,300,....
+*** Clemént updated the qarnot-extractor, so I need to exctract all workloads again and rerun everything
+*** I fixed the analyze_results.py and also add a method to plot the Gantt Chart diff and now the output are been saved on outputs/[workload]
+*** I did a bash script to do the whole analyzes, which are included:
+**** Copy the input data from the simulator-prototype
+**** Prepare the environment, aka. data/ outputs/
+**** Pre process the .csv needed, aka. _jobs.csv
+**** Copy the analyze_results.py to all workload folder in data/
+**** Execute the analyze_results.py
