@@ -1926,3 +1926,27 @@ https://rpkgs.datanovia.com/ggpubr/reference/ggarrange.html
 **** Pre process the .csv needed, aka. _jobs.csv
 **** Copy the analyze_results.py to all workload folder in data/
 **** Execute the analyze_results.py
+* Week 16-05 / 22-05
+** tuesday, 16-05-2019
+*** I have been worked on the script run-experiments.sh
+**** I also added the robin scripts into that and Moved the script to the main repository *experiments-mascots2019*
+**** TODO Modify the output of robin to standard_scheduler and locationBased_scheduler in a folder with "workload_name" as usual.
+*** I updated the analyze_results.py and added methods to generate the plot for the data sets dependencies and processing time density.
+*** ThomasThomas Ropars' Seminar:
+Using Big Data Solutions to Improve HPC systems
+   In-situ data analysis
+   CPU overheating prediction in HPC systems
+*** To conifgure my file in the qarnot-extractor: https://gitlab.inria.fr/anr-greco/influxDB/blob/master/learning/src/utils.py
+*** DONE Table of experiments
+| Workload   | Extract | Standard | Location_based | Log_Analyzes | Allocation_Analyzes |
+| 1d_25April | d       |          |                |              |                     |
+| 1d_29April | d       |          |                |              |                     |
+| 1d_04May   | d       |          |                |              |                     |
+| 3d_26April | d       |          |                |              |                     |
+| 3d_03May   | d       |          |                |              |                     |
+| 1w_06May   | d       |          |                |              |                     |
+| 1w_29April | d       |          |                |              |                     |
+*** I extracted the new 'jobs' for all workloads and deleted the no long used ones.
+*** TODO To push the sample-data
+*** I added both scripts, run-experiments.sh and analyze_results.py to the repo *experiments-mascots2019*
+*** I also fixed little bugs with strings in the script create-yaml.py in the repo *experiments-mascots2019*
