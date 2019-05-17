@@ -1951,7 +1951,18 @@ Using Big Data Solutions to Improve HPC systems
 *** I added both scripts, run-experiments.sh and analyze_results.py to the repo *experiments-mascots2019*
 *** I also fixed little bugs with strings in the script create-yaml.py in the repo *experiments-mascots2019*
 ** friday, 17-05-2019
-*** TODO To finsih the run-experiments.sh
-*** TODO To run it.
-*** TODO To fiz my parts in the paper.
-*** TODO To discuss the paper's objective
+*** DONE To finsih the run-experiments.sh
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-05-17 sex 16:34]
+:END:      
+**** I need to fix the prints. Its printing 3d_ for every steps in the analyzes steps.
+*** DONE To run it.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-05-17 sex 16:35]
+:END:      
+*** TODO To fix my parts in the paper.
+*** DONE To discuss the paper's objective
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-05-17 sex 16:35]
+:END:      
+*** TODO To fiz the name of the plots to keep near alphabeticaly the GantT_chats.
