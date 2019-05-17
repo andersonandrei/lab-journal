@@ -1927,7 +1927,7 @@ https://rpkgs.datanovia.com/ggpubr/reference/ggarrange.html
 **** Copy the analyze_results.py to all workload folder in data/
 **** Execute the analyze_results.py
 * Week 16-05 / 22-05
-** tuesday, 16-05-2019
+** thursday, 16-05-2019
 *** I have been worked on the script run-experiments.sh
 **** I also added the robin scripts into that and Moved the script to the main repository *experiments-mascots2019*
 **** TODO Modify the output of robin to standard_scheduler and locationBased_scheduler in a folder with "workload_name" as usual.
@@ -1950,3 +1950,8 @@ Using Big Data Solutions to Improve HPC systems
 *** TODO To push the sample-data
 *** I added both scripts, run-experiments.sh and analyze_results.py to the repo *experiments-mascots2019*
 *** I also fixed little bugs with strings in the script create-yaml.py in the repo *experiments-mascots2019*
+** friday, 17-05-2019
+*** TODO To finsih the run-experiments.sh
+*** TODO To run it.
+*** TODO To fiz my parts in the paper.
+*** TODO To discuss the paper's objective
