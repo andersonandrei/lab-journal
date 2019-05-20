@@ -1965,4 +1965,68 @@ Using Big Data Solutions to Improve HPC systems
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-05-17 sex 16:35]
 :END:      
-*** TODO To fiz the name of the plots to keep near alphabeticaly the GantT_chats.
+*** TODO To fix the name of the plots to keep near alphabeticaly the GantT_chats.
+** saturday, 18-05-2019
+*** DONE Added the new schedulers in the script
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-05-19 dom 14:26]
+:END:      
+*** DONE Run the script with the new schedulers
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-05-19 dom 14:26]
+:END:      
+*** DONE Extract the workloads again, since the qarnot-extractor had changes
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-05-19 dom 14:26]
+:END:
+*** I got a template for my report in the MOSIG website and started to edit it.
+** sunday, 19-05-2019
+*** Analyzes based on the out_pybatsim.csv:
+**** I moved the code in R in the jupyter notebook to a R script.
+**** I removed the workload dependency to be able to run it using the run-experiments.sh
+**** I added the new scheduler to the script, now it compare metrics for 4 schedulers.
+*** I ran the script.Erros: 
+**** 1w_09 does not finish
+**** 1w_02 replicateOnSubmit does not create out_pybatsim.csv, it creates out_pybatsim_full_replicate.csv
+***** TODO Ask Clement to fix it.
+*** Analyzes:
+**** Some histograms are weird, checking:
+***** 1d_01May, no data sets -> Workload: datasets: null
+***** 1w_25April, no data sets -> Workload: datasets: null
+***** 3d_26April, no data sets -> Workload: datasets: null
+**** DONE Extract the data sets again
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-05-19 dom 14:26]
+- All the same. 
+:END:
+**** TODO Ask Yoan why.
+*** Since I have sure that the burn and staging jobs are removed from the out_jobs.csv the Gantt Charts are almost empty.
+*** Then, to check if now it is correct I did, manually for 1 week out_jobs.csv:
+a) Removed all the real jobs and plotted the GanttChart, which means that there are only staging and burn jobs.
+b) Removed all the staging and burn and plotted the GanttChart, which means that there are only real jobs
+c) For b) I also plotted the chart with details
+d) Plotted all together to go from a), b), c) and d) comparing the pictures
+*** It really looks like the QRas are heated by burn jobs almost all the time. 
+**** The amount of burn jobs in the gantt charts are much much much bigger than the real jobs.
+*** I have fixed my text in the paper
+*** I extracted more 3 weeks:
+**** 26April -> extracted so fast .. Check it.
+**** 03May
+**** 10May
+** monday, 20-05-2019
+*** Analyzing
+**** 10_May did not work
+**** I extracted wrong the 23April, it should be 26April
+*** Workin on the graphs
+**** Modifications indicated by Clement in the metrics one
+**** For the histograms, the aixe x is weird
+*** I refigured the graphs:
+**** Scheduling metrics
+**** Processing time density
+***** I made another one filtering by processing_time <= 50000
+**** Data sets dependcies
+***** I changed the plot from a pie plot to a bar plot
+**** Gantt Chart
+***** I plotted a new one filtering by starting_time <= 40000
+**** As Clement fixed some bug in the events, he ran the 1w_10May, 1d_08May and 3d_03May.
+**** I got the outputs and used the updated scripts on them.
