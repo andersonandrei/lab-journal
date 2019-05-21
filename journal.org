@@ -7,7 +7,7 @@
 #+TAGS: noexport(n) Stats(S)
 #+TAGS: Teaching(T) R(R) OrgMode(O) Python(P)
 #+TAGS: Book(b) Paper(p) Presentation(p) Scheduler(S) Denis(D) Clément(C) Andrei(a) Qarnot(q) WeekReview(w) CodeReviewed(c)
-#+TAGS: DataVis(v) PaperReview(W)
+#+TAGS: DataVis(v) PaperReview(W) MasterThesis(m)
 #+EXPORT_SELECT_TAGS: Blog
 #+OPTIONS:   H:3 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
@@ -2030,3 +2030,31 @@ d) Plotted all together to go from a), b), c) and d) comparing the pictures
 ***** I plotted a new one filtering by starting_time <= 40000
 **** As Clement fixed some bug in the events, he ran the 1w_10May, 1d_08May and 3d_03May.
 **** I got the outputs and used the updated scripts on them.
+** tuesday, 21-05-2019
+*** Greco's meeting
+**** Paper Mascots
+*** Analyzing the last plots:
+**** Workloads description
+***** 1 week: 10 May
+****** Looking for the big picture: 75% in [0,4000]
+****** Looking the interval [0,600]: 75% in [0,264]
+****** Datasets depencies is not so well distributed.
+****** TODO Maybe plot the % and remove the discrete value.
+**** New metrics:
+***** from data_staging.csv:
+****** Compute the SUM of "transfer_size" for "default" status
+***** from out_jobs.csv:
+****** Compute the Mean and Max for:
+******* Waiting_time <- start_time(last resubmitted) - Submission_time(first)
+******* turnarooung_time <- completion_time(last resubmitted) - submission_time(first)
+*** Christian's phd defense
+**** Examples of HPC usage 
+**** Problem: A lot of Energy Consummed
+**** Solution: Energy consumption model in simulations -> His thesis.
+**** Presentation sections organized by Contributions       :MasterThesis:
+*** TODO To keep the consumed_joules in the metrics and cite Chrisitian paper
+*** TODO Ask how to get the 3 and 10 for qarnotNodeSchedReplicateLeastLoaded.py
+*** TODO To validate the waiting and turn around time
+*** TODO To change the scale of the data_transfer
+*** I added the new metrics: waiting/turn_around_time, total_data_transfer_size
+*** I updated the run_measurements.sh to plot the new metrics and also using the new scheduler: Replicate3LeastLoaded Replicate10LeastLoaded
