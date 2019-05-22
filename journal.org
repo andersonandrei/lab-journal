@@ -2058,3 +2058,9 @@ d) Plotted all together to go from a), b), c) and d) comparing the pictures
 *** TODO To change the scale of the data_transfer
 *** I added the new metrics: waiting/turn_around_time, total_data_transfer_size
 *** I updated the run_measurements.sh to plot the new metrics and also using the new scheduler: Replicate3LeastLoaded Replicate10LeastLoaded
+** wednesday, 22-05-2019
+*** I finished the plots
+*** I fixed the diagrams
+*** I finished the scripts and Clement ran it in his computer
+**** There were some fixes to be done in about the waiting time, the turn around time was changed for slowdown
+*** I wrote the metrics results as a table to be showed in the paper.
