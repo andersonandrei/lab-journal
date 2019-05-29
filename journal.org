@@ -2064,3 +2064,25 @@ d) Plotted all together to go from a), b), c) and d) comparing the pictures
 *** I finished the scripts and Clement ran it in his computer
 **** There were some fixes to be done in about the waiting time, the turn around time was changed for slowdown
 *** I wrote the metrics results as a table to be showed in the paper.
+* Week 23-05 / 29-05
+** thursday, 23-05-2019
+*** I have been started to write the section that explain the Qarnot's extractor.
+** friday, 24-05-2019
+*** I went to Annecy for the EmbrWave Hackathons
+** saturday, 25-05-2019
+*** I was in Annecy for the EmbrWave
+*** I wrote some more lines about the Qarnot's extractor and reviews the text
+** sunday, 26-05-2019
+*** I reviewd the text
+** monday, 27-05-2019
+*** We worked in the details of the paper, the last TODO's.
+** tuesday, 28-05-2019
+*** We discussed by video the last modifications and review for the subsmission.
+*** We submitted the paper :D
+** wednesday, 29-05-2019
+*** I have been started to work on my master thesis, finally.
+*** I got the the template that I already modified, added the Jury and copied the paper there.
+**** This way I have an idea how many pages does the papar fill.
+**** I added some plots for the same reason.
+*** TODO Write more in the report
+*** TODO Write an workload to validate the schedulers.
