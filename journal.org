@@ -2086,3 +2086,22 @@ d) Plotted all together to go from a), b), c) and d) comparing the pictures
 **** I added some plots for the same reason.
 *** TODO Write more in the report
 *** TODO Write an workload to validate the schedulers.
+** 
+* Week 30-05 / 05-06
+** thursday, 30-05-2019
+*** DONE Organize the master2-project repository with the last outputs to do the new plots
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-05-31 sex 01:39]
+:END:      
+**** 1w_03 _10 _17
+*** TODO Calclculate the processing_time for the dyn-stag
+*** DONE Plot all workloads in the same metric plots
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-05-31 sex 01:39]
+:END:
+*** DONE Plot the processing time as boxplot. Also 1 boxplot for each workload with the same size.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-05-31 sex 01:40]
+:END:
+*** Does not make sense to plot all data sets dependencies together because the x aixe use the data_set ID and
+*** the data sets changes among the workloads.
