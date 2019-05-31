@@ -2094,7 +2094,10 @@ d) Plotted all together to go from a), b), c) and d) comparing the pictures
 - State "DONE"       from "TODO"       [2019-05-31 sex 01:39]
 :END:      
 **** 1w_03 _10 _17
-*** TODO Calclculate the processing_time for the dyn-stag
+*** DONE Calclculate the processing_time for the dyn-stag
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-05-31 sex 02:17]
+:END:
 *** DONE Plot all workloads in the same metric plots
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-05-31 sex 01:39]
