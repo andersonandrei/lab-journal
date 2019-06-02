@@ -2086,7 +2086,6 @@ d) Plotted all together to go from a), b), c) and d) comparing the pictures
 **** I added some plots for the same reason.
 *** TODO Write more in the report
 *** TODO Write an workload to validate the schedulers.
-** 
 * Week 30-05 / 05-06
 ** thursday, 30-05-2019
 *** DONE Organize the master2-project repository with the last outputs to do the new plots
@@ -2108,3 +2107,47 @@ d) Plotted all together to go from a), b), c) and d) comparing the pictures
 :END:
 *** Does not make sense to plot all data sets dependencies together because the x aixe use the data_set ID and
 *** the data sets changes among the workloads.
+** friday, 31-05-2019
+*** I organized my travel to come back to Brazil (Flight and CROUS)
+** sunday, 02-06-2019
+*** DONE Write the algorithms
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-06-02 dom 21:31]
+:END:      
+**** DONE Standard
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-06-02 dom 21:31]
+:END:      
+**** DONE LocalityBased
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-06-02 dom 21:31]
+:END:      
+**** DONE FullReplicate
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-06-02 dom 21:31]
+:END:      
+**** DONE Replicated3
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-06-02 dom 21:31]
+:END:      
+**** DONE Replicated10
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-06-02 dom 21:31]
+:END:      
+*** DONE Insert the image of the simulated platform
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-06-02 dom 14:13]
+:END:      
+*** TODO Write the explaination of the translation from the real to the simulated platform 
+*** TODO Write the description of the simulated platform
+*** TODO Write the 3 topics for the analyzes: processing time, data sets dependencies and metrics. 
+**** Maybe, also the allocation
+*** DONE To paste the all the plots to figure out how does it fit.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-06-02 dom 14:03]
+:END:
+*** TODO Create a simple workload as practical example.
+** monday, 03-06-2019
+*** TODO To check with Clement 
+**** TODO if the computation of the list of the qbox for each consdition would make difference (for the LocalityBased).
+**** TODO Should I explain details of the StorageController based on the deliverable?
