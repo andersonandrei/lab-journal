@@ -2148,6 +2148,23 @@ d) Plotted all together to go from a), b), c) and d) comparing the pictures
 :END:
 *** TODO Create a simple workload as practical example.
 ** monday, 03-06-2019
-*** TODO To check with Clement 
+*** WAITING To check with Clement 
+:LOGBOOK:  
+- State "WAITING"    from "TODO"       [2019-06-03 seg 09:43]
+:END:      
 **** TODO if the computation of the list of the qbox for each consdition would make difference (for the LocalityBased).
 **** TODO Should I explain details of the StorageController based on the deliverable?
+*** TODO To change and run the Locality Based to re-compute the list of available_mobos for each priority.
+*** TODO To merge and run both DoDispatches() on the Locality Based
+*** TODO To compare the three results, the previous one, the second one (2 todos above), the third one (1 todo above).
+*** I discussed with Denis about the structure. 
+**** I should take care about the information of parts not developed by myself.
+**** I should explain in the introduction what I used and what I developed. The introduction should have subsections: Edgde, Iot, the platform and my contributions.
+*** TODO Some fixes in the Simulated Platform
+**** TODO Index starting from 1.
+**** TODO Charge the order of 16 and 15.
+*** I have been filled the sections of the paper with more details:
+**** The Introduction: I pointed what I should add
+**** The Qarnot platform: I added the diagram of the workflow and its explanations.
+**** The Simulated Platform: I added a new section to show and explain the simulated platform workflow.
+**** The Job Allocation: I described a little bit more the scheduling problems and the Qarnot's one and how it is new.
