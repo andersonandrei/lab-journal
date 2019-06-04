@@ -2138,8 +2138,14 @@ d) Plotted all together to go from a), b), c) and d) comparing the pictures
 :LOGBOOK:  
 - State "DONE"       from "TODO"       [2019-06-02 dom 14:13]
 :END:      
-*** TODO Write the explaination of the translation from the real to the simulated platform 
-*** TODO Write the description of the simulated platform
+*** DONE Write the explaination of the translation from the real to the simulated platform 
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-06-04 ter 13:43]
+:END:      
+*** DONE Write the description of the simulated platform
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-06-04 ter 13:43]
+:END:      
 *** TODO Write the 3 topics for the analyzes: processing time, data sets dependencies and metrics. 
 **** Maybe, also the allocation
 *** DONE To paste the all the plots to figure out how does it fit.
@@ -2168,3 +2174,17 @@ d) Plotted all together to go from a), b), c) and d) comparing the pictures
 **** The Qarnot platform: I added the diagram of the workflow and its explanations.
 **** The Simulated Platform: I added a new section to show and explain the simulated platform workflow.
 **** The Job Allocation: I described a little bit more the scheduling problems and the Qarnot's one and how it is new.
+** tuesday, 04-06-2019
+*** Sebastian's presentation
+**** In Situo Computing fo Data Assimilation
+***** Data Assimilation
+****** Incorporate Observations into a model (ex Wether Forecast and simulations)
+*** I extracted the workload 1w_24May
+*** I tried to run it, but there are some errors
+*** TODO Ask Clement to run it for some scheduler, or all ..
+*** Thesis
+**** Introduction: I better structured it, wrote my contributions and emphased what I used and what I developed.
+**** Introduction: I also removed some parts that was selling the paper.
+*** I changed with Massih my defense to 24 at 14p.m and contact Christophe Cérin that agreed with the time.
+*** I invited Yanik to attend to my defense.
+*** TODO Try to manage the video conference tool
