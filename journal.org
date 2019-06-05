@@ -2181,10 +2181,24 @@ d) Plotted all together to go from a), b), c) and d) comparing the pictures
 ****** Incorporate Observations into a model (ex Wether Forecast and simulations)
 *** I extracted the workload 1w_24May
 *** I tried to run it, but there are some errors
-*** TODO Ask Clement to run it for some scheduler, or all ..
+*** DONE Ask Clement to run it for some scheduler, or all ..
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-06-05 qua 18:51]
+- I ran it.
+:END:      
 *** Thesis
 **** Introduction: I better structured it, wrote my contributions and emphased what I used and what I developed.
 **** Introduction: I also removed some parts that was selling the paper.
 *** I changed with Massih my defense to 24 at 14p.m and contact Christophe Cérin that agreed with the time.
 *** I invited Yanik to attend to my defense.
 *** TODO Try to manage the video conference tool
+** wednesday, 05-06-2019
+*** I fixed an error in the BoxSched on the rejectReservedMobo.
+*** I ran the simulation for the new workload 1w_24May
+*** I plotted all the 4 workloads together.
+*** TODO Ask Arnaud some opnion of a good way to show it.
+*** I almost finish the sectios: 
+**** Job Allocation
+**** A dedicated Scheduling Simulator for edge platforms
+**** Case study: the Qarnot Computing platform
+*** I fixed the simulated platform diagram and inserted the new one in the report.
