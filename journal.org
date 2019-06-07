@@ -2158,9 +2158,17 @@ d) Plotted all together to go from a), b), c) and d) comparing the pictures
 :LOGBOOK:  
 - State "WAITING"    from "TODO"       [2019-06-03 seg 09:43]
 :END:      
-**** TODO if the computation of the list of the qbox for each consdition would make difference (for the LocalityBased).
+**** DONE if the computation of the list of the qbox for each consdition would make difference (for the LocalityBased).
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-06-06 qui 14:20]
+- He said that he did this last modificaton as an "improvement" in the code, to make it cleaner.
+:END:      
 **** TODO Should I explain details of the StorageController based on the deliverable?
-*** TODO To change and run the Locality Based to re-compute the list of available_mobos for each priority.
+*** DONE To change and run the Locality Based to re-compute the list of available_mobos for each priority.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-06-06 qui 14:22]
+- Nothing changed.
+:END:      
 *** TODO To merge and run both DoDispatches() on the Locality Based
 *** TODO To compare the three results, the previous one, the second one (2 todos above), the third one (1 todo above).
 *** I discussed with Denis about the structure. 
@@ -2202,3 +2210,395 @@ d) Plotted all together to go from a), b), c) and d) comparing the pictures
 **** A dedicated Scheduling Simulator for edge platforms
 **** Case study: the Qarnot Computing platform
 *** I fixed the simulated platform diagram and inserted the new one in the report.
+* Week 06-06 / 12-06
+** thursday, 06-06-2019 
+*** TODO Clement feedbacks
+**** TODO We don't say "the section X" but "Section X"
+**** TODO I think you should not talk about background tasks, since they are only "cpu burn" not coming from HPC customers 
+***** or mention that it is just cpu burn jobs when there are no customer jobs to execute, and I think it's only at QBox level.
+**** TODO You should re-check the algorithms, there are some bugs and typos.
+**** TODO Re-check also the text, there are some 'not correct' formulations.
+**** TODO You tend to forget the subject before a verb. Like "Hence is necessary to", "This way was possible to compare"
+*** TODO Advices from Jean-Marques
+**** TODO Split the workload in two parts, short and long jobs
+**** TODO Show some correlations
+*** I did a script to split the workloads, I take the max_time = 75% of the processing time from the workload_original.
+*** Now, I have 8 from 4 workloads, each one become _short and _long
+*** TODO Run the 8 workloads.
+*** I wrote a little bit more about the extractor.
+** friday, 07-06-2019
+*** TODO If the split workload simulations show difference among the size of jobs
+**** then I could say that a mechanism to predict the amount of processing time for the job, in the future, could be very usefuls
+*** TODO Added a brief description about the new scheduling policies in the introduction
+*** TODO References for scheduling metrics
+**** From Salah's paper: Bounded Slowdown , starvation (?)
+**** Analyze startvation since it is related with the waiting time
+**** threshold.
+**** Utilization, predictability, workloads, and user runtime
+estimates in scheduling the ibm sp2 with backfilling.
+**** Metrics for parallel job scheduling and their convergence.
+**** Effect of job size characteristics on job scheduling performance.
+***** Maybe I could say about the size since the split of the workloads.
+**** Implementing Reproducible Research
+*** I added a table with the processing time of all workloads before the split.
+*** Using it I justify split the workloads and then, will show the new processing time.
+*** Reading papers for state of the art:
+**** Metrics for Parallel Job Scheduling and Their Convergence
+ In some cases interactions may occur between the metric
+and certain characteristics of the system, leading to results that actually depend
+on the metric being used [21].
+
+ The root cause for convergence problems is variability in the workloads. We
+therefore start by characterizing the variability in the runtimes and arrivals of
+workloads observed on different systems, and in models based on them.
+ 
+ As we saw above, it may take the average response time a very long time to
+converge when the simulated job stream being scheduled is based on dispersive
+distributions. Do other metrics converge more quickly? And indeed, what is the
+most meaningful metric?
+The first metric we deal with is the response time. We define “response time”
+to mean the total wallclock time from the instant at which the job is submitted
+to the system, until it finishes its run. This can be divided into two components:
+the running time T r , during which the job is actually running in parallel on
+multiple processing nodes, and the waiting time T w , in which it is waiting to be
+scheduled or for some event such as I/O. The waiting time itself can also be used
+as a metric, based on the assumption that T r does not depend on the scheduling.
+Obviously, a lower bound on the response time of a given job is its running
+time. As the runtimes of jobs have a very large variance, so must the response
+time. It has therefore been suggested that a better metric may be the slowdown
+(also called “expansion factor”), which is the response time normalized by the
+running time:
+T w + T r
+slowdown =
+T r
+Thus if a job takes twice as long to run due to system load, it suffers from a slow-
+down factor of 2, etc. This is expected to reduce the extreme values associated198
+D.G. Feitelson
+with very long jobs, because even if a week-long job is delayed for a whole year
+the slowdown is only a factor of 50. Moreover, slowdown is widely perceived as
+better matching user expectations that a job’s response time will be proportional
+to its running time. Indeed, 30 years ago Brinch Hansen already suggested that
+slowdowns be used to prioritize jobs for scheduling [1].
+The problem with the slowdown metric is that it over-em
+**** An Efficient Algorithm for Scheduling Jobs in Volunteer Computing platforms
+ The increased number of processors involved in the new
+computing platforms and the complexity of the underly-
+ing architecture have made the job scheduling manage-
+ment an always more difficult task.
+**** A survey on resource allocation in high performance distributed computing systems
+ The resource management mechanism determines the efficiency of the used resources and guarantees the Quality of
+Service (QoS) provided to the users. Therefore, the resource allocation mechanisms are considered a central theme in HPCs
+[85].
+ QoS resource management and scheduling algorithms are capable of
+optimally assigning resources in ideal situation or near-optimally assigning resources in actual situation, taking into account
+the task characteristics and QoS requirements [77,86].
+ The features of the HPC categories (cluster, grid, and cloud) are conceptually similar [112]. Therefore, an effort has been
+made to distinguish each of the categories by selecting relevant distinct features for all. The features are selected based on
+the information present in the resource allocation domain, acquired from a plethora of literature.
+HPC Jobs
+In conservative scheduling [87], processes allocate required resources before execution. Moreover, the
+operations are delayed for serial execution of the tasks that helps in process sequencing. The delay is also helpful in rejection
+of the processes. In conservative scheduling, operations are not rejected but delayed. In an aggressive (easy) scheduling [87],
+operations are immediately scheduled for execution to avoid delay in the operations. Moreover, the operations are reordered
+on the arrival of new operations. In some situations when a task cannot be completed in serial way, the operations are re-
+jected. In aggressive scheduling, the operations are not delayed but have rejection risk at later stages.
+
+
+ Clusters
+ The goal of cluster computing is to design an efficient computing platform that uses a group of commodity computer re-
+sources integrated through hardware, networks, and software to improve the performance and availability of a single com-
+puter resource [144,145].
+ One of the main ideas of cluster computing is to portray a single system image to the outside
+world. Initially, cluster computing and HPC were referred to the same type of computing systems. However, today’s technol-
+ogy enables the extension of cluster class by incorporating load balancing, parallel processing, multi-level system manage-
+ment, and scalability methodologies.
+ The extension of traditional clusters transforms into user-demand systems (provides SLA-based performance) that deliver
+Reliability, Availability, and Serviceability (RAS) needed for HPC applications. A modern cluster is made up of a set of com-
+modity computers that are usually restricted to a single switch or group of interconnected switches within a single virtual
+local-area network (VLAN) [93]. Each compute node (computer) may have different architecture specifications (single pro-
+cessor machine, symmetric multiprocessor system, etc.) and access to various types of storage devices. The underlying net-
+work is a dedicated network made up of high-speed and low-latency system of switches with a single or multi-level
+hierarchic internal structure. In addition to executing compute-intensive applications, cluster systems are also used for rep-
+licated storage and backup servers that provide essential fault tolerance and reliability for critical parallel applications.
+ 
+ GRID
+ The concept of grid computing is based on using the Internet as a medium for the wide spread availability of powerful
+computing resources as low-cost commodity components [142]. Computational grid can be thought of as a distributed sys-
+tem of logically coupled local clusters with non-interactive workloads that involve a large number of files [15,111].
+ What makes grid different
+from conventional HPC systems, such as cluster, is that grids tend to be more loosely coupled, heterogeneous, and geograph-
+ically dispersed [139,140].
+
+ Cloud
+ Cloud computing describes a new model for Information Technology (IT) services based on the Internet, and typically in-
+volves provision of dynamically scalable and often virtualized resources over-the-Internet [2,3,12,147].
+ Typical cloud computing providers deliver common business applications online that are ac-
+cessed through web service, and the data and software are stored on the servers. Clouds often appear as a single point of
+access for computing the consumer needs. Commercial offerings are generally expected to meet the QoS requirements of
+customers, and typically include SLAs [9].
+
+Comparisons
+ Table 1 depicts the common attributes among the HPC categories, such as size, network type, and coupling.
+ 
+Features and requirements
+
+ Cloud
+ The cloud computing systems are difficult to model with resource contention (competing access to shared resources).
+Many factors, such as the number of machines, types of application, and overall workload characteristics, can vary widely
+and affect the performance of the system.
+**** Survey on Resource Allocation Policy and Job Scheduling Algorithms of Cloud Computing
+ How to make appropriate decisions when
+allocating hardware resources to the tasks and dispatching
+the computing tasks to resource pool has become the main
+issue in cloud computing.
+ 
+Fig.1 shows the mode of calculation in different stages
+of development. Calculation mode has gone through a
+process from the original mode of gathering all the tasks
+to large-scale processor for processing (Fig.1(a)), to the
+distributed tasks processing mode based on Internet
+(Fig.1(b)) later, and then to the cloud computing mode for
+immediate processing (Fig.1(c)) [1] .
+ 
+ Strictly speaking, Cloud Computing
+is a model of enabling ubiquitous, convenient and on-
+demand network access to a shared pool of configurable
+computing resource(e.g. networks, servers, storage,
+applications, and service) that can be rapidly provisioned
+and released with minimal management effort or service
+provider interaction according to NIST(National Institute
+of Standards and Technology) [3] .
+ 
+ Cloud computing is a
+product from mixing traditional computer techniques and
+network technologies, such as grid computing, distributed
+computing, parallel computing, utility computing,
+network storage, virtualization, load balancing, etc [4] .
+ 
+ Allocation of resources is an important component of
+cloud computing. Its efficiency will directly influence the
+performance of the whole cloud environment. Since
+cloud computing has its own features, original resource
+allocation polocy and scheduling algorithms for grid
+computing are unable to work under this condition
+
+Background.
+
+Job scheduling of cloud computing refers to the
+process of adjusting resources between different resource
+users according to certain rules of resource use under a
+given cloud environment [21] . Resource management and
+job scheduling are the key technologies of cloud
+computing. At present, there is not an uniform standard
+for job scheduling in cloud. Most alogorithms foucus on ob dispatcher, which is almost resopnsible for all the task
+allocations, responses and retransmissions [22] .
+**** A Survey on Mobile Edge Computing: The Communication Perspective
+
+Cloud
+ THE LAST decade has seen Cloud Computing emerging
+as a new paradigm of computing. Its vision is the central-
+ization of computing, storage and network management in the
+Clouds, referring to data centers, backbone IP networks and
+cellular core networks [1], [2]. The vast resources available in
+the Clouds can then be leveraged to deliver elastic computing power and storage to support resource-constrained end-user
+devices. Cloud Computing has been driving the rapid growth
+of many Internet companies. For example, the Cloud business
+has risen to be the most profitable sector for Amazon [3], and
+Dropbox’s success depended highly on the Cloud service of
+Amazon.
+
+However, in recent years, a new trend in computing is
+happening with the function of Clouds being increasingly
+moving towards the network edges [4]. It is estimated that
+tens of billions of Edge devices will be deployed in the near
+future, and their processor speeds are growing exponentially,
+following Moore’s Law. Harvesting the vast amount of the
+idle computation power and storage space distributed at the
+network edges can yield sufficient capacities for perform-
+ing computation-intensive and latency-critical tasks at mobile
+devices. This paradigm is called Mobile Edge Computing
+(MEC) [5]. While long propagation delays remain a key draw-
+back for Cloud Computing, MEC, with the proximate access,
+is widely agreed to be a key technology for realizing various
+visions for next-generation Internet, such as Tactile Internet
+(with millisecond-scale reaction time) [6], Internet of Things
+(IoT) [7], and Internet of Me [8].
+
+Recently, the concept
+of Fog Computing has been proposed by Cisco as a gener-
+alized form of MEC where the definition of edge devices
+gets broader, ranging from smartphones to set-top boxes [11].
+This led to the emergence of a new research area called Fog Computing and Networking [4], [12], [13]. However, the areas
+of Fog Computing and MEC are overlapping and the termi-
+nologies are frequently used interchangeably.
+
+MEC is implemented based on a virtualized platform
+that leverages recent advancements in network functions vir-
+tualization (NFV), information-centric networks (ICN) and
+software-defined networks (SDN).
+
+A main focus of MEC research is to develop these
+general network technologies so that they can be implemented
+at the network edges.
+
+**** Simulation and optimization of HPC job allocation for jointly reducing communication and cooling costs
+We implement our evaluation models and allocation optimiza-
+tion methods in SST, the Structural Simulation Toolkit. SST is
+an architectural simulation framework designed to assist in the
+design, evaluation, and optimization of HPC architectures and
+applications [33]. It is developed by Sandia National Laboratories
+to evaluate the performance of computer systems ranging from
+small-scale single-chip processors to large-scale parallel comput-
+ing architectures.
+
+This section introduces the simulation framework (SST) we use for
+evaluating our joint optimization algorithm managing real-world
+parallel workloads, as well as the implementations of job scheduler
+and allocation algorithms in SST.
+
+Energy
+Along with the data center computational capacities, energy
+consumption of HPC data centers has increased tremendously. It
+has been reported that the worldwide data center electricity con-
+sumption increased by 56% from 2005 to 2010, which accounted
+for 1.3% of the total electricity use [8]. A recent review [9] shows
+that for every dollar spent on power of data center computing
+equipments, another dollar is spent on data center cooling infras-
+tructures, which translates to an energy cost reaching up to millions
+of dollars and cooling costs reaching close to half of the overall
+energy cost [10–12]. Thus, maintaining cooling and energy effi-
+ciency is becoming one of the main constraints in the design and
+management of today’s data centers.
+
+ ==> Is it possible to say that, then say that Batsim includes the Temperature Plugin from the paper of Cristian.
+     Also the Qarnot Platform proposes an efficient solution for that problem.
+**** E ect of Job Size Characteristics on Job Scheduling Performance 
+certain job size charac-
+teristics a ected performance of priority scheduling
+signi cantly.
+
+Many previous performance evaluation works as-
+sumed that characteristics of parallel jobs, or a paral-
+lel workload, followed a simple mathematical model.
+However, recent analysis of real workload logs, which
+are collected from many large-scale parallel comput-
+ers in production use, shows that a real parallel work-
+load has more complicated characteristics [5, 6, 7, 8].
+
+Characterization
+(a) Uniform model
+Job size is an integer that follows the Uniform
+distribution within the range [1,m]. This model
+is very simple synthetic model that used in many
+previous performance evaluation works..
+(b) Harmonic model
+Job size is an integer that follows the Harmonic
+distribution within the range [1,m]. The proba-
+bility that jobsize = n is proportional to 1=n 1 : 5 .
+This model represents the job size characteristic (1) in the above.
+(c) Power2 model
+Job size is an integer that is calculated by 2 k
+within the range [1,m]. (k is an integer.) The
+probability of each value is uniform. This model
+represents the job size characteristic (2).
+(d) Square model
+Job size is an integer that is calculated by k 2
+within the range [1,m]. (k is an integer.) The
+probability of each value is uniform. This model
+represents the job size characteristic (3)
+(e) Multi10 model
+Job size is an integer that is calculated by 10 1 k
+within the range [1,m]. (k is an integer.) The
+probability of each value is uniform. This model
+represents the job size characteristic (4).
+
+Performance
+Performance of job scheduling algorithms is mea-
+sured by two metrics: processor utilization and slow-
+down ratio. Processor utilization is the percent-
+age that processors are busy over entire simulation.
+Slowdown ratio, SR, shows normalized data for mean
+response time, and it is derived by the following for-
+mula [9].
+For instance, let us sup-
+pose that 10000 jobs were executed in an experiment.
+The mean response time of these 10000 jobs was 5
+hours, and their mean execution time on processors
+was 2 hours. Then, the slowdown ratio is 2.5.
+
+Then, show for each kind of workload the results.
+
+==> Looking my workloads, I could characterize it as its paper presented definitions. 
+    Then use the paper results for each workload to power it.
+**** Containers and Clusters for Edge Cloud Architectures – a Technology Review
+Cloud computing is moving from centralised, large-scale
+data centres to a more distributed multi-cloud setting com-
+prised of a network of larger and smaller virtualised infras-
+tructure runtime nodes. Virtualising reaches the network and
+allows Internet-of Things (IoT) infrastructures to be integrated.
+These architectures and their setting are often referred to as
+edge clouds, edge computing or fog computing [4].As a chal-
+lenge resulting from distribution, we need a more lightweight
+solutions than the current virtual machine (VM)-based virtu-
+alisation technology. Furthermore, as another challenge, the
+orchestration of lightweight virtualised runtimes is needed
+ Regarding the first challenge, the cloud relies on virtual-
+isation techniques to achieve elasticity of large-scale shared
+resources. Virtual machines (VMs) have been at the core
+of the compute infrastructure layer providing virtualised op-
+erating systems. We will investigate containers, which are
+a lightweight virtualisation concept, i.e., less resource and
+time consuming. VMs and containers are both virtualisation
+techniques, but solve different problems. Containers are a
+solution for more interoperable application packaging in the
+cloud and should therefore address the PaaS concerns.
+
+Cloud edge computing is pushing computing applications,
+data, and services away from centralized cloud data centre
+architectures to the edges of the underlying network [5]. The
+objective is to allow analytics and knowledge generation ser-
+vices to be placed at the source of the data. Cloud computing
+at the edge of the network links into the internet of things
+(IoT).
+**** A Survey on Cloud Computing Resource Allocation Techniques  
+ecause of the advancement in Information and
+Communication Technology (ICT) over past few years,
+Computing has been considered as a utility like water,
+electricity, gas and telephony. These utilities are available at
+any time to the consumers based on their requirement.
+Consumers pay service providers based on their usage [2] [3].
+
+Cloud computing is composed of three kind of services
+[1] [5] [6] [9].
+1) Cloud Software as a Service (SaaS)
+In this service model, instead of using locally run
+applications the cloud consumer uses the cloud provider’s
+software services running on a cloud infrastructure.
+2) Cloud Platform as a Service (PaaS)
+In this service model, the cloud platform offers an
+environment on which developers create and deploy
+applications.
+3) Cloud Infrastructure as a Service (IaaS)
+In this service model, cloud providers manage large set of
+computing resources such as storing and processing
+capability.
+
+Could be Private, Public, Community or Hybrid
+
+Motivation
+Cloud computing
+introduces new challenges for manageable and flexible
+resource allocation due to heterogeneity in hardware
+capabilities, workload estimation and characteristics in order
+to meet Service Level Objectives of the cloud consumers’
+applications.
+The ultimate goal of resource allocation in cloud
+computing is to maximize the profit for cloud providers and
+to minimize the cost for cloud consumers.
+
+A list of papers and techniques.
+
+
+
+
+ 
