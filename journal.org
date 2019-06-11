@@ -3267,9 +3267,30 @@ vices to be placed at the source of the data. Cloud computing
 at the edge of the network links into the internet of things
 (IoT).
 *** I almost finish the state of art, I organized all papers, refered all groups, organized the section and wrote the whole text and structure.
-*** TODO Put the bibTex of all references, clean a little bit more and discuss it with Denis.
+*** DONE Put the bibTex of all references, clean a little bit more and discuss it with Denis.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-06-11 ter 21:10]
+:END:      
 *** I plot the results of the last simulation.
-*** TODO Analyze the plots.
-*** TODO I figured out that the script to the metrics takes in account the staging_jobs.csv to compute the data transfet and nb_staging_jobs.
+*** DONE Analyze the plots.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-06-11 ter 21:10]
+:END:      
+*** DONE I figured out that the script to the metrics takes in account the staging_jobs.csv to compute the data transfet and nb_staging_jobs.
+:LOGBOOK:  
+- State "DONE"       from "TODO"       [2019-06-11 ter 21:10]
+I can consider now the output_pybatsim.csv.
+:END:      
 **** I need to check with Clement which one I should use, since the last updates, the out_pybatsim.csv contains this data. So: Which one is the correct one?
-
+** tuesday, 11-06-2019
+*** I finished the State of Art, fixed all the points of Clément, I cleaned all references from the original papers. 
+*** I also got all bibTex and correctly referred all papers.
+*** I rewokerd the Introduction, added a lit bit more about the Fog, Iot and Edge Computing, referred by the Roger's paper.
+*** I added in my contributions: 
+**** the design of the experiments, 
+**** the measurement of the metrics (bounded_slowdown, slowdown, data_transfer and nb_staging_jobs),
+**** the simulation of the Qarnot platform.
+*** I analyzed the results with Clément.
+*** TODO To write about the results.
+*** I have started to change the job_allocation script to get the splited results from the full simulations, but I still think that re-built all was the correct think.
+*** TODO To ask Denis what he thinks about it.
