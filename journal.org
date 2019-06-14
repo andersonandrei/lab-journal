@@ -3294,3 +3294,14 @@ I can consider now the output_pybatsim.csv.
 *** TODO To write about the results.
 *** I have started to change the job_allocation script to get the splited results from the full simulations, but I still think that re-built all was the correct think.
 *** TODO To ask Denis what he thinks about it.
+** wedenesday
+* Weel 13-06 / 19-06
+** thurday
+** friday, 14-06-2019
+*** Final experiments
+ | Workloads      | Full experiments | cp ReplicateOnSub FullReplicate | full analyzes | new analyze_results.py | plots | summary(data sets) |
+ | 1w_03 - REMOVE | done             | done                            | done          | done                   | done  |                    |
+ | 1w_10          | done             | done                            | done          | done                   | done  |                    |
+ | 1w_17          | done             | done                            | done          | done                   | done  |                    |
+ | 1w_24          | done             | done                            | done          | done                   | done  |                    |
+ | 1w_31          |                  |                                 |               |                        |       |                    |
