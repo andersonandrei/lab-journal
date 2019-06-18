@@ -3300,8 +3300,26 @@ I can consider now the output_pybatsim.csv.
 ** friday, 14-06-2019
 *** Final experiments
  | Workloads      | Full experiments | cp ReplicateOnSub FullReplicate | full analyzes | new analyze_results.py | plots | summary(data sets) |
- | 1w_03 - REMOVE | done             | done                            | done          | done                   | done  |                    |
- | 1w_10          | done             | done                            | done          | done                   | done  |                    |
- | 1w_17          | done             | done                            | done          | done                   | done  |                    |
- | 1w_24          | done             | done                            | done          | done                   | done  |                    |
- | 1w_31          |                  |                                 |               |                        |       |                    |
+ | 1w_03 - REMOVE | done             | done                            | done          | done                   | done  | done               |
+ | 1w_10          | done             | done                            | done          | done                   | done  | done               |
+ | 1w_17          | done             | done                            | done          | done                   | done  | done               |
+ | 1w_24          | done             | done                            | done          | done                   | done  | done               |
+*** I finished the Chapter of experiments.
+*** Danilo's meeting
+**** We discussed about the bounded slowdown results. Everything made sense, good results :)
+** saturday, 15-06-2019
+*** I finished the Chapter of Results detailing what I discussed with Danilo.
+*** I finished the Conclusion and Abstract.
+*** Clement translated my abstrac to French.
+** sunday, 16-06-2019
+*** I review the whole thesis.
+*** I did the spell and grammar check with Grammarly (showed about 900 errors)
+*** I fixed the legend in the plots.
+*** I organized the order of the plots.
+*** Thesis done and delivered.
+** monday, 17-06-2019
+*** I started to draw the scheduling policies slides, almost done for all policies.
+** tuedays, 18-06-2019
+*** I got some feedbacks from Clement about the scheduling policies drafts.
+*** I almost done the whole presentation, with exception of Conclusion and futher remarks.
+*** TODO To decide if I will put the platform workflow.
